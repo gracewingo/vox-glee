@@ -8,13 +8,9 @@ const app = express();
 // serve static files from React app
 app.use(express.static(path.join(__dirname, "client/build")));
 
-// Get configs - make this dynamic based on site i.e grubstreet - use parameters 
-app.get("/api/configs", (req, res) => {
-
+app.get("/api/configs", async (req, res) => {
   const configs = await loadConfigData();
-
-  // return requested configs
-  res.send(await configs.find({}));
+  res.send(await configs.find({}).toArray());
 });
 
 // Add/update to configs
@@ -36,8 +32,6 @@ async function loadConfigData() {
   return client.db("concertads-configs").collection("test");
 }
 
-
-
 // Connect to DB and get config data into MongoDB
 const MongoClient = require("mongodb").MongoClient;
 const uri =
@@ -45,8 +39,7 @@ const uri =
 const client = new MongoClient(uri, { useUnifiedTopology: true });
 client.connect((err) => {
   const db = client.db("concertads-configs").collection("test");
-  importYAMLConfigs(db);
-  console.log("connected to mongodb!");
+  // importYAMLConfigs(db);
 });
 
 function importYAMLConfigs(db) {
