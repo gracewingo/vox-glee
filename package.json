@@ -6,7 +6,8 @@
   "dependencies": {
     "express": "^4.17.1",
     "js-yaml": "^3.14.0",
-    "mongodb": "^3.5.9"
+    "mongodb": "^3.5.9",
+    "mongoose": "^5.9.24"
   },
   "scripts": {
     "start": "node app.js",
