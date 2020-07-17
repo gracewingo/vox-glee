@@ -88,9 +88,9 @@ function importYAMLConfigs(db){
           }
 
         }
-        db.insert(doc, {
-          ordered: false,
-        })
+        // db.insert(doc, {
+        //   ordered: false,
+        // })
       } else {
         // Not a directory - safe load - i.e files at the platformContents level
       }
