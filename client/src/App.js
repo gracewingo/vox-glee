@@ -7,18 +7,14 @@ const App = () => {
 
   let platform = ['Chorus configs', 'New York Mag configs'];
 
-  fetch('api')
-    .then(res=> {
-      console.log(res);
-      return res.json();
-    })
-    .then(json => {
-      console.log(json);
+  async function getData(){
+    const response = await fetch('/api/configs');
+    const data = await response.json();
+    console.log(data);
+  }
 
-    })
-    .catch(error => {
-      console.error(error);
-    })
+  getData();
+  
   return (
     <div className="App">
       <div className='content'>
