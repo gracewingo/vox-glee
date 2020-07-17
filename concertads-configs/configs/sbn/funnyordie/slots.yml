@@ -1,0 +1,408 @@
+---
+- behavior: merge
+  remove:
+  - prelude
+  - buy_button
+
+- name: editorially_placed_athena_mobile
+  watcherEligible: false
+  sizes:
+  - [620, 366]
+  - [325, 508]
+  - [325, 203]
+  - [325, 236]
+  - [325, 204]
+  - [300, 250]
+  - [300, 250v]
+
+- name: editorially_placed_athena_desktop
+  watcherEligible: false
+  sizes:
+  - [728, 90]
+
+- name: editorially_placed_leaderboard
+  prebidName: desktop_article_body
+  watcherEligible: false
+
+- name: native_quicklistings
+  watcherEligible: false
+
+- name: native_quicklistings_article
+  watcherEligible: false
+
+- name: prelude
+  watcherEligible: false
+
+- name: reskin
+  watcherEligible: false
+
+- name: desktop_leaderboard_variable
+  watcherEligible: false
+  sizes:
+  - [728, 90]
+  - [970, 90]
+  - [970, 250]
+  - [1020, 90]
+
+- name: tablet_leaderboard
+  watcherEligible: false
+
+- name: mobile_leaderboard_hub
+  watcherEligible: false
+
+- name: mobile_leaderboard_group
+  watcherEligible: false
+  sizes:
+  - [320, 50]
+  - [300, 250]
+  - [300, 250v]
+
+- name: package_cover_ad
+  watcherEligible: false
+  prebidName: desktop_leaderboard_variable
+  sizes:
+  - [728, 90]
+  - [970, 250]
+  - [970, 90]
+  - [1020, 90]
+
+- name: package_cover_ad_mobile
+  watcherEligible: false
+  prebidName: mobile_leaderboard
+  sizes:
+  - [320, 50]
+  - [300, 250]
+  - [300, 250v]
+
+- name: tablet_btf_leaderboard
+  watcherEligible: false
+
+- name: mobile_footer
+  watcherEligible: false
+
+- name: package_mobile_footer
+  watcherEligible: false
+  prebidName: mobile_footer
+  sizes:
+  - [320, 50]
+  - [300, 250]
+  - [300, 250v]
+
+- name: mobile_feature_body
+  prebidName: mobile_leaderboard
+  sizes:
+  - [320, 50]
+  - [300, 250]
+  - [300, 250v]
+  - [325, 203]
+  - [325, 204]
+  - [325, 236]
+  - [325, 508]
+
+- name: desktop_feature_body
+  prebidName: desktop_article_body
+  sizes:
+  - [728, 90]
+
+- name: desktop_feature_body_dynamic
+  watcherEligible: false
+  prebidName: desktop_dynamic
+  sizes:
+  - [728, 90]
+  - [300, 250]
+  - [300, 250v]
+
+- name: athena_features_mobile
+  watcherEligible: false
+  prebidName: mobile_med_rec_athena
+  sizes:
+  - [300, 250]
+  - [300, 250v]
+
+- name: athena_features_dynamic_mobile
+  watcherEligible: false
+  prebidName: mobile_med_rec_athena
+  sizes:
+  - [300, 250]
+  - [300, 250v]
+
+- name: athena_features_desktop
+  watcherEligible: false
+  prebidName: desktop_athena_dynamic
+  sizes:
+  - [728, 90]
+  - [970, 250]
+
+- name: mobile_leaderboard
+  watcherEligible: false
+
+- name: desktop_article_body
+  sizes:
+  - [620, 366]
+  - [620, 371]
+  - [620, 415]
+
+- name: desktop_article_body_failsafe
+  sizes:
+  - [620, 366]
+  - [620, 371]
+  - [620, 415]
+
+- name: mobile_article_body
+  sizes:
+  - [325, 508]
+  - [300, 250]
+  - [300, 250v]
+  - [300, 265]
+  - [325, 203]
+  - [325, 236]
+  - [325, 204]
+
+- name: mobile_med_rec_athena
+  sizes:
+  - [300, 250]
+  - [300, 250v]
+  - [325, 508]
+  - [300, 265]
+  - [325, 203]
+  - [325, 236]
+  - [325, 204]
+
+- name: mobile_article_body_med_rec_dynamic
+  prebidName: mobile_med_rec_athena
+  sizes:
+  - [300, 250]
+  - [300, 250v]
+
+- name: desktop_article_medrec_dynamic
+  watcherEligible: false
+
+- name: medium_rectangle_variable
+  watcherEligible: false
+
+- name: medium_rectangle_short
+  watcherEligible: false
+  prebidName: desktop_article_medrec_dynamic
+
+- name: btf_medium_rectangle_variable_hub
+  watcherEligible: false
+  refreshRate: 30
+
+- name: btf_medium_rectangle_variable_article
+  prebidName: medium_rectangle_variable
+  refreshRate: 30
+  sizes:
+  - [300, 250]
+  - [300, 250v]
+  - [300, 600]
+
+- name: in_map_legacy
+  watcherEligible: false
+
+- name: in_map
+  sizes:
+  - [300, 250]
+  - [300, 250v]
+  - [620, 366]
+  - [620, 371]
+  - [620, 415]
+  watcherEligible: false
+
+- name: athena_article
+  prebidName: desktop_athena_dynamic
+  sizes:
+  - [728, 90]
+  - [970, 250]
+
+- name: athena_hub
+  prebidName: desktop_article_body
+  sizes:
+  - [728, 90]
+  - [620, 366]
+  - [1060, 610]
+  - size: [970, 250]
+    filters:
+      viewportWidth:
+        min: 970
+
+- name: hub_river_leaderboard
+  sizes:
+  - [728, 90]
+  - [620, 366]
+
+- name: hub_river_med_rec
+  sizes:
+  - [300, 250]
+  - [300, 250v]
+  - [325, 203]
+  - [325, 204]
+  - [325, 236]
+  - [325, 508]
+  customSizes:
+  - placement: 1
+    sizes:
+    - [300, 250]
+    - [300, 250v]
+    - [325, 203]
+    - [325, 204]
+    - [325, 236]
+    - [325, 508]
+
+- name: gift_guide_leaderboard_variable_desktop
+  watcherEligible: false
+  sizes:
+  - [320, 50]
+  - [300, 250]
+  - [300, 250v]
+
+- name: gift_guide_leaderboard_mobile
+  watcherEligible: false
+  sizes:
+  - [320, 50]
+  - [300, 250]
+  - [300, 250v]
+
+- name: storystream_top_leaderboard_desktop
+  watcherEligible: false
+
+- name: storystream_bottom_leaderboard_variable_desktop
+  sizes:
+  - [620, 366]
+  - [620, 371]
+  - [620, 415]
+  - [728, 90]
+  watcherEligible: false
+
+- name: storystream_river_leaderboard_variable_desktop
+  watcherEligible: false
+  sizes:
+  - [620, 366]
+  - [620, 371]
+  - [620, 415]
+  - [728, 90]
+
+- name: storystream_top_leaderboard_mobile
+  watcherEligible: false
+  prebidName: mobile_leaderboard
+  sizes:
+  - [320, 50]
+  - [300, 250]
+  - [300, 250v]
+
+- name: storystream_bottom_leaderboard_variable_mobile
+  watcherEligible: false
+  prebidName: mobile_leaderboard
+  sizes:
+  - [320, 50]
+  - [300, 250]
+  - [300, 250v]
+
+- name: storystream_river_leaderboard_variable_mobile
+  watcherEligible: false
+  prebidName: mobile_leaderboard
+  sizes:
+  - [320, 50]
+  - [300, 250]
+  - [300, 250v]
+  customSizes:
+  - placement: 2
+    sizes:
+    - [320, 50]
+    - [300, 250]
+    - [300, 250v]
+    - [325, 508]
+    - [325, 203]
+    - [325, 236]
+    - [325, 204]
+
+- name: site_sponsorship_logo_white
+  watcherEligible: false
+
+- name: site_sponsorship_logo_color
+  watcherEligible: false
+
+- name: site_sponsorship_logo_mobile_white
+  watcherEligible: false
+
+- name: site_sponsorship_logo_mobile_color
+  watcherEligible: false
+
+- name: native_ad_mobile
+  sizes:
+  - [325, 508]
+  - [300, 250]
+  - [300, 250v]
+  - [300, 265]
+  - [325, 203]
+  - [325, 236]
+  - [325, 204]
+
+- name: native_ad_latest
+  watcherEligible: false
+
+- name: native_ad_video
+  watcherEligible: false
+
+- name: native_ad_ymal_link
+  watcherEligible: false
+
+- name: native_ad_linkset_link
+  watcherEligible: false
+
+- name: native_ad_content_link
+  watcherEligible: false
+
+- name: native_ad_module
+  watcherEligible: false
+
+- name: branded_content_feedback_form
+  watcherEligible: false
+
+- name: failsafe_article_med_rec_athena_mobile
+  watcherEligible: false
+  sizes:
+  - [300, 250]
+  - [300, 250v]
+  - [325, 508]
+  - [300, 265]
+  - [325, 203]
+  - [325, 236]
+  - [325, 204]
+
+# Add a mobile leaderboard on articles right below the header
+- name: mobile_upper_leaderboard
+  prebidName: mobile_leaderboard
+  className: m-ad__mobile_leaderboard
+  selector: body:not(.l-hub-page):not(.l-group-page) .l-header
+  sizes:
+  - [320, 50]
+  insertion: after
+  watcherEligible: false
+  filters:
+    viewportWidth:
+      max: 728
+
+# Add a desktop leaderboard right before the next clicks on articles
+- name: desktop_leaderboard_next_click
+  prebidName: desktop_article_body
+  className: m-ad__desktop_leaderboard
+  selector: .l-col__main .c-nextclick
+  sizes:
+  - [728, 90]
+  filters:
+    viewportWidth:
+      min: 728
+
+- name: csk_athena
+  sizes:
+  - [728, 90]
+  - [970, 250]
+
+- name: csk_athena_mobile
+  sizes:
+  - [325, 508]
+  - [325, 203]
+  - [325, 236]
+  - [325, 204]
+  - [300, 250]
+  - [300, 250v]

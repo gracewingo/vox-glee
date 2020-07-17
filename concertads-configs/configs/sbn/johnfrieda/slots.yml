@@ -1,0 +1,12 @@
+---
+- behavior: replace
+- name: athena
+  selector: ".hub-front-page .ad__athena_internal"
+  sizes:
+  - - 1030
+    - 590
+  holdSize:
+  - 300
+  - 295
+  refreshEligible: false
+  maxSlots: 1

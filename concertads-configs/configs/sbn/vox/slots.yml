@@ -1,0 +1,180 @@
+---
+- behavior: merge
+  remove:
+  - athena_article
+
+- name: desktop_leaderboard_variable
+  blockthrough: 
+    dataId: "5d83cece4b-377"
+
+- name: tablet_leaderboard
+  blockthrough: 
+    dataId: "5d83ced69f-377"
+
+- name: package_cover_ad
+  blockthrough: 
+    dataId: "5d83cedb0c-377"
+
+- name: btf_leaderboard_variable
+  blockthrough: 
+    dataId: "5d83cedefa-377"
+
+- name: tablet_btf_leaderboard
+  blockthrough: 
+    dataId: "5d83cee2f8-377"
+
+- name: desktop_feature_body
+  blockthrough: 
+    dataId: "5d83cee686-377"
+
+- name: desktop_feature_body_dynamic
+  blockthrough: 
+    dataId: "5d83cee9cd-377"
+
+- name: desktop_article_body
+  blockthrough: 
+    dataId: "5d83ceedf4-377"
+
+- name: hub_river_leaderboard
+  blockthrough: 
+    dataId: "5d83cef1cd-377"
+
+- name: gift_guide_leaderboard_variable_desktop
+  blockthrough: 
+    dataId: "5d83cef542-377"
+
+- name: storystream_top_leaderboard_desktop
+  blockthrough: 
+    dataId: "5d83cef9fe-377"
+
+- name: storystream_bottom_leaderboard_variable_desktop
+  blockthrough: 
+    dataId: "5d83cefde6-377"
+
+- name: storystream_river_leaderboard_variable_desktop
+  blockthrough: 
+    dataId: "5d83cf0270-377"
+
+- name: medium_rectangle_variable
+  blockthrough: 
+    dataId: "5d83cf0728-37"
+
+- name: btf_medium_rectangle_secondary
+  className: m-ad__btf_medium_rectangle
+  prebidName: desktop_article_medrec_dynamic
+  selector: body:not(.hub-front-page) .l-col__sidebar .c-newsletter_signup_box
+  sizes: 
+  - [300, 250]
+  holdSize: [300, 250]
+  maxSlots: 1
+  filters:
+    viewportWidth:
+      min: 881
+
+- name: btf_medium_rectangle_variable_article
+  blockthrough: 
+    dataId: "5d83cf0bba-377"
+
+- name: mobile_leaderboard_hub
+  blockthrough: 
+    dataId: "5d83cf0f61-377"
+
+- name: package_cover_ad_mobile
+  blockthrough: 
+    dataId: "5d83cf1509-377"
+
+- name: mobile_footer
+  blockthrough: 
+    dataId: "5d83cf19b6-377"
+
+- name: package_mobile_footer
+  blockthrough: 
+    dataId: "5d83cf1e66-377"
+
+- name: mobile_feature_body
+  blockthrough: 
+    dataId: "5d83cf22af-377"
+
+- name: athena_features_mobile
+  blockthrough: 
+    dataId: "5d83cf2817-377"
+
+- name: athena_features_dynamic_mobile
+  blockthrough: 
+    dataId: "5d83cf2bd0-377"
+
+- name: mobile_leaderboard
+  blockthrough: 
+    dataId: "5d83cf302b-377"
+
+- name: mobile_article_body
+  blockthrough: 
+    dataId: "5d83cf34ca-377"
+
+- name: native_ad_mobile
+  blockthrough: 
+    dataId: "5d83cf385f-377"
+
+- name: mobile_article_body_med_rec_dynamic
+  blockthrough: 
+    dataId: "5d83cf3bb1-377"
+
+- name: desktop_article_medrec_dynamic
+  blockthrough: 
+    dataId: "5d83cf3f3d-377"
+
+- name: medium_rectangle_short
+  blockthrough: 
+    dataId: "5d83cf426f-377"
+
+- name: btf_medium_rectangle_variable_hub
+  blockthrough: 
+    dataId: "5d83cf45d4-37"
+
+- name: in_map_legacy
+  blockthrough: 
+    dataId: "5d83cf4954-377"
+
+- name: in_map
+  blockthrough: 
+    dataId: "5d83cf4cf9-377"
+
+- name: mobile_med_rec_athena
+  blockthrough: 
+    dataId: "5d83cf5091-377"
+
+- name: hub_river_med_rec
+  blockthrough: 
+    dataId: "5d83cf53bc-377"
+
+- name: gift_guide_leaderboard_mobile
+  blockthrough: 
+    dataId: "5d83cf5717-377"
+
+- name: storystream_bottom_leaderboard_variable_mobile
+  blockthrough: 
+    dataId: "5d83cf5abd-377"
+
+- name: storystream_river_leaderboard_variable_mobile
+  blockthrough: 
+    dataId: "5d83cf5f1a-377"
+
+- name: mobile_leaderboard_group
+  blockthrough: 
+    dataId: "5d83cf62fd-377"
+
+- name: storystream_top_leaderboard_mobile
+  blockthrough: 
+    dataId: "5d83cf66d2-377"
+
+- name: csk_mobile_article
+  blockthrough: 
+    dataId: "5d83cf6a9c-377"
+
+- name: csk_athena
+  blockthrough: 
+    dataId: "5d83cf6e31-377"
+
+- name: csk_athena_mobile
+  blockthrough: 
+    dataId: "5d83cf71ed-377"

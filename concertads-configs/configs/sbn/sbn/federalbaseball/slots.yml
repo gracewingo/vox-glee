@@ -1,0 +1,5 @@
+---
+- behavior: merge
+  
+- name: right_rail_desktop
+  selector: .c-rock-list--fanposts, .entry_layout_unison_main .c-rock-list--trending

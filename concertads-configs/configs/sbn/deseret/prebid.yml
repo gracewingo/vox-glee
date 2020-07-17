@@ -1,0 +1,275 @@
+---
+biddingEnabled: true
+prebidEnabled: true
+timeout: 1000
+amazonPubId: 3176
+defaultConfig:
+  openx:
+    delDomain: sbnationbidder-d.openx.net
+    unit: 540300046
+  rubicon:
+    accountId: 7470
+    position: btf
+    siteId: 276276
+    zoneId: 1381108
+  consumable:
+    networkId: 9969
+    siteId: 1039096
+  teads:
+    pageId: 109778
+  rubi__mm:
+    accountId: 21670
+    siteId: 294140
+    zoneId: 1480274
+    zoneName: "Deseret News_MediaMath DC"
+  rubi__ttd:
+    accountId: 21670
+    siteId: 294142
+    zoneName: "Deseret News_TTD DC"
+    zoneId: 1480300
+btf_leaderboard_variable:
+  consumable:
+    unitId: 6448
+    unitName: cnsmbl-audio-728x90-slider-dr-d
+  openx:
+    unit: 540817485
+  appnexus:
+    placementId: 16598219
+  ix:
+    siteId: 416363
+btf_medium_rectangle_variable:
+  consumable:
+    unitId: 6449
+    unitName: cnsmbl-audio-300x250-slider-dr-d
+  openx:
+    unit: 540817494
+  appnexus:
+    placementId: 16598234
+  ix:
+    siteId: 416373
+desktop_article_body:
+  consumable:
+    unitId: 6448
+    unitName: cnsmbl-audio-728x90-slider-dr-d
+  openx:
+    unit: 540817487
+  appnexus:
+    placementId: 16598221
+  ix:
+    siteId: 416365
+  teads:
+    placementId: 119366
+desktop_article_medrec_dynamic:
+  consumable:
+    unitId: 6449
+    unitName: cnsmbl-audio-300x250-slider-dr-d
+  openx:
+    unit: 540817488
+  appnexus:
+    placementId: 16598223
+  ix:
+    siteId: 416366
+desktop_athena_dynamic:
+  concert:
+    partnerId: deseret_news
+  consumable:
+    unitId: 6448
+    unitName: cnsmbl-audio-728x90-slider-dr-d
+  openx:
+    unit: 540817508
+  appnexus:
+    placementId: 16598245
+  ix:
+    siteId: 416367
+desktop_dynamic:
+  consumable:
+    unitId: 6448
+    unitName: cnsmbl-audio-728x90-slider-dr-d
+    unitId: 6449
+    unitName: cnsmbl-audio-300x250-slider-dr-d
+  openx:
+    unit: 540817490
+  appnexus:
+    placementId: 16598225
+  ix:
+    siteId: 416368
+desktop_leaderboard_variable:
+  rubicon:
+    position: atf
+  consumable:
+    unitId: 6448
+    unitName: cnsmbl-audio-728x90-slider-dr-d
+  openx:
+    unit: 540817493
+  appnexus:
+    placementId: 16598230
+  ix:
+    siteId: 416369
+hub_river_leaderboard:
+  rubicon:
+    position: atf
+  consumable:
+    unitId: 6448
+    unitName: cnsmbl-audio-728x90-slider-dr-d
+  openx:
+    unit: 540817493
+  appnexus:
+    placementId: 16598230
+  ix:
+    siteId: 416370
+hub_river_med_rec:
+  consumable:
+    unitId: 6449
+    unitName: cnsmbl-audio-300x250-slider-dr-d
+  openx:
+    unit: 540817494
+  appnexus:
+    placementId: 16598231
+  ix:
+    siteId: 416364
+in_map:
+  consumable:
+    unitId: 6449
+    unitName: cnsmbl-audio-300x250-slider-dr-d
+  openx:
+    unit: 540817495
+  appnexus:
+    placementId: 16598232
+  ix:
+    siteId: 416372
+medium_rectangle_short:
+  consumable:
+    unitId: 6449
+    unitName: cnsmbl-audio-300x250-slider-dr-d
+  openx:
+    unit: 540817496
+  appnexus:
+    placementId: 16598233
+medium_rectangle_variable:
+  consumable:
+    unitId: 6449
+    unitName: cnsmbl-audio-300x250-slider-dr-d
+    unitId: 6452
+    unitName: cnsmbl-audio-300x600-dr-d
+  openx:
+    unit: 540817497
+  appnexus:
+    placementId: 16598234
+mobile_article_body:
+  consumable:
+    unitId: 6450
+    unitName: cnsmbl-audio-300x250-slider-dr-mw
+  openx:
+    unit: 540817498
+  appnexus:
+    placementId: 16598235
+  ix:
+    siteId: 41637
+  teads:
+    placementId: 119366
+mobile_footer:
+  consumable:
+    unitId: 6451
+    unitName: cnsmbl-audio-320x50-slider-dr-mw
+    unitId: 6450
+    unitName: cnsmbl-audio-300x250-slider-dr-mw
+  openx:
+    unit: 540817501
+  appnexus:
+    placementId: 16598238
+  ix:
+    siteId: 416376
+mobile_med_rec_athena:
+  concert:
+    partnerId: deseret_news 
+  rubicon:
+    position: atf
+  consumable:
+    unitId: 6450
+    unitName: cnsmbl-audio-300x250-slider-dr-mw
+  openx:
+    unit: 540817503
+  appnexus:
+    placementId: 16598240
+  ix:
+    siteId: 416374
+native_ad_mobile:
+  consumable:
+    unitId: 6450
+    unitName: cnsmbl-audio-300x250-slider-dr-mw
+  openx:
+    unit: 540817504
+  appnexus:
+    placementId: 16598241
+tablet_btf_leaderboard:
+  consumable:
+    unitId: 6448
+    unitName: cnsmbl-audio-728x90-slider-dr-d
+  openx:
+    unit: 540817514
+  appnexus:
+    placementId: 16598252
+tablet_leaderboard:
+  rubicon:
+    position: atf
+  consumable:
+    unitId: 6448
+    unitName: cnsmbl-audio-728x90-slider-dr-d
+  openx:
+    unit: 540817515
+  appnexus:
+    placementId: 16598253
+  ix:
+    siteId: 416380
+mobile_leaderboard:
+  rubicon:
+    position: atf
+  consumable:
+    unitId: 6451
+    unitName: cnsmbl-audio-320x50-slider-dr-mw
+    unitId: 6450
+    unitName: cnsmbl-audio-300x250-slider-dr-mw
+  openx:
+    unit: 540817502
+  appnexus:
+    placementId: 16598239
+  ix:
+    siteId: 416377
+mobile_article_body_med_rec_dynamic:
+  consumable:
+    unitId: 6450
+    unitName: cnsmbl-audio-300x250-slider-dr-mw
+  openx:
+    unit: 540817499
+  appnexus:
+    placementId: 16598236
+  teads:
+    placementId: 119366
+medium_rectangle_variable_section_front:
+  rubicon:
+    position: atf
+  consumable:
+    unitId: 6449
+    unitName: cnsmbl-audio-300x250-slider-dr-d
+  openx:
+    unit: 540817496
+  appnexus:
+    placementId: 16598233
+  ix:
+    siteId: 416364
+desktop_feature_body_dynamic:
+  teads:
+    placementId: 119366
+mobile_feature_body:
+  teads:
+    placementId: 119366
+athena_features_mobile:
+  concert:
+    partnerId: deseret_news
+  teads:
+    placementId: 119366
+athena_features_dynamic_mobile:
+  concert:
+    partnerId: deseret_news
+  teads:
+    placementId: 119366

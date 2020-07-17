@@ -1,0 +1,183 @@
+---
+- behavior: merge
+  remove:
+  - athena_article
+
+- name: desktop_leaderboard_variable
+  blockthrough: 
+    dataId: "5d83d04fe4-377"
+
+- name: tablet_leaderboard
+  blockthrough: 
+    dataId: "5d83d05314-377"
+
+- name: package_cover_ad
+  blockthrough: 
+    dataId: "5d83d057fb-377"
+
+- name: btf_leaderboard_variable
+  blockthrough: 
+    dataId: "5d83d05d06-377"
+
+- name: tablet_btf_leaderboard
+  blockthrough: 
+    dataId: "5d83d06128-377"
+
+- name: desktop_feature_body
+  blockthrough: 
+    dataId: "5d83d06769-377"
+
+- name: desktop_feature_body_dynamic
+  blockthrough: 
+    dataId: "5d83d06c5c-377"
+
+- name: desktop_article_body
+  blockthrough: 
+    dataId: "5d83d07098-377"
+
+- name: hub_river_leaderboard
+  blockthrough: 
+    dataId: "5d83d074ea-377"
+
+- name: gift_guide_leaderboard_variable_desktop
+  blockthrough: 
+    dataId: "5d83d07b24-377"
+
+- name: storystream_top_leaderboard_desktop
+  blockthrough: 
+    dataId: "5d83d07f0e-377"
+
+- name: storystream_bottom_leaderboard_variable_desktop
+  blockthrough: 
+    dataId: "5d83d082f9-377"
+
+- name: storystream_river_leaderboard_variable_desktop
+  blockthrough: 
+    dataId: "5d83d086c7-377"
+
+- name: medium_rectangle_variable
+  blockthrough: 
+    dataId: "5d83d08a72-377"
+
+- name: btf_medium_rectangle_variable_article
+  blockthrough: 
+    dataId: "5d83d08e1d-377"
+
+- name: mobile_leaderboard_hub
+  blockthrough: 
+    dataId: "5d83d09169-377"
+
+- name: package_cover_ad_mobile
+  blockthrough: 
+    dataId: "5d83d094ed-377"
+
+- name: mobile_footer
+  blockthrough: 
+    dataId: "5d83d098b1-377"
+
+- name: package_mobile_footer
+  blockthrough: 
+    dataId: "5d83d09bae-377"
+
+- name: mobile_feature_body
+  blockthrough: 
+    dataId: "5d83d09eb3-377"
+
+- name: athena_features_mobile
+  blockthrough: 
+    dataId: "5d83d0a32e-377"
+
+- name: athena_features_dynamic_mobile
+  blockthrough: 
+    dataId: "5d83d0a752-377"
+
+- name: mobile_leaderboard
+  blockthrough: 
+    dataId: "5d83d0ab7d-377"
+
+- name: mobile_article_body
+  blockthrough: 
+    dataId: "5d83d0aef3-377"
+
+- name: native_ad_mobile
+  blockthrough: 
+    dataId: "5d83d0b28e-377"
+
+- name: mobile_article_body_med_rec_dynamic
+  blockthrough: 
+    dataId: "5d83d0b5e9-377"
+
+- name: desktop_article_medrec_dynamic
+  blockthrough: 
+    dataId: "5d83d0b8f2-377"
+
+- name: medium_rectangle_short
+  blockthrough: 
+    dataId: "5d83d0bca7-377"
+
+- name: btf_medium_rectangle_variable_hub
+  blockthrough: 
+    dataId: "5d83d0c065-377"
+
+- name: in_map_legacy
+  blockthrough: 
+    dataId: "5d83d0c4f9-377"
+
+- name: in_map
+  blockthrough: 
+    dataId: "5d83d0c926-377"
+
+- name: mobile_med_rec_athena
+  blockthrough: 
+    dataId: "5d83d0cc5f-377"
+
+- name: hub_river_med_rec
+  blockthrough: 
+    dataId: "5d83d0cf83-377"
+
+- name: gift_guide_leaderboard_mobile
+  blockthrough: 
+    dataId: "5d83d0d440-377"
+
+- name: storystream_bottom_leaderboard_variable_mobile
+  blockthrough: 
+    dataId: "5d83d0d789-377"
+
+- name: storystream_river_leaderboard_variable_mobile
+  blockthrough: 
+    dataId: "5d83d0db23-377"
+
+- name: mobile_leaderboard_group
+  blockthrough: 
+    dataId: "5d83d0deae-377"
+
+- name: storystream_top_leaderboard_mobile
+  blockthrough: 
+    dataId: "5d83d0e2d4-377"
+
+- name: csk_mobile_article
+  blockthrough: 
+    dataId: "5d83d0e617-377"
+
+- name: csk_athena
+  blockthrough: 
+    dataId: "5d83d0e9ef-377"
+
+- name: csk_athena_mobile
+  blockthrough: 
+    dataId: "5d83d0ed3b-377"
+
+- name: failsafe_article_med_rec_athena_mobile
+  selector: body:not(.entry_template_stream):not(.entry_template_package_landing):not(.entry_template_mapstack) .c-entry-content > *:last-child
+
+- name: btf_medium_rectangle_secondary
+  className: m-ad__btf_medium_rectangle
+  prebidName: desktop_article_medrec_dynamic
+  selector: body:not(.hub-front-page) .l-col__sidebar .c-newsletter_signup_box, body:not(.hub-front-page) .l-col__sidebar .c-rock-community-info
+  sizes: 
+  - [300, 250]
+  holdSize: [300, 250]
+  maxSlots: 1
+  filters:
+    viewportWidth:
+      min: 881

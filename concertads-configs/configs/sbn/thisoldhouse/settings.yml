@@ -1,0 +1,7 @@
+refreshRate: 60
+experiments: []
+concertTrackingEnabled: false
+ixLibraryEnabled: false
+
+containerLimits:
+  .c-entry-content: 20

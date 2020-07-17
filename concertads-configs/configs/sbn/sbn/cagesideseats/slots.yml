@@ -1,0 +1,18 @@
+---
+- behavior: merge
+- name: mobile_leaderboard_atf
+  className: m-ad__mobile_leaderboard
+  prebidName: mobile_leaderboard
+  selector: .entry_template_standard .c-entry-content blockquote
+  sizes:
+  - [300, 250]
+  - [300, 250v]
+  holdSize: [300, 250]
+  insertion: after
+  maxSlots: 1
+  filters:
+    viewportWidth:
+      max: 728
+    showIfPresent:
+      selector: head > link[rel='canonical'][href*='rumor-roundup']
+

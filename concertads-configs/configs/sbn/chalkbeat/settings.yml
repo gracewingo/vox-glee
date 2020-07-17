@@ -1,0 +1,8 @@
+refreshRate: 45
+experiments: []
+concertTrackingEnabled: false
+ixLibraryEnabled: false
+slotDisplay: 
+  className: sponsorship-message
+  message: Become a Chalkbeat sponsor
+  link: https://www.chalkbeat.org/pages/become-a-chalkbeat-sponsor

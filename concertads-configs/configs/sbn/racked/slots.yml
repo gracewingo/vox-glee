@@ -1,0 +1,20 @@
+---
+- behavior: merge
+
+- name: medium_rectangle_variable
+  selector: .l-col__sidebar:not(.c-sports-blog-directory__filter) > div:first-of-type, .l-article-sidebar > *:first-child
+  sizes:
+  - [300, 250]
+  - [300, 600]
+  - [300, 250v]
+  holdSize: [300, 250]
+  maxSlots: 1
+  allowSiblings: true # for btf_medium_rectangle_variable_article
+  filters:
+    viewportWidth:
+      min: 881
+    hideIfPresent:
+      selector: .l-full-archives
+    elementHeight:
+        selector: .l-article-body-segment .l-col__main, .l-main-content > .l-col__main
+        min: 2001

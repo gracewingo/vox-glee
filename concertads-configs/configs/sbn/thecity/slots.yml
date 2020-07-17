@@ -1,0 +1,7 @@
+- behavior: merge
+
+- name: medium_rectangle_variable
+  selector: .c-newsletter_signup_box.c-newsletter_signup_box--breaker
+  insertion: after
+  
+  

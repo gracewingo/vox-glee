@@ -1,0 +1,5 @@
+---
+- behavior: merge
+- name: native_ad_latest
+  sizes:
+  - [300, 100]

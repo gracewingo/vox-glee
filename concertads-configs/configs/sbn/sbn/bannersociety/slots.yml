@@ -1,0 +1,30 @@
+---
+- behavior: merge
+
+# Remove mobile ads on the home page
+# since there is no river
+
+- name: btf_leaderboard_variable
+  filters:
+    viewportWidth:
+      min: 881
+    hideIfPresent:
+      selector: .hub-front-page
+
+- name: mobile_footer
+  filters:
+    viewportWidth:
+      min: 0
+      max: 728
+    hideIfPresent:
+      selector: .hub-front-page
+
+- name: btf_medium_rectangle_variable_hub
+  filters:
+    viewportWidth:
+      min: 881
+    hideIfPresent:
+      selector: .l-full-archives, .l-group-page
+
+- name: right_rail_desktop
+  selector: .c-rock-list--fanposts, .entry_layout_unison_main .c-rock-list--trending

@@ -1,0 +1,29 @@
+---
+- behavior: replace
+
+- name: mobile_article_body_med_rec_dynamic
+  selector: "#block1, #block3, #block5"
+  sizes:
+  - [300, 250]
+  - [300, 250v]
+  - [320, 50]
+  previewHoldSize: [300, 250]
+  maxSlots: 3
+  insertion: after
+  filters:
+    spacing:
+      before: 150
+    viewportWidth:
+      max: 779
+
+- name: athena
+  selector: "#block1, #block3, #block5"
+  sizes:
+  - [1030, 590]
+  - [728, 90]
+  holdSize: [728, 295]
+  insertion: after
+  maxSlots: 3
+  filters:
+    viewportWidth:
+      min: 780

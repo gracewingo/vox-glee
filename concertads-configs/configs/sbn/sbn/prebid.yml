@@ -1,0 +1,312 @@
+---
+biddingEnabled: true
+prebidEnabled: true
+timeout: 1500
+amazonPubId: 3176
+priceGranularity: dense
+defaultConfig:
+  openx:
+    delDomain: sbnationbidder-d.openx.net
+    unit: 538623519
+  rubicon:
+    accountId: 7470
+    position: btf
+    siteId: 23308
+    zoneId: 185808
+  rubiconLite:
+    accountId: 18288
+    siteId: 193902
+    sizes: [213, 270, 271, 272]
+    position: btf
+  consumable:
+    networkId: 9969
+    siteId: 1039096
+  teads:
+    pageId: 104312
+  usersync:
+    userIds:
+      - name: "unifiedId"
+        params:
+          url: "https://match.adsrvr.org/track/rid?ttd_pid=gs8reto&fmt=json"
+        storage:
+          type: "cookie"
+          name: "pbjs-unifiedid"
+          expires: 14
+        syncDelay: 3000
+prelude:
+  trustx:
+    uid: 2663
+reskin:
+  trustx:
+    uid: 2664
+desktop_leaderboard_variable:
+  trustx:
+    uid: 2665
+  appnexus:
+    placementId: 9887250
+  ix:
+    siteId: 186858
+  rubicon:
+    position: atf
+  triplelift:
+    inventoryCode: sbnation_leaderboard_970x250_desktop
+  consumable:
+    unitId: 5498
+    unitName: cnsmbl-audio-728x90-slider
+medium_rectangle_variable:
+  trustx:
+    uid: 2666
+  appnexus:
+    placementId: 9887251
+  ix:
+    siteId: 186859
+  rubicon:
+    position: atf
+  triplelift:
+    inventoryCode: sbnation_300x250_desktop
+  consumable:
+    unitId: 5482
+    unitName: cnsmbl-audio-300x250-slider
+btf_medium_rectangle_variable:
+  trustx:
+    uid: 2668
+  appnexus:
+    placementId: 9887253
+  ix:
+    siteId: 186860
+  consumable:
+    unitId: 5482
+    unitName: cnsmbl-audio-300x250-slider
+desktop_article_medrec_dynamic:
+  trustx:
+    uid: 2669
+  appnexus:
+    placementId: 11807771
+  ix:
+    siteId: 212995
+  consumable:
+    unitId: 5482
+    unitName: cnsmbl-audio-300x250-slider
+btf_leaderboard_variable:
+  trustx:
+    uid: 2670
+  appnexus:
+    placementId: 9887254
+  ix:
+    siteId: 186861
+  consumable:
+    unitId: 5498
+    unitName: cnsmbl-audio-728x90-slider
+native_ad_latest:
+  trustx:
+    uid: 2671
+native_ad_ymal_link:
+  trustx:
+    uid: 2672
+mobile_leaderboard:
+  trustx:
+    uid: 2673
+  appnexus:
+    placementId: 9887256
+  ix:
+    siteId: 186867
+  rubicon:
+    position: atf
+  triplelift:
+    inventoryCode: sbnation_leaderboard_300x250_mobile
+  consumable:
+    unitId: 5514
+    unitName: cnsmbl-audio-320x50-slider
+mobile_article_body:
+  teads:
+    placementId: 112921
+  trustx:
+    uid: 2674
+  appnexus:
+    placementId: 11807768
+  ix:
+    siteId: 212992
+  triplelift:
+    inventoryCode: sbnation_300x250_mobile
+  rubiconLite:
+    zoneId: 944782
+  consumable:
+    unitId: 5506
+    unitName: cnsmbl-audio-300x250-slider
+native_ad_mobile:
+  teads:
+    placementId: 112921
+  trustx:
+    uid: 2675
+  consumable:
+    unitId: 5514
+    unitName: cnsmbl-audio-320x50-slider
+mobile_article_body_med_rec_dynamic:
+  teads:
+    placementId: 112921
+  trustx:
+    uid: 2676
+  appnexus:
+    placementId: 11807770
+  ix:
+    siteId: 212994
+  rubiconLite:
+    zoneId: 944782
+  consumable:
+    unitId: 5506
+    unitName: cnsmbl-audio-300x250-slider
+mobile_footer:
+  trustx:
+    uid: 2677
+  appnexus:
+    placementId: 9887258
+  ix:
+    siteId: 186868
+  consumable:
+    unitId: 5514
+    unitName: cnsmbl-audio-320x50-slider
+tablet_leaderboard:
+  trustx:
+    uid: 2678
+  appnexus:
+    placementId: 9887259
+  ix:
+    siteId: 186863
+  rubicon:
+    position: atf
+  consumable:
+    unitId: 5498
+    unitName: cnsmbl-audio-728x90-slider
+tablet_medium_rectangle:
+  trustx:
+    uid: 2679
+  appnexus:
+    placementId: 9887260
+  ix:
+    siteId: 186864
+  rubicon:
+    position: atf
+  consumable:
+    unitId: 5482
+    unitName: cnsmbl-audio-300x250-slider
+tablet_btf_leaderboard:
+  trustx:
+    uid: 2680
+  appnexus:
+    placementId: 9887262
+  ix:
+    siteId: 186866
+  consumable:
+    unitId: 5498
+    unitName: cnsmbl-audio-728x90-slider
+native_ad_content_link:
+  trustx:
+    uid: 2681
+  triplelift:
+    inventoryCode: sbnation_infeed_desktop
+hub_river_leaderboard:
+  trustx:
+    uid: 2682
+  appnexus:
+    placementId: 11807773
+  ix:
+    siteId: 212996
+  rubiconLite:
+    zoneId: 944782
+  consumable:
+    unitId: 5498
+    unitName: cnsmbl-audio-728x90-slider
+hub_river_med_rec:
+  trustx:
+    uid: 2684
+  appnexus:
+    placementId: 11807774
+  ix:
+    siteId: 212997
+  consumable:
+    unitId: 5482
+    unitName: cnsmbl-audio-300x250-slider
+mobile_med_rec_athena:
+  trustx:
+    uid: 2685
+  appnexus:
+    placementId: 9887257
+  ix:
+    siteId: 186776
+  rubicon:
+    position: atf
+  triplelift:
+    inventoryCode: sbnation_300x250_midcontent_mobile
+  rubiconLite:
+    zoneId: 944782
+    position: atf
+  consumable:
+    unitId: 5506
+    unitName: cnsmbl-audio-300x250-slider
+athena:
+  appnexus:
+    placementId: 9887252
+  ix:
+    siteId: 186862
+  rubicon:
+    position: atf
+  rubiconLite:
+    zoneId: 944782
+    position: atf
+  consumable:
+    unitId: 5482
+    unitName: cnsmbl-audio-300x250-slider
+btf_tablet_medium_rectangle:
+  appnexus:
+    placementId: 9887261
+  ix:
+    siteId: 186865
+  consumable:
+    unitId: 5482
+    unitName: cnsmbl-audio-300x250-slider
+desktop_article_body:
+  teads:
+    placementId: 112921
+  appnexus:
+    placementId: 11807769
+  ix:
+    siteId: 212993
+  rubiconLite:
+    zoneId: 944782
+  consumable:
+    unitId: 5482
+    unitName: cnsmbl-audio-300x250-slider
+in_map:
+  appnexus:
+    placementId: 11807772
+  ix:
+    disabled: true
+  rubiconLite:
+    zoneId: 944782
+  consumable:
+    unitId: 5482
+    unitName: cnsmbl-audio-300x250-slider
+athena_features:
+  appnexus:
+    placementId: 11807775
+  ix:
+    siteId: 212998
+  rubiconLite:
+    zoneId: 944782
+  consumable:
+    unitId: 5482
+    unitName: cnsmbl-audio-300x250-slider
+  teads:
+    placementId: 112921
+athena_features_dynamic:
+  appnexus:
+    placementId: 11807776
+  ix:
+    siteId: 212999
+  rubiconLite:
+    zoneId: 944782
+  consumable:
+    unitId: 5482
+    unitName: cnsmbl-audio-300x250-slider
+  teads:
+    placementId: 112921

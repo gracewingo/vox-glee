@@ -1,0 +1,23 @@
+---
+- behavior: merge
+
+- name: native_ad_latest
+  sizes:
+  - - 300
+    - 100
+  - size:
+    - 300
+    - 250
+    filters:
+      showIfPresent:
+        selector: "#rock-tickets"
+
+# - name: stubhub_widget
+#   selector: ".l-col__sidebar > div:last-of-type"
+#   insertion: after
+#   sizes:
+#   - - 300
+#     - 317
+
+- name: right_rail_desktop
+  selector: .c-rock-list--fanposts, .entry_layout_unison_main .c-rock-list--trending

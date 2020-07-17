@@ -1,0 +1,63 @@
+---
+- behavior: replace
+
+- name: mobile_article_body_med_rec_dynamic
+  selector: ".ad-placemarker-mobile"
+  sizes:
+  - [300, 250]
+  - [300, 250v]
+  - [320, 50]
+  previewHoldSize: [300, 250]
+  maxSlots: 3
+  insertion: after
+  filters:
+    viewportWidth:
+      max: 779
+      
+- name: editorial_app_med_rec
+  selector: ".ad-placemarker-med-rec"
+  sizes:
+  - [300, 250]
+  - [300, 250v]
+  previewHoldSize: [300, 250]
+  maxSlots: 3
+  insertion: after
+
+- name: athena
+  selector: ".athena-ad-placemarker"
+  sizes:
+  - [1030, 590]
+  - [728, 90]
+  - [970, 250]
+  holdSize: [728, 295]
+  insertion: after
+  maxSlots: 3
+  filters:
+    viewportWidth:
+      min: 780
+
+- name: editorial_app_athena_mobile
+  prebidName: mobile_med_rec_athena
+  selector: ".athena-ad-placemarker-mobile"
+  sizes:
+  - [1030, 590]
+  - [325, 508]
+  - [325, 203]
+  - [325, 236]
+  - [325, 204]
+  - [300, 250] 
+  - [300, 250v]      
+  holdSize: [300, 250]
+  filters: 
+    viewportWidth:
+      max: 779
+
+- name: article_sponsorship
+  selector: ".light-logo-ad-placemarker-desktop"
+  insertion: after
+  maxSlots: 1
+  sizes:
+  - [200, 40]
+  prebidEligible: false
+  refreshEligible: false
+  watcherEligible: false

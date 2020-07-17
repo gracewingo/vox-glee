@@ -1,0 +1,249 @@
+---
+biddingEnabled: true
+prebidEnabled: true
+timeout: 1500
+amazonPubId: 3176
+defaultConfig:
+  openx:
+    delDomain: sbnationbidder-d.openx.net
+    unit: 538623516
+  rubicon:
+    accountId: 7470
+    position: btf
+    siteId: 40736
+    zoneId: 185790
+  rubiconLite:
+    accountId: 18288
+    siteId: 193902
+    sizes: [213, 270, 271, 272]
+    position: btf
+  consumable:
+    networkId: 9969
+    siteId: 1039096
+  teads:
+    pageId: 106959
+  rubi__mm:
+    accountId: 21670
+    siteId: 294140
+    zoneName: "Racked_MediaMath DC"
+    zoneId: 1480280
+  rubi__ttd:
+    accountId: 21670
+    siteId: 294142
+    zoneName: "Racked_TTD DC"
+    zoneId: 1480306
+  usersync:
+    userIds:
+      - name: "unifiedId"
+        params:
+          url: "https://match.adsrvr.org/track/rid?ttd_pid=gs8reto&fmt=json"
+        storage:
+          type: "cookie"
+          name: "pbjs-unifiedid"
+          expires: 14
+        syncDelay: 3000
+prelude:
+  trustx:
+    uid: 2663
+reskin:
+  trustx:
+    uid: 2664
+desktop_leaderboard_variable:
+  trustx:
+    uid: 2665
+  appnexus:
+    placementId: 9887470
+  ix:
+    siteId: 186892
+  rubicon:
+    position: atf
+  triplelift:
+    inventoryCode: racked_leaderboard_desktop
+medium_rectangle_variable:
+  trustx:
+    uid: 2666
+  appnexus:
+    placementId: 9887471
+  ix:
+    siteId: 186893
+  rubicon:
+    position: atf
+  triplelift:
+    inventoryCode: racked_300x250_desktop
+btf_medium_rectangle_variable:
+  trustx:
+    uid: 2668
+  appnexus:
+    placementId: 9887473
+  ix:
+    siteId: 186894
+desktop_article_medrec_dynamic:
+  trustx:
+    uid: 2669
+  appnexus:
+    placementId: 11890329
+  ix:
+    siteId: 212966
+btf_leaderboard_variable:
+  trustx:
+    uid: 2670
+  appnexus:
+    placementId: 9887474
+  ix:
+    siteId: 186895
+native_ad_latest:
+  trustx:
+    uid: 2671
+native_ad_ymal_link:
+  trustx:
+    uid: 2672
+mobile_leaderboard:
+  trustx:
+    uid: 2673
+  appnexus:
+    placementId: 9887475
+  ix:
+    siteId: 186901
+  rubicon:
+    position: atf
+mobile_article_body:
+  teads:
+    placementId: 116057
+  trustx:
+    uid: 2674
+  appnexus:
+    placementId: 11890326
+  ix:
+    siteId: 212961
+  rubiconLite:
+    zoneId: 944796
+native_ad_mobile:
+  teads:
+    placementId: 116057
+  trustx:
+    uid: 2675
+mobile_article_body_med_rec_dynamic:
+  teads:
+    placementId: 116057
+  trustx:
+    uid: 2676
+  appnexus:
+    placementId: 11890328
+  ix:
+    siteId: 212961
+  rubiconLite:
+    zoneId: 944796
+mobile_footer:
+  trustx:
+    uid: 2677
+  appnexus:
+    placementId: 9887477
+  ix:
+    siteId: 186903
+tablet_leaderboard:
+  trustx:
+    uid: 2678
+  appnexus:
+    placementId: 9887478
+  ix:
+    siteId: 186897
+  rubicon:
+    position: atf
+tablet_medium_rectangle:
+  trustx:
+    uid: 2679
+  appnexus:
+    placementId: 9887479
+  ix:
+    siteId: 186898
+  rubicon:
+    position: atf
+tablet_btf_leaderboard:
+  trustx:
+    uid: 2680
+  appnexus:
+    placementId: 9887481
+  ix:
+    siteId: 186900
+native_ad_content_link:
+  trustx:
+    uid: 2681
+hub_river_leaderboard:
+  trustx:
+    uid: 2682
+  appnexus:
+    placementId: 11890330
+  ix:
+    siteId: 212968
+  rubiconLite:
+    zoneId: 944796
+hub_river_med_rec:
+  trustx:
+    uid: 2684
+  appnexus:
+    placementId: 11890332
+  ix:
+    siteId: 212969
+mobile_med_rec_athena:
+  trustx:
+    uid: 2685
+  appnexus:
+    placementId: 9887476
+  ix:
+    siteId: 186902
+  rubicon:
+    position: atf
+  triplelift:
+    inventoryCode: "racked_300x250_midcontent_mobile\t"
+  rubiconLite:
+    zoneId: 944796
+    position: atf
+athena:
+  appnexus:
+    placementId: 9887472
+  ix:
+    siteId: 186896
+  rubicon:
+    position: atf
+  rubiconLite:
+    zoneId: 944796
+    position: atf
+btf_tablet_medium_rectangle:
+  appnexus:
+    placementId: 9887480
+  ix:
+    siteId: 186899
+in_map:
+  appnexus:
+    placementId: 9887473
+  ix:
+    siteId: 186894
+  rubiconLite:
+    zoneId: 944796
+desktop_article_body:
+  teads:
+    placementId: 116057
+  appnexus:
+    placementId: 11890327
+  ix:
+    siteId: 212963
+  rubiconLite:
+    zoneId: 944796
+athena_features:
+  appnexus:
+    placementId: 11890333
+  ix:
+    siteId: 212971
+  rubiconLite:
+    zoneId: 944796
+  teads:
+    placementId: 116057
+athena_features_dynamic:
+  appnexus:
+    placementId: 11890334
+  ix:
+    siteId: 212972
+  rubiconLite:
+    zoneId: 944796
+  teads:
+    placementId: 116057

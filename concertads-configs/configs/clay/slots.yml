@@ -1,0 +1,1199 @@
+---
+
+# Google Buy Button
+- name: buy_button
+
+########
+## Manual placements
+########
+
+# Mobile editorially placed athena
+- name: editorially_placed_athena_mobile
+  className: m-ad__editorially_placed_athena
+  prebidName: mobile_article_body
+  selector: .m-ad.m-ad__editorial-athena-placement
+  sizes:
+  - [1030, 590]
+  - [620, 366]
+  - [325, 508]
+  - [325, 203]
+  - [325, 236]
+  - [325, 204]
+  - [300, 250]
+  holdSize: [300, 500]
+  filters:
+    viewportWidth:
+      max: 727
+
+# Desktop editorially placed athena
+- name: editorially_placed_athena_desktop
+  className: m-ad__editorially_placed_athena
+  prebidName: desktop_article_body
+  selector: .m-ad.m-ad__editorial-athena-placement
+  sizes:
+  - [1030, 590]
+  - [728, 90]
+  - size: [1060, 610]
+    filters:
+      containerWidth:
+        min: 1060
+  - size: [620, 366]
+    filters:
+      containerWidth:
+        max: 1059
+  - size: [1060, 619]
+    filters:
+      containerWidth:
+        min: 1060
+  - size: [1060, 694]
+    filters:
+      containerWidth:
+        min: 1060
+  holdSize: [728, 295]
+  filters:
+    viewportWidth:
+      min: 728
+
+- name: editorially_placed_leaderboard
+  prebidName: desktop_article_body
+  selector: .m-ad.m-ad__editorial-leaderboard-placement
+  sizes:
+  - [728, 90]
+  holdSize: [728, 90]
+  filters:
+    viewportWidth:
+      min: 728
+
+# Within the river - These are DFP Native Real Estate Quicklistings
+# Needs to be listed in config/on the page before the river desktop and mobile leaderboards
+# b/c the leaderboards include a spacing exception for these specific slots
+- name: native_quicklistings
+  selector: .l-hub-page .river-segment-0 .c-compact-river__entry:nth-child(2), .l-hub-page .river-segment-0 .c-compact-river__entry:nth-child(6), .l-hub-page .river-segment-0 .c-compact-river__entry:nth-child(8), .l-hub-page .river-segment-0 .c-compact-river__entry:nth-child(10)
+  sizes:
+  - fluid
+  prebidEligible: false
+  refreshEligible: false
+  watcherEligible: false
+  filters:
+    matchDomain:
+      domains: curbed.com, atlanta.curbed.com, austin.curbed.com, boston.curbed.com, chicago.curbed.com, detroit.curbed.com, hamptons.curbed.com, la.curbed.com, miami.curbed.com, nola.curbed.com, ny.curbed.com, philly.curbed.com, sf.curbed.com, seattle.curbed.com, dc.curbed.com
+
+# In Latest Stories river at the bottom of Curbed articles, insert 1 after first story
+- name: native_quicklistings_article
+  selector: .l-segment .l-segment .c-compact-river__entry
+  sizes:
+  - fluid
+  maxSlots: 1
+  prebidEligible: false
+  refreshEligible: false
+  watcherEligible: false
+  insertion: after
+  filters:
+    matchDomain:
+      domains: curbed.com, atlanta.curbed.com, austin.curbed.com, boston.curbed.com, chicago.curbed.com, detroit.curbed.com, hamptons.curbed.com, la.curbed.com, miami.curbed.com, nola.curbed.com, ny.curbed.com, philly.curbed.com, sf.curbed.com, seattle.curbed.com, dc.curbed.com
+
+########
+## Chorus Storytelling Kit
+########
+
+- name: csk_mobile_article
+  prebidName: mobile_article_body_med_rec_dynamic
+  className: m-ad__csk_mobile_article
+  selector: .ad-placemarker-mobile
+  sizes:
+  - [300, 250]
+  - [320, 50]
+  previewHoldSize: [300, 250]
+  maxSlots: 3
+  insertion: after
+  filters:
+    viewportWidth:
+      max: 779
+
+- name: csk_athena
+  prebidName: athena
+  className: m-ad__athena
+  selector: .ad-placemarker-athena
+  sizes:
+  - [1030, 590]
+  - [728, 90]
+  - [970, 250]
+  holdSize: [728, 295]
+  insertion: after
+  maxSlots: 3
+  filters:
+    viewportWidth:
+      min: 780
+
+- name: csk_athena_mobile
+  prebidName: mobile_med_rec_athena
+  selector: .ad-placemarker-athena-mobile
+  sizes:
+  - [1030, 590]
+  - [325, 508]
+  - [325, 203]
+  - [325, 236]
+  - [325, 204]
+  - [300, 250]
+  holdSize: [300, 250]
+  filters:
+    viewportWidth:
+      max: 779
+
+- name: csk_article_sponsorship
+  className: m-ad__article_sponsorship
+  selector: .ad-placemarker-light-logo-desktop
+  insertion: after
+  maxSlots: 1
+  sizes:
+  - [200, 40]
+  prebidEligible: false
+  refreshEligible: false
+  watcherEligible: false
+
+########
+## Top of page
+########
+
+- name: prelude
+  selector: .l-root
+  reveal:
+    enabled: true
+    offset: 0
+    zIndex: -1000
+    observationTarget: .l-header
+  sizes:
+  - [1400, 600]
+  - [1180, 450]
+  prebidEligible: false
+  refreshEligible: false
+  watcherEligible: false
+  allowSiblings: true
+  filters:
+    viewportWidth:
+      min: 881
+    deviceType: desktop
+
+- name: reskin
+  selector: .l-root
+  sizes:
+  - [2, 2]
+  prebidEligible: false
+  refreshEligible: false
+  watcherEligible: false
+  filters:
+    viewportWidth:
+      min: 1280
+    hideIfPresent: # We hide these on features and map hubs.
+      selector: .l-feature, .c-maps-hub
+
+########
+## Leaderboards
+########
+
+- name: desktop_leaderboard_variable
+  selector: .l-header
+  sizes:
+  - [728, 90]
+  - [970, 90]
+  - [1020, 90]
+  holdSize: [728, 90]
+  insertion: after
+  filters:
+    viewportWidth:
+      min: 881
+    hideIfPresent:
+      selector: .l-feature # We hide these on features.
+
+#  temporarily removing until we can revisit the placement
+# - name: tablet_leaderboard
+#   selector: .l-header
+#   sizes:
+#   - [728, 90]
+#   holdSize: [728, 90]
+#   insertion: after
+#   filters:
+#     viewportWidth:
+#       min: 729
+#       max: 880
+
+# On hub pages, place the mobile leaderboard slot under the header
+- name: mobile_leaderboard_hub
+  className: m-ad__mobile_leaderboard
+  prebidName: mobile_leaderboard
+  selector: .l-hub-page .l-header
+  sizes:
+  - [320, 50]
+  - [300, 250]
+  holdSize: [300, 250]
+  insertion: after
+  maxSlots: 1
+  filters:
+    viewportWidth:
+      max: 728
+
+# On group pages, place the mobile leaderboard slot under the header
+- name: mobile_leaderboard_group
+  className: m-ad__mobile_leaderboard
+  prebidName: mobile_leaderboard
+  selector: .l-group-page .l-header
+  sizes:
+  - [320, 50]
+  - [300, 250]
+  holdSize: [320, 50]
+  insertion: after
+  maxSlots: 1
+  filters:
+    viewportWidth:
+      max: 728
+
+# Packaged content landing page covers have an ad after the nav
+- name: package_cover_ad
+  prebidName: desktop_leaderboard_variable
+  selector: .c-package-subnav
+  sizes:
+  - [728, 90]
+  - [970, 250]
+  - [970, 90]
+  - [1020, 90]
+  - [1030, 590]
+  - size: [1060, 610]
+    filters:
+      containerWidth:
+        min: 1060
+  - size: [620, 366]
+    filters:
+      containerWidth:
+        max: 1059
+  - size: [1060, 619]
+    filters:
+      containerWidth:
+        min: 1060
+  - size: [1060, 694]
+    filters:
+      containerWidth:
+        min: 1060
+  holdSize: [728, 90]
+  insertion: after
+  filters:
+    viewportWidth:
+      min: 729
+
+# Packaged content landing page covers have an ad after the nav
+- name: package_cover_ad_mobile
+  prebidName: mobile_leaderboard
+  selector: .c-package-subnav
+  sizes:
+  - [320, 50]
+  - [300, 250]
+  - [1030, 590]
+  - [325, 508]
+  - [325, 203]
+  - [325, 236]
+  - [325, 204]
+  holdSize: [320, 50]
+  insertion: after
+  filters:
+    viewportWidth:
+      max: 729
+
+########
+## Footer
+########
+
+- name: btf_leaderboard_variable
+  selector: .c-footer
+  sizes:
+  - [728, 90]
+  - [1020, 90]
+  holdSize: [728, 90]
+  filters:
+    viewportWidth:
+      min: 881
+
+- name: tablet_btf_leaderboard
+  selector: .c-footer
+  sizes:
+  - [728, 90]
+  holdSize: [728, 90]
+  filters:
+    viewportWidth:
+      min: 729
+      max: 888
+
+- name: mobile_footer
+  selector: body:not(.entry_layout_unison_package_landing) .c-footer
+  sizes:
+  - [320, 50]
+  - [300, 250]
+  - [325, 203]
+  - [325, 236]
+  - [325, 204]
+  holdSize: [300, 250]
+  filters:
+    viewportWidth:
+      min: 0
+      max: 728
+
+# Packaged content landing page includes a size not normally available
+# on other footers
+- name: package_mobile_footer
+  prebidName: mobile_footer
+  selector: .entry_layout_unison_package_landing .c-footer
+  sizes:
+  - [320, 50]
+  - [300, 250]
+  - [1030, 590]
+  - [325, 508]
+  - [325, 203]
+  - [325, 236]
+  - [325, 204]
+  holdSize: [300, 250]
+  filters:
+    viewportWidth:
+      min: 0
+      max: 728
+
+
+#######
+## Features
+#######
+
+# 300x250 on mobile, after the first paragraph
+- name: mobile_feature_body
+  className: m-ad__mobile_article_body_med_rec_dynamic
+  prebidName: mobile_article_body_med_rec_dynamic
+  selector: .l-feature .c-entry-content > p + p
+  sizes:
+  - [300, 250]
+  - [325, 508]
+  - [325, 203]
+  - [325, 236]
+  - [325, 204]
+  - [320, 50]
+  - [1030, 590]
+  previewHoldSize: [300, 250]
+  maxSlots: 1
+  filters:
+    spacing:
+      before: 150
+    viewportWidth:
+      max: 779
+
+# 728x90 added after the first instance of three consecutive paragraphs
+- name: desktop_feature_body
+  prebidName: desktop_article_body
+  selector: .l-feature .c-entry-content > p + p + p
+  sizes:
+  - [728, 90]
+  - [620, 366]
+  - [1030, 590]
+  previewHoldSize: [728, 90]
+  maxSlots: 1
+  insertion: after
+  filters:
+    avoidFloats: true
+    spacing:
+      before: 1200
+      after: 1200
+    paragraphHeight:
+      above: 200
+    viewportWidth:
+      min: 780
+    hideIfPresent:
+      selector: .c-buying-guide
+
+# add more ad slots throughout feature posts
+- name: desktop_feature_body_dynamic
+  className: m-ad__desktop_feature_body
+  prebidName: desktop_article_body
+  selector: .l-feature .c-entry-content > p + p
+  sizes:
+  - [728, 90]
+  - [300, 250]
+  - [620, 366]
+  - [1030, 590]
+  previewHoldSize: [728, 90]
+  maxSlots: 3
+  filters:
+    avoidFloats: true
+    spacing:
+      before: 1200
+      after: 1200
+    paragraphHeight:
+      above: 200
+    viewportWidth:
+      min: 780
+    hideIfPresent:
+      selector: .c-buying-guide
+
+# auto placement of athena features on mobile
+# one after 10 paragraphs, then one every 20 paragraphs
+- name: athena_features_mobile
+  className: m-ad__athena_features
+  prebidName: athena_features
+  selector: .l-feature .c-entry-content > p + p
+  sizes:
+  - [1030, 590]
+  - [325, 508]
+  - [300, 250]
+  - [300, 265]
+  - [325, 203]
+  - [325, 236]
+  - [325, 204]
+  previewHoldSize: [300, 250]
+  maxSlots: 1
+  filters:
+    avoidFloats: true
+    paragraphHeight:
+      above: 200
+    viewportWidth:
+      max: 779
+    spacing:
+      before: 1500
+
+- name: athena_features_dynamic_mobile
+  className: m-ad__athena_features_dynamic
+  prebidName: athena_features_dynamic
+  selector: .l-feature .c-entry-content > p + p
+  sizes:
+  - [1030, 590]
+  - [325, 508]
+  - [300, 250]
+  - [300, 265]
+  - [325, 203]
+  - [325, 236]
+  - [325, 204]
+  previewHoldSize: [300, 250]
+  maxSlots: 2
+  filters:
+    avoidFloats: true
+    paragraphHeight:
+      above: 200
+    viewportWidth:
+      max: 779
+    spacing:
+      before: 1500
+
+# auto placement of athena features on desktop, every 15 paragraphs
+- name: athena_features_desktop
+  className: m-ad__athena_features
+  prebidName: desktop_article_body
+  selector: .l-feature .c-entry-content > p + p
+  sizes:
+  - [1030, 590]
+  - [620, 366]
+  - [620, 371]
+  - [620, 415]
+  - [728, 90]
+  previewHoldSize: [726, 415]
+  maxSlots: 3
+  filters:
+    paragraphHeight:
+      above: 200
+    avoidFloats: true
+    viewportWidth:
+      min: 779
+    spacing:
+      after: 1200
+      before: 1200
+
+#######
+## General Articles
+#######
+
+# For content pages, we place the mobile leaderboard within the content itself.
+- name: mobile_leaderboard
+  selector: .l-segment:not(.l-feature) .c-entry-content > p + p
+  sizes:
+  - [320, 50]
+  - [300, 250]
+  holdSize: [300, 250]
+  maxSlots: 1
+  filters:
+    viewportWidth:
+      max: 728
+
+# Automatic in-article athenas
+# Place after the 5th paragraph, but not inside the last three paragraphs
+- name: desktop_article_body
+  selector: .l-segment:not(.l-feature) .c-entry-content > p + p, .l-article .c-entry-content > p + p
+  sizes:
+  - [1030, 590]
+  - [620, 366]
+  - [620, 371]
+  - [620, 415]
+  - size: [728, 90]
+    filters:
+      containerWidth:
+        min: 700
+  previewHoldSize: [726, 415]
+  maxSlots: 1
+  filters:
+    avoidFloats: true
+    paragraphHeight:
+      above: 150
+      below: 250
+    spacing:
+      before: 750
+      after: 450
+    containerWidth:
+      min: 620
+
+# Insert one of 300x250 1030x590 300x265 after 4th/10th paragraph
+- name: mobile_article_body
+  selector: .l-segment:not(.l-feature) .c-entry-content > p + p
+  sizes:
+  - [1030, 590]
+  - [325, 508]
+  - [300, 250]
+  - [300, 265]
+  - [325, 203]
+  - [325, 236]
+  - [325, 204]
+  previewHoldSize: [300, 250]
+  maxSlots: 1
+  filters:
+    viewportWidth:
+      max: 728
+    spacing:
+      before: 600
+
+# Insert one of 300x250 1030x590 300x265 after 4th/10th paragraph
+- name: native_ad_mobile
+  selector: .l-segment:not(.l-feature) .c-entry-content > p + p
+  sizes:
+  - [1030, 590]
+  - [325, 508]
+  - [300, 250]
+  - [300, 265]
+  - [325, 203]
+  - [325, 236]
+  - [325, 204]
+  previewHoldSize: [300, 250]
+  maxSlots: 1
+  filters:
+    viewportWidth:
+      max: 728
+    spacing:
+      before: 600
+
+# After the 10th paragraph, insert 300x250 every 6th paragraph.
+- name: mobile_article_body_med_rec_dynamic
+  selector: .l-segment:not(.l-feature) .c-entry-content > p + p
+  sizes:
+  - [300, 250]
+  - [1030, 590]
+  - [325, 508]
+  - [325, 203]
+  - [325, 236]
+  - [325, 204]
+  - [320, 50]
+  previewHoldSize: [300, 250]
+  filters:
+    viewportWidth:
+      max: 728
+    spacing:
+      before: 900
+
+- name: desktop_article_medrec_dynamic
+  selector: .l-segment:not(.l-feature) .c-entry-content > p + p, .l-article .c-entry-content > p + p
+  sizes:
+  - [300, 250]
+  holdSize: [300, 250]
+  filters:
+    paragraphHeight:
+      above: 150
+      below: 250
+    viewportWidth:
+      min: 729
+    avoidFloats: true
+    spacing:
+      before: 1500
+      after: 750
+
+#######
+## Right Rail
+#######
+
+# On the right rail, the very top of the sidebar gets a slot. Since there are
+# two rails on the homepage/hubpages— we limit this to only appear on the first
+# one.
+#
+# [300, 250] can be shown in any context, but to show [300, 600] .l-col__main must be at least 2001px tall
+- name: medium_rectangle_variable
+  selector: .l-col__sidebar:not(.c-sports-blog-directory__filter) > div:first-of-type, .l-article-sidebar > *:first-child
+  sizes:
+  - [300, 250]
+  - [300, 600]
+  holdSize: [300, 250]
+  maxSlots: 1
+  allowSiblings: true # for btf_medium_rectangle_variable_article
+  filters:
+    viewportWidth:
+      min: 881
+    hideIfPresent:
+      selector: .l-full-archives
+    elementHeight:
+        selector: .l-article-body-segment .l-col__main, .l-main-content > .l-col__main
+        min: 2001
+
+# [300, 250] can be shown in any context, but to show [300, 600] .l-col__main must be at least 2001px tall, see trule above
+- name: medium_rectangle_short
+  prebidName: desktop_article_medrec_dynamic
+  selector: .l-col__sidebar:not(.c-sports-blog-directory__filter) > div:first-of-type, .l-article-sidebar > *:first-child
+  sizes:
+  - [300, 250]
+  holdSize: [300, 250]
+  maxSlots: 1
+  allowSiblings: true
+  filters:
+    viewportWidth:
+      min: 881
+    hideIfPresent:
+      selector: .l-full-archives
+    elementHeight:
+        selector: .l-article-body-segment .l-col__main, .l-main-content > .l-col__main
+        max: 2000
+
+# On the right rail on articles, when the main entry body is long enough
+- name: btf_medium_rectangle_variable_article
+  className: m-ad__btf_medium_rectangle_variable
+  prebidName: btf_medium_rectangle_variable
+  selector: body[data-entry-id] .l-col__sidebar:not(.c-sports-blog-directory__filter) > div:last-of-type
+  allowSiblings: true
+  sticky:
+    enabled: true
+    offset: 100
+  sizes:
+  - [300, 250]
+  - size: [300, 600]
+    filters:
+      viewportHeight:
+        min: 600
+  holdSize: [300, 250]
+  insertion: after
+  maxSlots: 1
+  filters:
+    viewportWidth:
+      min: 881
+
+# On hub and group pages, the right rail sidebars get ad slots
+- name: btf_medium_rectangle_variable_hub
+  className: m-ad__btf_medium_rectangle_variable
+  prebidName: btf_medium_rectangle_variable
+  selector: .l-hub-page .l-col__sidebar > div:last-of-type, .l-group-page .l-col__sidebar > div:last-of-type
+  sticky:
+    enabled: true
+    offset: 50
+  sizes:
+  - [300, 250]
+  - [300, 600]
+  holdSize: [300, 250]
+  insertion: after
+  maxSlots: 2
+  filters:
+    viewportWidth:
+      min: 881
+    hideIfPresent:
+      selector: .l-full-archives
+
+#######
+## MAPS
+#######
+
+# Currently, this is added within the mapstacks in the one empty area.
+- name: in_map_legacy
+  className: m-ad__in_map
+  prebidName: in_map
+  selector: .c-mapstack__ad
+  sizes:
+  - [300, 250]
+  previewHoldSize: [300, 250]
+
+# New map design, ad should appear before the first card, and after each fourth card
+- name: in_map
+  selector: .c-mapstack__card--ad
+  sizes:
+  - [300, 250]
+  - [1030, 590]
+  - [620, 366]
+  - [620, 371]
+  - [620, 415]
+  previewHoldSize: [300, 250]
+  insertion: after
+
+# On mapstacks, sponsorship logo should appear at the top before the content text
+- name: mapstack_sponsorship
+  className: m-ad__mapstack_sponsorship
+  selector: .c-mapstack__content
+  insertion: before
+  maxSlots: 1
+  sizes:
+  - [200, 40]
+  prebidEligible: false
+  refreshEligible: false
+  watcherEligible: false
+
+#######
+## Hub Pages
+#######
+
+# On hub and group pages (include home pages), after the first river— we insert an
+# athena.
+- name: athena_hub
+  className: m-ad__athena
+  prebidName: athena
+  selector: .l-hub-page .river-segment-0, .l-group-page .river-segment-0
+  sizes:
+  - [1030, 590]
+  - [970, 250]
+  - [728, 90]
+  - size: [1060, 610]
+    filters:
+      containerWidth:
+        min: 1060
+  - size: [620, 366]
+    filters:
+      containerWidth:
+        max: 1059
+  - size: [1060, 619]
+    filters:
+      containerWidth:
+        min: 1060
+  - size: [1060, 694]
+    filters:
+      containerWidth:
+        min: 1060
+  holdSize: [728, 295]
+  maxSlots: 1
+  insertion: after
+  filters:
+    viewportWidth:
+      min: 728
+
+# At the bottom of articles, on a medium desktop size, we insert an athena or a leaderboard
+- name: athena_article
+  className: m-ad__athena
+  prebidName: athena
+  selector: .l-article-body-segment
+  sizes:
+  - [1030, 590]
+  - [728, 90]
+  - size: [1060, 610]
+    filters:
+      containerWidth:
+        min: 1060
+  - size: [620, 366]
+    filters:
+      containerWidth:
+        max: 1059
+  - size: [970, 250]
+    filters:
+      viewportWidth:
+        min: 970
+  - size: [620, 371]
+    filters:
+      containerWidth:
+        max: 1059
+  - size: [620, 415]
+    filters:
+      containerWidth:
+        max: 1059
+  holdSize: [728, 295]
+  maxSlots: 1
+  insertion: after
+  filters:
+    viewportWidth:
+      min: 728
+
+# Within the river (on desktop), we add in leaderboard every 700px.
+- name: hub_river_leaderboard
+  selector: .l-hub-page .c-compact-river__entry, .l-group-page .c-compact-river__entry
+  sizes:
+  - [728, 90]
+  - [1030, 590]
+  - [620, 366]
+  holdSize: [728, 90]
+  filters:
+    spacing:
+      before: 700
+      after: 500
+      exceptSlot: native_quicklistings
+    containerWidth:
+      min: 728
+
+# On hub pages (include home pages), after the first river— we insert an
+# med_rec or athena.
+- name: mobile_med_rec_athena
+  selector: .l-hub-page .river-segment-0
+  sizes:
+  - [300, 250]
+  - [1030, 590]
+  - [325, 508]
+  - [300, 265]
+  - [325, 203]
+  - [325, 236]
+  - [325, 204]
+  holdSize: [300, 250]
+  maxSlots: 1
+  insertion: after
+  filters:
+    viewportWidth:
+      max: 728
+
+# Within the river (on mobile), we add in med_rec every 500px.
+- name: hub_river_med_rec
+  selector: .l-hub-wrapper .c-compact-river__entry, .l-group-page .c-compact-river__entry
+  sizes:
+  - [300, 250]
+  - [1030, 590]
+  - [325, 203]
+  - [325, 204]
+  - [325, 236]
+  - [325, 508]
+  customSizes:
+  - placement: 1
+    sizes:
+    - [300, 250]
+    - [1030, 590]
+    - [325, 203]
+    - [325, 204]
+    - [325, 236]
+    - [325, 508]
+  holdSize: [300, 250]
+  filters:
+    spacing:
+      before: 600
+      after: 400
+    viewportWidth:
+      max: 728
+
+#######
+## Gift Guides
+#######
+
+# On desktop, add a 1030x590/728x90 before the filters
+- name: gift_guide_leaderboard_variable_desktop
+  className: m-ad__desktop_article_body
+  prebidName: desktop_article_body
+  selector: .l-feature .c-buying-guide
+  sizes:
+  - [1030, 590]
+  - [620, 366]
+  - [728, 90]
+  - [620, 371]
+  - [620, 415]
+  previewHoldSize: [726, 415]
+  maxSlots: 1
+  filters:
+    viewportWidth:
+      min: 728
+
+# On gift guides, place the mobile leaderboard before the filters
+- name: gift_guide_leaderboard_mobile
+  className: m-ad__mobile_leaderboard
+  prebidName: mobile_leaderboard
+  selector: .l-feature .c-buying-guide
+  sizes:
+  - [320, 50]
+  - [300, 250]
+  - [1030, 590]
+  holdSize: [300, 250]
+  maxSlots: 1
+  filters:
+    viewportWidth:
+      max: 728
+
+#######
+## StoryStreams
+#######
+# add a leaderboard above the start of the storystream page
+# on desktop
+- name: storystream_top_leaderboard_desktop
+  className: m-ad__hub_river_leaderboard
+  prebidName: desktop_leaderboard_variable
+  selector: .l-main-content > .c-entry-group-labels--stream
+  sizes:
+  - [728, 90]
+  - [970, 90]
+  - [970, 250]
+  - [1020, 90]
+  holdSize: [728, 90]
+  maxSlots: 1
+  filters:
+    viewportWidth:
+      min: 880
+
+# add an ad slot before the storystream on desktop
+- name: storystream_bottom_leaderboard_variable_desktop
+  className: m-ad__desktop_article_body
+  prebidName: btf_leaderboard_variable
+  selector: .c-entry-group-labels--stream ~ .c-entry-update-bar
+  sizes:
+  - [1030, 590]
+  - [620, 366]
+  - [620, 371]
+  - [620, 415]
+  - [728, 90]
+  previewHoldSize: [726, 415]
+  maxSlots: 1
+  filters:
+    avoidFloats: true
+    containerWidth:
+      min: 729
+
+# add an ad slot every 6 storystream entries on desktop
+- name: storystream_river_leaderboard_variable_desktop
+  className: m-ad__hub_river_leaderboard
+  prebidName: hub_river_leaderboard
+  selector: .c-stream-list .c-stream-list__entry:nth-of-type(6n) .c-entry-box--stream-item
+  sizes:
+  - [1030, 590]
+  - [620, 366]
+  - [620, 371]
+  - [620, 415]
+  - [728, 90]
+  previewHoldSize: [726, 415]
+  insertion: after
+  filters:
+    viewportWidth:
+      min: 729
+
+# add leaderboard above start of storystream page on mobile
+- name: storystream_top_leaderboard_mobile
+  className: m-ad__hub_river_leaderboard
+  prebidName: mobile_leaderboard
+  selector: .l-main-content > .c-entry-group-labels--stream
+  sizes:
+  - [320, 50]
+  - [300, 250]
+  holdSize: [320, 50]
+  maxSlots: 1
+  filters:
+    viewportWidth:
+      max: 728
+
+# add an ad slot before the storystream on mobile
+- name: storystream_bottom_leaderboard_variable_mobile
+  className: m-ad__mobile_article_body_med_rec_dynamic
+  prebidName: mobile_footer
+  selector: .c-entry-group-labels--stream ~ .c-entry-update-bar
+  sizes:
+  - [320, 50]
+  - [300, 250]
+  - [1030, 590]
+  - [325, 508]
+  - [325, 203]
+  - [325, 236]
+  - [325, 204]
+  - [620, 366]
+  previewHoldSize: [300, 250]
+  maxSlots: 1
+  filters:
+    containerWidth:
+      max: 728
+
+# add an ad slot every 6 story stream entries on mobile
+- name: storystream_river_leaderboard_variable_mobile
+  className: m-ad__mobile_article_body_med_rec_dynamic
+  prebidName: mobile_article_body_med_rec_dynamic
+  selector: .c-stream-list .c-stream-list__entry:nth-of-type(6n) .c-entry-box--stream-item
+  sizes:
+  - [320, 50]
+  - [300, 250]
+  customSizes:
+  - placement: 2
+    sizes:
+    - [320, 50]
+    - [300, 250]
+    - [1030, 590]
+    - [325, 508]
+    - [325, 203]
+    - [325, 236]
+    - [325, 204]
+  previewHoldSize: [300, 250]
+  insertion: after
+  filters:
+    viewportWidth:
+      max: 728
+
+#######
+## Site Sponsorships
+## Added by Chorus when the need arises.
+#######
+- name: site_sponsorship_logo_white
+  selector: .site_sponsorship_logo.site_sponsorship_logo-white
+  sizes:
+  - [26, 1]
+  prebidEligible: false
+  refreshEligible: false
+  watcherEligible: false
+  filters:
+    viewportWidth:
+      min: 601
+
+- name: site_sponsorship_logo_color
+  selector: .site_sponsorship_logo:not(.site_sponsorship_logo-white), .c-tab-bar__sponsorship
+  sizes:
+  - [26, 2]
+  prebidEligible: false
+  refreshEligible: false
+  watcherEligible: false
+  filters:
+    viewportWidth:
+      min: 601
+
+- name: site_sponsorship_logo_mobile_white
+  selector: .site_sponsorship_logo_mobile.site_sponsorship_logo-white
+  sizes:
+  - [26, 3]
+  prebidEligible: false
+  refreshEligible: false
+  watcherEligible: false
+  filters:
+    viewportWidth:
+      max: 600
+
+- name: site_sponsorship_logo_mobile_color
+  selector: .site_sponsorship_logo_mobile:not(.site_sponsorship_logo-white), .c-tab-bar__sponsorship
+  sizes:
+  - [26, 4]
+  prebidEligible: false
+  refreshEligible: false
+  watcherEligible: false
+  filters:
+    viewportWidth:
+      max: 600
+
+
+
+#######
+## Native Ads
+## Each one of these is added by markup added by Chorus wherever Chorus wants
+## them.
+#######
+
+- name: native_ad_latest
+  selector: .dynamic-native-ad-native_ad_latest
+  sizes:
+  - [300, 100]
+  prebidEligible: false
+  refreshEligible: false
+  watcherEligible: false
+
+- name: native_ad_video
+  selector: .dynamic-native-ad-native_ad_video
+  sizes:
+  - [200, 200]
+  prebidEligible: false
+  refreshEligible: false
+  watcherEligible: false
+
+- name: native_ad_ymal_link
+  selector: .dynamic-native-ad-native_ad_ymal_link
+  sizes:
+  - [1200, 100]
+  prebidEligible: false
+  refreshEligible: false
+  watcherEligible: false
+
+- name: native_ad_linkset_link
+  selector: .dynamic-native-ad-native_ad_linkset_link
+  sizes:
+  - [1200, 100]
+  prebidEligible: false
+  refreshEligible: false
+  watcherEligible: false
+
+- name: native_ad_content_link
+  selector: .dynamic-native-ad-native_ad_content_link
+  sizes:
+  - [650, 150]
+  prebidEligible: false
+  refreshEligible: false
+  watcherEligible: false
+
+- name: native_ad_module
+  selector: .c-related-list
+  sizes:
+  - fluid
+  prebidEligible: false
+  refreshEligible: false
+  watcherEligible: false
+  maxSlots: 1
+
+- name: branded_content_feedback_form
+  selector: .branded_content_feedback_form
+  sizes:
+  - [300, 200]
+  prebidEligible: false
+  refreshEligible: false
+  watcherEligible: false
+  maxSlots: 1
+
+# Sponsorship for editorial
+- name: article_sponsorship
+  className: m-ad__article_sponsorship
+  selector: .entry_template_package_landing .c-package-cover__title-body, body.entry_layout_unison_main .c-entry-hero--feature .c-entry-hero__content .c-byline, body.entry_layout_unison_main div.c-entry-hero:not(.c-entry-hero--feature)
+  insertion: after
+  maxSlots: 1
+  sizes:
+  - [200, 40]
+  prebidEligible: false
+  refreshEligible: false
+  watcherEligible: false
+
+# Sponsorship for editorial hubs
+- name: hub_sponsorship
+  className: m-ad__hub_sponsorship
+  selector: .c-hub-title__inner, .c-group-header .p-page-title
+  insertion: after
+  maxSlots: 1
+  sizes:
+  - [200, 40]
+  prebidEligible: false
+  refreshEligible: false
+  watcherEligible: false
+
+
+# This is a failsafe, in case normal ads cannot be placed inside an entry.
+# It places an ad at the end of the entry body.
+- name: failsafe_article_med_rec_athena_mobile
+  className: m-ad__mobile_med_rec_athena
+  prebidName: mobile_med_rec_athena
+  selector: body:not(.entry_template_stream):not(.entry_template_package_landing) .c-entry-content > *:last-child
+  sizes:
+  - [300, 250]
+  - [1030, 590]
+  - [325, 508]
+  - [300, 265]
+  - [325, 203]
+  - [325, 236]
+  - [325, 204]
+  holdSize: [300, 250]
+  maxSlots: 1
+  insertion: after
+  filters:
+    viewportWidth:
+      max: 728
+    spacing:
+      before: 300
+    hideIfPresent:
+      selector: .c-entry-content .m-ad
+      count: 2
+
+# Failsafe for if other mobile leaderboard selector isn't present.
+- name: failsafe_mobile_leaderboard
+  selector: .l-segment:not(.l-feature) .c-entry-content > p:nth-of-type(2)
+  sizes:
+  - [320, 50]
+  - [300, 250]
+  holdSize: [300, 250]
+  insertion: after
+  maxSlots: 1
+  filters:
+    viewportWidth:
+      max: 728
+    hideIfPresent:
+      selector: .m-ad__mobile_leaderboard

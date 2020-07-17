@@ -1,0 +1,241 @@
+---
+biddingEnabled: true
+prebidEnabled: true
+timeout: 1500
+amazonPubId: 3176
+defaultConfig:
+  openx:
+    delDomain: sbnationbidder-d.openx.net
+  rubicon:
+    accountId: 7470
+    position: btf
+    siteId: 180140
+    zoneId: 877672
+  rubiconLite:
+    accountId: 18288
+    siteId: 193902
+    sizes: [213, 270, 271, 272]
+    position: btf
+  consumable:
+    networkId: 9969
+    siteId: 1039096
+  appnexus:
+    placementId: 12989713
+  rubi__mm:
+    accountId: 21670
+    siteId: 294140
+    zoneName: "Recode_MediaMath DC"
+    zoneId: 1480308
+  rubi__ttd:
+    accountId: 21670
+    siteId: 294142
+    zoneName: "Recode_TTD DC"
+    zoneId: 1480282
+  usersync:
+    userIds:
+      - name: "unifiedId"
+        params:
+          url: "https://match.adsrvr.org/track/rid?ttd_pid=gs8reto&fmt=json"
+        storage:
+          type: "cookie"
+          name: "pbjs-unifiedid"
+          expires: 14
+        syncDelay: 3000
+prelude:
+  trustx:
+    uid: 2663
+  appnexus:
+    disabled: true
+reskin:
+  trustx:
+    uid: 2664
+  appnexus:
+    disabled: true
+desktop_leaderboard_variable:
+  trustx:
+    uid: 2665
+  ix:
+    siteId: 194325
+  rubicon:
+    position: atf
+  triplelift:
+    inventoryCode: recode_leaderboard_970x250_desktop
+medium_rectangle_variable:
+  trustx:
+    uid: 2666
+  ix:
+    siteId: 194326
+  rubicon:
+    position: atf
+  triplelift:
+    inventoryCode: recode_300x600_desktop
+btf_medium_rectangle_variable:
+  trustx:
+    uid: 2668
+  ix:
+    siteId: 194328
+  rubicon:
+    position: atf
+desktop_article_medrec_dynamic:
+  trustx:
+    uid: 2669
+  ix:
+    siteId: 212978
+  rubicon:
+    position: atf
+btf_leaderboard_variable:
+  trustx:
+    uid: 2670
+  ix:
+    siteId: 194329
+  rubicon:
+    position: atf
+native_ad_latest:
+  trustx:
+    uid: 2671
+  appnexus:
+    disabled: true
+native_ad_ymal_link:
+  trustx:
+    uid: 2672
+  appnexus:
+    disabled: true
+mobile_leaderboard:
+  trustx:
+    uid: 2673
+  ix:
+    siteId: 194334
+  rubicon:
+    position: atf
+  triplelift:
+    inventoryCode: recode_leaderboard_300x250_mobile
+mobile_article_body:
+  trustx:
+    uid: 2674
+  ix:
+    siteId: 212975
+  rubicon:
+    position: atf
+  rubiconLite:
+    zoneId: 944794
+    position: atf
+native_ad_mobile:
+  trustx:
+    uid: 2675
+  rubicon:
+    position: atf
+  rubiconLite:
+    zoneId: 944794
+    position: atf
+  appnexus:
+    disabled: true
+mobile_article_body_med_rec_dynamic:
+  trustx:
+    uid: 2676
+  ix:
+    siteId: 212977
+  rubicon:
+    position: atf
+  rubiconLite:
+    zoneId: 944794
+    position: atf
+mobile_footer:
+  trustx:
+    uid: 2677
+  ix:
+    siteId: 194336
+  rubicon:
+    position: atf
+tablet_leaderboard:
+  trustx:
+    uid: 2678
+  ix:
+    siteId: 194330
+  rubicon:
+    position: atf
+tablet_medium_rectangle:
+  trustx:
+    uid: 2679
+  ix:
+    siteId: 194331
+  rubicon:
+    position: atf
+tablet_btf_leaderboard:
+  trustx:
+    uid: 2680
+  ix:
+    siteId: 194333
+  rubicon:
+    position: atf
+native_ad_content_link:
+  trustx:
+    uid: 2681
+  rubicon:
+    position: atf
+  appnexus:
+    disabled: true
+hub_river_leaderboard:
+  trustx:
+    uid: 2682
+  ix:
+    siteId: 212979
+  rubicon:
+    position: atf
+  rubiconLite:
+    zoneId: 944794
+    position: atf
+hub_river_med_rec:
+  trustx:
+    uid: 2684
+  ix:
+    siteId: 212980
+  rubicon:
+    position: atf
+  appnexus:
+    disabled: true
+mobile_med_rec_athena:
+  trustx:
+    uid: 2685
+  ix:
+    siteId: 194335
+  rubicon:
+    position: atf
+  triplelift:
+    inventoryCode: recode_midarticle_300x250_mobile
+  rubiconLite:
+    zoneId: 944794
+    position: atf
+athena:
+  ix:
+    siteId: 194327
+  rubicon:
+    position: atf
+  rubiconLite:
+    zoneId: 944794
+    position: atf
+btf_tablet_medium_rectangle:
+  ix:
+    siteId: 194332
+desktop_article_body:
+  rubicon:
+    position: atf
+  ix:
+    siteId: 212976
+  rubiconLite:
+    zoneId: 944794
+    position: atf
+in_map:
+  ix:
+    disabled: true
+  rubiconLite:
+    zoneId: 944794
+athena_features:
+  ix:
+    siteId: 212981
+  rubiconLite:
+    zoneId: 944794
+athena_features_dynamic:
+  ix:
+    siteId: 212983
+  rubiconLite:
+    zoneId: 944794

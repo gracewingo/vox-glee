@@ -28,7 +28,7 @@ client.connect((err) => {
 });
 
 function importYAMLConfigs(db){
-  let workingDirectory = "../concertads-configs/configs"; 
+  let workingDirectory = "concertads-configs/configs"; 
   let platforms = fs.readdirSync(workingDirectory);
 
   platforms.forEach(platform => {

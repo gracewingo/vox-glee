@@ -1,0 +1,688 @@
+---
+biddingEnabled: true
+prebidEnabled: true
+timeout: 2000
+priceGranularity: high
+enableSendAllBids: false
+targetingControls:
+  alwaysIncludeDeal: true
+  auctionKeyMaxChars: 5000
+amazonPubId: 115b87a6-7d9f-45e3-8482-be3caf9e7b91
+defaultConfig:
+  rubicon:
+    accountId: 15926
+    position: btf
+    siteId: 287176
+    zoneId: 1443066
+  pubmatic:
+    publisherId: 159293
+desktop_leaderboard_variable:
+  consumable:
+    networkId: 9969
+    siteId: 2001040
+    unitId: 8440
+    unitName: cnsmbl-audio-responsive
+  ix:
+    siteId: 418730
+  rubicon:
+    position: atf
+    zoneId: 1443068
+  appnexus:
+    placementId: 17183531
+  # 33across:
+  #   siteId: dNdBBgfSir6Q5WaKlId8sQ
+  #   productId: siab
+  districtm:
+    placementId: 17335045
+  districtmDMX:
+    dmxid: 434622
+    memberid: 100819
+  aol:
+    placement: 5150459
+    network: 10948.1
+  rhythmone:
+    placementId: 85357
+  sharethrough:
+    pkey: vWkNp6r5poWy1bVwUjQEU5Ue
+  # sonobi:
+  #   placement_id: 5aac7f9a88c91d31e632
+  #   ad_unit:
+  sovrn:
+    tagid: 664422
+  pubmatic:
+    adSlot: thisoldhouse.com-desktop_tablet-728x90_970x90_970x250_1020x90-ATF
+medium_rectangle_variable:
+  consumable:
+    networkId: 9969
+    siteId: 2001040
+    unitId: 8442
+    unitName: cnsmbl-audio-300x600
+  ix:
+    siteId: 418734
+  rubicon:
+    position: atf
+    zoneId: 1443072
+  appnexus:
+    placementId: 17183589
+  # 33across:
+  #   siteId: a0BEKofSmr6Ok2aKkv7mNO
+  #   productId: siab
+  districtm:
+    placementId: 17335048
+  districtmDMX:
+    dmxid: 434625
+    memberid: 100819
+  aol:
+    placement: 5150469
+    network: 10948.1
+  rhythmone:
+    placementId: 85361
+  sharethrough:
+    pkey: YNnV7Z5PZQcBdLvb2f627vTH
+  # sonobi:
+  #   placement_id: 31b80bf5d6020d4ba4d3
+  #   ad_unit:
+  sovrn:
+    tagid: 664429
+  pubmatic:
+    adSlot: thisoldhouse.com-desktop_tablet-300x250_300x600-ATF
+btf_medium_rectangle_variable:
+  consumable:
+    networkId: 9969
+    siteId: 2001040
+    unitId: 8442
+    unitName: cnsmbl-audio-300x600
+  rubicon:
+    zoneId: 1443070
+  ix:
+    siteId: 418733
+  appnexus:
+    placementId: 17183576
+  # 33across:
+  #   siteId: aNx82gfSmr6Ok2aKkv7mNO
+  #   productId: siab
+  districtm:
+    placementId: 17335047
+  districtmDMX:
+    dmxid: 434624
+    memberid: 100819
+  aol:
+    placement: 5150462
+    network: 10948.1
+  rhythmone:
+    placementId: 85360
+  sharethrough:
+    pkey: nJEFGunQyGCPBxXjpnSdVf5g
+  # sonobi:
+  #   placement_id: f6e4dc5cf952da3330e5
+  #   ad_unit:
+  sovrn:
+    tagid: 664427
+  pubmatic:
+    adSlot: thisoldhouse.com-desktop_tablet-300x250_300x600-BTF
+desktop_article_medrec_dynamic:
+  trustx:
+    disabled: true
+  appnexus:
+    placementId: 15568498
+  pubmatic:
+    adSlot: thisoldhouse.com-desktop_tablet-300x250-BTF3
+btf_leaderboard_variable:
+  consumable:
+    networkId: 9969
+    siteId: 2001040
+    unitId: 8434
+    unitName: cnsmbl-audio-footer
+  rubicon:
+    zoneId: 1443060
+  ix:
+    siteId: 418724
+  appnexus:
+    placementId: 17183358
+  # 33across:
+  #   siteId: cvXEG0fSer6Ok2aKkv7mNO
+  #   productId: siab
+  districtm:
+    placementId: 17335041
+  districtmDMX:
+    dmxid: 434618
+    memberid: 100819
+  aol:
+    placement: 5150460
+    network: 10948.1
+  rhythmone:
+    placementId: 85351
+  sharethrough:
+    pkey: cDyPSUadW6GXTxFmwzGqd88h
+  # sonobi:
+  #   placement_id: 8c405317cf2a1c5bd315
+  #   ad_unit:
+  sovrn:
+    tagid: 664414
+  pubmatic:
+    adSlot: thisoldhouse.com-desktop_tablet-728x90-BTF1
+mobile_leaderboard:
+  consumable:
+    networkId: 9969
+    siteId: 2001040
+    unitId: 8441
+    unitName: cnsmbl-audio-300x250-slider
+  ix:
+    siteId: 418737
+  rubicon:
+    position: atf
+    siteId: 287294
+    zoneId: 1443846
+  appnexus:
+    placementId: 17183653
+  # 33across:
+  #   siteId: bVhf_GfSmr6Q5WaKlId8sQ
+  #   productId: siab
+  districtm:
+    placementId: 17335050
+  districtmDMX:
+    dmxid: 434627
+    memberid: 100819
+  aol:
+    placement: 5150466
+    network: 10948.1
+  rhythmone:
+    placementId: 85364
+  sharethrough:
+    pkey: L67nTL9AjmAh4Vf4snSV55FX
+  # sonobi:
+  #   placement_id: db31776b3d7dbe728e5e
+  #   ad_unit:
+  sovrn:
+    tagid: 664436
+  pubmatic:
+    adSlot: thisoldhouse.com-mobileweb-320x50_300x250-ATF
+mobile_next_up:
+  ix:
+    siteId: 418737
+  rubicon:
+    siteId: 287294
+    zoneId: 1443846
+  appnexus:
+    placementId: 17183653
+  districtm:
+    placementId: 17335050
+  districtmDMX:
+    dmxid: 434627
+    memberid: 100819
+  aol:
+    placement: 5150466
+    network: 10948.1
+  rhythmone:
+    placementId: 85364
+  sharethrough:
+    pkey: L67nTL9AjmAh4Vf4snSV55FX
+  pubmatic:
+    adSlot: thisoldhouse.com-mobileweb-320x50_300x250-BTF2
+mobile_article_body:
+  consumable:
+    networkId: 9969
+    siteId: 2001040
+    unitId: 8441
+    unitName: cnsmbl-audio-300x250-slider
+  ix:
+    siteId: 418738
+  rubicon:
+    siteId: 287294
+    zoneId: 1443848
+  rubiconLite:
+    zoneId: 1042148
+  appnexus:
+    placementId: 17183670
+  # 33across:
+  #   siteId: cazItufSmr6OkIaKkGJozW
+  #   productId: siab
+  districtm:
+    placementId: 17335051
+  districtmDMX:
+    dmxid: 434628
+    memberid: 100819
+  aol:
+    placement: 5150470
+    network: 10948.1
+  rhythmone:
+    placementId: 85365
+  sharethrough:
+    pkey: hqcxr8m8YMcUZYr7SmsHoeFA
+  # sonobi:
+  #   placement_id: 805f36d4e5465957e37c
+  #   ad_unit:
+  sovrn:
+    tagid: 664437
+  pubmatic:
+    adSlot: thisoldhouse.com-mobileweb-300x250-BTF1
+mobile_article_body_med_rec_dynamic:
+  pubmatic:
+    adSlot: thisoldhouse.com-mobileweb-320x50_300x250-BTF1
+  consumable:
+    networkId: 9969
+    siteId: 2001040
+    unitId: 8441
+    unitName: cnsmbl-audio-300x250-slider
+  rubicon:
+    siteId: 287294
+    zoneId: 1443844
+  ix:
+    siteId: 418735
+  appnexus:
+    placementId: 17183620
+  # 33across:
+  #   siteId: biYoogfSmr6Q5WaKlId8sQ
+  #   productId: siab
+  districtm:
+    placementId: 17335049
+  districtmDMX:
+    dmxid: 434626
+    memberid: 100819
+  aol:
+    placement: 5150471
+    network: 10948.1
+  rhythmone:
+    placementId: 85362
+  sharethrough:
+    pkey: FXLe6gXfWmLTxVJmNhhEHbcC
+  # sonobi:
+  #   placement_id: 787e1e1a83fb6dddbaa6
+  #   ad_unit:
+  sovrn:
+    tagid: 664432
+mobile_footer:
+  pubmatic:
+    adSlot: thisoldhouse.com-mobileweb-320x50_300x250-BTF2
+  consumable:
+    networkId: 9969
+    siteId: 2001040
+    unitId: 8446
+    unitName: cnsmbl-audio-footer
+  ix:
+    siteId: 418736
+  appnexus:
+    placementId: 17183639
+  rubicon:
+    siteId: 287294
+    zoneId: 1443846
+  # 33across:
+  #   siteId: bGXOjkfSmr6Q5WaKlId8sQ
+  #   productId: siab
+  aol:
+    placement: 5150472
+    network: 10948.1
+  rhythmone:
+    placementId: 85363
+  sharethrough:
+    pkey: 9c6qkyZH8WtoffjB8rjn5Ek1
+  # sonobi:
+  #   placement_id: 216e10d31474e660d43b
+  #   ad_unit:
+  sovrn:
+    tagid: 664434
+tablet_leaderboard:
+  pubmatic:
+    adSlot: thisoldhouse.com-tablet-728x90-ATF
+  consumable:
+    networkId: 9969
+    siteId: 2001040
+    unitId: 8436
+    unitName: cnsmbl-audio-728x90-slider
+  ix:
+    siteId: 418739
+  rubicon:
+    position: atf
+    zoneId: 1443074
+  appnexus:
+    placementId: 17183689
+  # 33across:
+  #   siteId: cpL2VYfSmr6Q5WaKlId8sQ
+  #   productId: siab
+  districtm:
+    placementId: 17335052
+  districtmDMX:
+    dmxid: 434629
+    memberid: 100819
+  aol:
+    placement: 5150473
+    network: 10948.1
+  rhythmone:
+    placementId: 85366
+  sharethrough:
+    pkey: FSTT7YHbxe4nkGz1Ypuh66Ut
+  # sonobi:
+  #   placement_id: 67c7976c68447cf41fad
+  #   ad_unit:
+  sovrn:
+    tagid: 664438
+tablet_btf_leaderboard:
+  pubmatic:
+    adSlot: thisoldhouse.com-tablet-728x90-BTF
+  consumable:
+    networkId: 9969
+    siteId: 2001040
+    unitId: 8434
+    unitName: cnsmbl-audio-footer
+  rubicon:
+    zoneId: 1443076
+  ix:
+    siteId: 418740
+  appnexus:
+    placementId: 17183718
+  # 33across:
+  #   siteId: cCgMC6fSmr6Q5WaKlId8sQ
+  #   productId: siab
+  districtm:
+    placementId: 17335053
+  districtmDMX:
+    dmxid: 434630
+    memberid: 100819
+  aol:
+    placement: 5150474
+    network: 10948.1
+  rhythmone:
+    placementId: 85367
+  sharethrough:
+    pkey: Fpbuoa9uGepWvdd3YBt7rRda
+  # sonobi:
+  #   placement_id: 4cf86b2072ed00491c36
+  #   ad_unit:
+  sovrn:
+    tagid: 664439
+hub_river_leaderboard:
+  pubmatic:
+    adSlot: thisoldhouse.com-desktop_tablet-728x90-BTF3
+  consumable:
+    networkId: 9969
+    siteId: 2001040
+    unitId: 8436
+    unitName: cnsmbl-audio-728x90-slider
+  ix:
+    siteId: 418731
+  appnexus:
+    placementId: 17183546
+  rubicon:
+    zoneId: 1443060
+  # 33across:
+  #   siteId: ajCGyIfSmr6Ok2aKkv7mNO
+  #   productId: siab
+  aol:
+    placement: 5150457
+    network: 10948.1
+  rhythmone:
+    placementId: 85358
+  sharethrough:
+    pkey: sGf3xiczz3g4RWuYLFyPmPpA
+  # sonobi:
+  #   placement_id: da042cbdc44de28c39ae
+  #   ad_unit:
+  sovrn:
+    tagid: 664425
+hub_river_med_rec:
+  pubmatic:
+    adSlot: thisoldhouse.com-desktop_tablet-300x250-BTF1
+  consumable:
+    networkId: 9969
+    siteId: 2001040
+    unitId: 8435
+    unitName: cnsmbl-audio-300x250-slider
+  rubicon:
+    zoneId: 1443062
+  ix:
+    siteId: 418725
+  appnexus:
+    placementId: 17183391
+  # 33across:
+  #   siteId: c9mkvIfSer6Ok2aKkv7mNO
+  #   productId: siab
+  districtm:
+    placementId: 17335042
+  districtmDMX:
+    dmxid: 434619
+    memberid: 100819
+  aol:
+    placement: 5150463
+    network: 10948.1
+  rhythmone:
+    placementId: 85352
+  sharethrough:
+    pkey: Yr54y3kSBaSJxXgNhbYBWz9j
+  # sonobi:
+  #   placement_id: 69a7216ab1c8d8a5b83f
+  #   ad_unit:
+  sovrn:
+    tagid: 664415
+mobile_med_rec_athena:
+  pubmatic:
+    adSlot: thisoldhouse.com-mobileweb-300x250-BTF2
+  consumable:
+    networkId: 9969
+    siteId: 2001040
+    unitId: 8441
+    unitName: cnsmbl-audio-300x250-slider
+  ix:
+    siteId: 418741
+  rubicon:
+    position: atf
+    siteID: 287294
+    zoneID: 1443848
+  appnexus:
+    placementId: 17183737
+  # 33across:
+  #   siteId: cOHOlSfSmr6OkIaKkGJozW
+  #   productId: siab
+  aol:
+    placement: 5150468
+    network: 10948.1
+  rhythmone:
+    placementId: 85368
+  sharethrough:
+    pkey: hqcxr8m8YMcUZYr7SmsHoeFA
+  # sonobi:
+  #   placement_id: 6ba7a06ea5727cf43766
+  #   ad_unit:
+  sovrn:
+    tagid: 664440
+desktop_article_body:
+  pubmatic:
+    adSlot: thisoldhouse.com-desktop_tablet-728x90-BTF2
+  consumable:
+    networkId: 9969
+    siteId: 2001040
+    unitId: 8436
+    unitName: cnsmbl-audio-728x90-slider
+  rubicon:
+    zoneId: 1443060
+  ix:
+    siteId: 418726
+  appnexus:
+    placementId: 17183400
+  # 33across:
+  #   siteId: b4bkn6fSir6Ok2aKkv7mNO
+  #   productId: siab
+  aol:
+    placement: 5150461
+    network: 10948.1
+  rhythmone:
+    placementId: 85353
+  sharethrough:
+    pkey: U9vK7QWpQ9cfri7VY6L5ny2S
+  # sonobi:
+  #   placement_id: c7ef5f41983fa3c5b526
+  #   ad_unit:
+  sovrn:
+    tagid: 664416
+in_map:
+  pubmatic:
+    adSlot: thisoldhouse.com-desktop_tablet_mobileweb-300x250-BTF
+  consumable:
+    networkId: 9969
+    siteId: 2001040
+    unitId: 8435
+    unitName: cnsmbl-audio-300x250-slider
+  rubicon:
+    siteId: 287294
+    zoneId: 1443850
+  ix:
+    siteId: 418732
+  appnexus:
+    placementId: 17183561
+  # 33across:
+  #   siteId: aATy-OfSmr6Q5WaKlId8sQ
+  #   productId: siab
+  districtm:
+    placementId: 17335046
+  districtmDMX:
+    dmxid: 434623
+    memberid: 100819
+  aol:
+    placement: 5150458
+    network: 10948.1
+  rhythmone:
+    placementId: 85359
+  sharethrough:
+    pkey: eLfwe1WTjBWX2nkTZ3vrugpx
+  # sonobi:
+  #   placement_id: 9718436191e3d4c57405
+  #   ad_unit:
+  sovrn:
+    tagid: 664426
+desktop_dynamic:
+  pubmatic:
+    adSlot: thisoldhouse.com-desktop_tablet-728x90_300x250-BTF
+  consumable:
+    networkId: 9969
+    siteId: 2001040
+    unitId: 8436
+    unitName: cnsmbl-audio-728x90-slider
+  rubicon:
+    zoneId: 1443066
+  ix:
+    siteId: 418729
+  appnexus:
+    placementId: 17183495
+  # 33across:
+  #   siteId: dkCNeOfSir6OkIaKkGJozW
+  #   productId: siab
+  districtm:
+    placementId: 17335044
+  districtmDMX:
+    dmxid: 434621
+    memberid: 100819
+  aol:
+    placement: 5150456
+    network: 10948.1
+  rhythmone:
+    placementId: 85356
+  sharethrough:
+    pkey: pTMHSjf8xZLkDuzBq1EbJqVr
+  # sonobi:
+  #   placement_id: af04466825b2c6300d27
+  #   ad_unit:
+  sovrn:
+    tagid: 664420
+athena_features:
+  pubmatic:
+    adSlot: thisoldhouse.com-desktop_tablet-300x250-BTF2
+  consumable:
+    networkId: 9969
+    siteId: 2001040
+    unitId: 8435
+    unitName: cnsmbl-audio-300x250-slider
+  ix:
+    siteId: 418727
+  appnexus:
+    placementId: 17183459
+  # 33across:
+  #   siteId: chAmJsfSir6Ok2aKkv7mNO
+  #   productId: siab
+  aol:
+    placement: 5150465
+    network: 10948.1
+  rhythmone:
+    placementId: 85354
+  sharethrough:
+    pkey: Rckuthg2Hent3aWRFTH4MBxX
+  # sonobi:
+  #   placement_id: ccb25801e67d45c79b8e
+  #   ad_unit:
+  sovrn:
+    tagid: 664417
+medium_rectangle_short:
+  pubmatic:
+    adSlot: thisoldhouse.com-desktop_tablet-300x250-BTF3
+  consumable:
+    networkId: 9969
+    siteId: 2001040
+    unitId: 8435
+    unitName: cnsmbl-audio-300x250-slider
+  appnexus:
+    placementId: 418742
+  ix:
+    siteId: 17183750
+  # 33across:
+  #   siteId: deN30sfSmr6Q5WaKlId8sQ
+  #   productId: siab
+  aol:
+    placement: 5150467
+    network: 10948.1
+  rhythmone:
+    placementId: 85369
+  sharethrough:
+    pkey: 5vgDCCV9Tnvs3BRdPr8hWWt7
+  # sonobi:
+  #   placement_id: 0a897d906e0eae112f1f
+  #   ad_unit:
+  sovrn:
+    tagid: 664441
+athena:
+  pubmatic:
+    adSlot: thisoldhouse.com-desktop_tablet-728x90_970x250-BTF
+  consumable:
+    networkId: 9969
+    siteId: 2001040
+    unitId: 8440
+    unitName: cnsmbl-audio-responsive
+  rubicon:
+    zoneId: 1443064
+  appnexus:
+    placementId: 17183479
+  ix:
+    siteId: 418728
+  # 33across:
+  #   siteId: cv8lzefSir6Ok2aKkv7mNO
+  #   productId: siab
+  districtm:
+    placementId: 17335043
+  districtmDMX:
+    dmxid: 434620
+    memberid: 100819
+  aol:
+    placement: 5150464
+    network: 10948.1
+  rhythmone:
+    placementId: 85355
+  sharethrough:
+    pkey: 7qaVsJ2aA6zHd5FofQ6EUkqj
+  # sonobi:
+  #   placement_id: 4a1bba6662fe1dde46b0
+  #   ad_unit:
+  sovrn:
+    tagid: 664418
+native_ad_latest:
+  trustx:
+    disabled: true
+native_ad_ymal_link:
+  trustx:
+    disabled: true
+native_ad_mobile:
+  trustx:
+    disabled: true
+native_ad_content_link:
+  trustx:
+    disabled: true
+reskin:
+  trustx:
+    disabled: true
+

@@ -1,0 +1,49 @@
+---
+- behavior: merge
+
+# At the bottom of articles, on a medium desktop size, we insert an athena or a leaderboard
+- name: athena_article
+  className: m-ad__athena
+  prebidName: athena
+  selector: .c-nextclick
+  sizes:
+  - [1030, 590]
+  - [728, 90]
+  - size: [1060, 610]
+    filters:
+      containerWidth:
+        min: 1060
+  - size: [620, 366]
+    filters:
+      containerWidth:
+        max: 1059
+  - size: [620, 371]
+    filters:
+      containerWidth:
+        max: 1059
+  - size: [620, 415]
+    filters:
+      containerWidth:
+        max: 1059
+  holdSize: [728, 295]
+  maxSlots: 1
+  filters:
+    viewportWidth:
+      min: 728
+    elementHeight:
+      selector: .c-entry-content
+      min: 500
+
+- name: right_rail_desktop
+  selector: .c-rock-list--fanposts, .entry_layout_unison_main .c-rock-list--trending
+
+- name: desktop_leaderboard_variable
+  watcherEligible: false
+  sizes:
+  - [728, 90]
+  - [970, 90]
+  - [970, 250]
+  - [1020, 90]
+  
+- name: medium_rectangle_variable
+  watcherEligible: false

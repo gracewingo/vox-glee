@@ -1,0 +1,54 @@
+---
+- behavior: merge
+
+- name: btf_medium_rectangle_variable_article
+  refreshRate: 45
+  sizes:
+  - [300, 250]
+  - [300, 250v]
+  - size: [300, 600]
+    filters:
+      viewportHeight:
+        min: 600
+      elementHeight:
+        selector: .l-article-body-segment .l-col__main
+        min: 1300
+
+- name: btf_medium_rectangle_variable_hub
+  refreshRate: 45
+
+# Within the river on home, hub, group, and article pages - This is the GAM Native River Ad for Revolt
+- name: native_river
+  slotDisplay: false
+  className: m-ad__native_river
+  selector: .l-hub-page .river-segment-0 .c-compact-river__entry:nth-child(3), .l-group-page .river-segment-0 .c-compact-river__entry:nth-child(3), .entry_layout_unison_main .c-compact-river .c-compact-river__entry:nth-child(4)
+  sizes:
+  - fluid
+  prebidEligible: false
+  refreshEligible: false
+  watcherEligible: false
+
+- name: hub_sponsorship
+  slotDisplay: false
+
+- name: article_sponsorship
+  slotDisplay: false
+
+- name: sponsored_content
+  slotDisplay: false
+  refreshEligible: false
+  insertion: inside
+  selector: .c-tab-bar__sponsored-content-image
+  sizes:
+  - [200, 33]
+
+- name: med_rec_variable_archive
+  sizes:
+  - [300, 250]
+  - [300, 600]
+  selector: .c-newsletter_signup_box__main
+  insertion: after
+  filters: 
+    showIfPresent:
+      selector: .l-segment.l-sidebar-fixed
+

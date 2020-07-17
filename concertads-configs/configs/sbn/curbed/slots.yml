@@ -1,0 +1,231 @@
+---
+- behavior: merge
+  remove:
+  - athena_article
+
+- name: homelight_widget
+  selector: .hub-front-page .river-segment-1 .c-rock-list__cta, .entry_key_unison_standard .l-col__sidebar .c-rock-list--trending, .l-hub-page .l-col__sidebar .c-newsletter_signup_box
+  insertion: before
+  maxSlots: 1
+  sizes:
+  - [300, 375]
+  filters:
+    viewportWidth:
+      min: 840
+
+- name: desktop_leaderboard_variable
+  blockthrough:
+    dataId: "5d83d0f47a-377"
+
+- name: tablet_leaderboard
+  blockthrough:
+    dataId: "5d83d0f921-377"
+
+- name: package_cover_ad
+  blockthrough:
+    dataId: "5d83d0fc3d-377"
+
+- name: btf_leaderboard_variable
+  blockthrough:
+    dataId: "5d83d0ffa6-377"
+
+- name: tablet_btf_leaderboard
+  blockthrough:
+    dataId: "5d83d103b8-377"
+
+- name: desktop_feature_body
+  blockthrough:
+    dataId: "5d83d106ed-377"
+
+- name: desktop_feature_body_dynamic
+  blockthrough:
+    dataId: "5d83d109fe-377"
+
+- name: desktop_article_body
+  blockthrough:
+    dataId: "5d83d10d3d-377"
+
+- name: hub_river_leaderboard
+  blockthrough:
+    dataId: "5d83d110ba-377"
+
+- name: gift_guide_leaderboard_variable_desktop
+  blockthrough:
+    dataId: "5d83d114de-377"
+
+- name: storystream_top_leaderboard_desktop
+  blockthrough:
+    dataId: "5d83d118fa-377"
+
+- name: storystream_bottom_leaderboard_variable_desktop
+  blockthrough:
+    dataId: "5d83d11c3d-377"
+
+- name: storystream_river_leaderboard_variable_desktop
+  blockthrough:
+    dataId: "5d83d11fc6-377"
+
+- name: medium_rectangle_variable
+  blockthrough:
+    dataId: "5d83d12339-377"
+
+- name: btf_medium_rectangle_secondary
+  className: m-ad__btf_medium_rectangle
+  prebidName: desktop_article_medrec_dynamic
+  selector: body[data-entry-id] .l-col__sidebar .c-newsletter_signup_box
+  sizes: 
+  - [300, 250]
+  holdSize: [300, 250]
+  maxSlots: 1
+  filters:
+    viewportWidth:
+      min: 881
+
+- name: btf_medium_rectangle_variable_article
+  selector: body[data-entry-id] .l-col__sidebar:not(#comments-sidebar) > div:last-of-type
+  blockthrough:
+    dataId: "5d83d126b2-377"
+
+- name: mobile_leaderboard_hub
+  blockthrough:
+    dataId: "5d83d126b2-377"
+
+- name: package_cover_ad_mobile
+  blockthrough:
+    dataId: "5d83d12f16-377"
+
+- name: mobile_footer
+  blockthrough:
+    dataId: "5d83d1338d-377"
+
+- name: package_mobile_footer
+  blockthrough:
+    dataId: "5d83d13818-377"
+
+- name: mobile_feature_body
+  blockthrough:
+    dataId: "5d83d13cf0-377"
+
+- name: athena_features_mobile
+  blockthrough:
+    dataId: "5d83d14117-377"
+
+- name: athena_features_dynamic_mobile
+  blockthrough:
+    dataId: "5d83d1447b-377"
+
+- name: mobile_leaderboard
+  blockthrough:
+    dataId: "5d83d1480d-377"
+
+- name: mobile_article_body
+  blockthrough:
+    dataId: "5d83d14ba7-377"
+
+- name: native_ad_mobile
+  blockthrough:
+    dataId: "5d83d150fd-377"
+
+- name: mobile_article_body_med_rec_dynamic
+  blockthrough:
+    dataId: "5d83d154f6-377"
+
+- name: desktop_article_medrec_dynamic
+  blockthrough:
+    dataId: "5d83d158a7-377"
+
+- name: medium_rectangle_short
+  blockthrough:
+    dataId: "5d83d15bec-377"
+
+- name: btf_medium_rectangle_variable_hub
+  blockthrough:
+    dataId: "5d83d16022-377"
+
+- name: in_map_legacy
+  blockthrough:
+    dataId: "5d83d1634d-377"
+
+- name: in_map
+  blockthrough:
+    dataId: "5d83d1667d-377"
+
+- name: mobile_med_rec_athena
+  blockthrough:
+    dataId: "5d83d169a7-377"
+
+- name: hub_river_med_rec
+  blockthrough:
+    dataId: "5d83d16e2a-377"
+
+- name: gift_guide_leaderboard_mobile
+  blockthrough:
+    dataId: "5d83d1721c-377"
+
+- name: storystream_bottom_leaderboard_variable_mobile
+  blockthrough:
+    dataId: "5d83d1783f-377"
+
+- name: storystream_river_leaderboard_variable_mobile
+  blockthrough:
+    dataId: "5d83d17c17-377"
+
+- name: mobile_leaderboard_group
+  blockthrough:
+    dataId: "5d83d17fe5-377"
+
+- name: storystream_top_leaderboard_mobile
+  blockthrough:
+    dataId: "5d83d18322-377"
+
+- name: csk_mobile_article
+  blockthrough:
+    dataId: "5d83d186ab-377"
+
+- name: csk_athena
+  blockthrough:
+    dataId: "5d83d18a4b-377"
+
+- name: csk_athena_mobile
+  blockthrough:
+    dataId: "5d83d18e7f-377"
+
+- name: comments_medium_rectangle_short
+  prebidName: desktop_article_medrec_dynamic
+  selector: "#comments-sidebar"
+  refreshRate: 15
+  sizes:
+  - [300, 250]
+  - [300, 250v]
+  holdSize: [300, 250]
+  insertion: inside
+  sticky:
+    enabled: true
+    offset: 10
+  maxSlots: 1
+  filters:
+    viewportWidth:
+      min: 881
+    elementHeight:
+      selector: "#comments"
+      min: 60
+      max: 599
+
+- name: comments_medium_rectangle
+  prebidName: btf_medium_rectangle_variable
+  selector: "#comments-sidebar"
+  refreshRate: 15
+  sizes:
+  - [300, 600]
+  holdSize: [300, 600]
+  insertion: inside
+  sticky:
+    enabled: true
+    offset: 10
+  maxSlots: 1
+  filters:
+    viewportWidth:
+      min: 881
+    elementHeight:
+      selector: "#comments"
+      min: 600

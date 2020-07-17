@@ -1,0 +1,463 @@
+---
+- behavior: merge
+  remove:
+  - reskin
+  - prelude
+  - native_ad_latest
+  - native_ad_video
+  - native_ad_ymal_link
+  - native_ad_linkset_link
+  - native_ad_content_link
+  - native_ad_module
+  - branded_content_feedback_form
+  - site_sponsorship_logo_white
+  - site_sponsorship_logo_color
+  - site_sponsorship_logo_mobile_white
+  - site_sponsorship_logo_mobile_color
+  - buy_button
+
+
+- name: editorially_placed_athena_desktop
+  sizes:
+  - [1030, 590]
+  - [728, 90]
+  - size: [1060, 610]
+    filters:
+      containerWidth:
+        min: 1060
+  - size: [620, 366]
+    filters:
+      containerWidth:
+        max: 1059
+  - size: [1060, 619]
+    filters:
+      containerWidth:
+        min: 1060
+  - size: [1060, 694]
+    filters:
+      containerWidth:
+        min: 1060
+
+- name: editorially_placed_athena_mobile
+  sizes:
+  - [300, 250]
+  - [300, 250v]
+  - [1030, 590]
+  - [325, 508]
+  - [325, 203]
+  - [325, 236]
+  - [325, 204]
+
+- name: athena_article
+  prebidName: desktop_athena_dynamic
+  sizes:
+  - [728, 90]
+  - [1030, 590]
+  - [620, 366]
+  - [620, 371]
+  - [620, 415]
+
+# Within the river (on desktop), we add in leaderboard every 700px.
+- name: hub_river_leaderboard
+  selector: .l-hub-page .c-compact-river__entry, .l-group-page .c-compact-river__entry
+  watcherEligible: false
+  sizes:
+  - [728, 90]
+  holdSize: [728, 90]
+  filters:
+    spacing:
+      before: 700
+      after: 500
+      exceptSlot: native_quicklistings
+    containerWidth:
+      min: 728
+
+# Within the river (on mobile), we add in med_rec every 500px.
+- name: hub_river_med_rec
+  selector: .l-hub-wrapper .c-compact-river__entry, .l-group-page .c-compact-river__entry
+  watcherEligible: false
+  sizes:
+  - [300, 250]
+  - [300, 250v]
+  holdSize: [300, 250]
+  filters:
+    spacing:
+      before: 600
+      after: 400
+    viewportWidth:
+      max: 728
+
+- name: mobile_med_rec_athena
+  selector: .river-segment-0
+  sizes:
+  - [300, 250]
+  - [300, 250v]
+  holdSize: [300, 250]
+  maxSlots: 1
+  insertion: after
+  filters:
+    viewportWidth:
+      max: 728
+    spacing:
+      after: 500
+    hideIfPresent:
+      selector: .l-hub-page, .l-group-page
+
+- name: medium_rectangle_short
+  prebidName: desktop_article_medrec_dynamic
+  sizes:
+  - [300, 600]
+  - [300, 250]
+  - [300, 250v]
+  filters:
+    viewportWidth:
+      min: 881
+    hideIfPresent:
+      selector: .l-full-archives, .l-hub-page, .l-group-page
+    elementHeight:
+        selector: .l-article-body-segment .l-col__main, .l-main-content > .l-col__main
+        max: 2000
+
+# Show on hub pages (including home) and group pages
+- name: medium_rectangle_short_hub
+  prebidName: desktop_article_medrec_dynamic
+  selector: .l-hub-page .l-col__sidebar:not(.c-sports-blog-directory__filter) > div:first-of-type, .l-hub-page .l-article-sidebar > *:first-child, .l-group-page .l-col__sidebar:not(.c-sports-blog-directory__filter) > div:first-of-type, .l-group-page .l-article-sidebar > *:first-child
+  sizes:
+  - [300, 600]
+  - [300, 250]
+  - [300, 250v]
+  holdSize: [300, 250]
+  watcherEligible: false
+  maxSlots: 1
+  filters:
+    viewportWidth:
+      min: 881
+    hideIfPresent:
+      selector: .l-full-archives
+    elementHeight:
+        selector: .l-article-body-segment .l-col__main, .l-main-content > .l-col__main
+        max: 2000
+
+- name: btf_medium_rectangle_variable_article
+  prebidName: medium_rectangle_variable
+  refreshRate: 30
+
+- name: mobile_article_body_med_rec_dynamic
+  prebidName: mobile_med_rec_athena
+  sizes:
+  - [300, 250]
+  - [300, 250v]
+  - [1030, 590]
+  - [325, 508]
+  - [325, 203]
+  - [325, 236]
+  - [325, 204]
+
+# Show on hub pages (including home) and group pages
+- name: mobile_med_rec_athena_hub
+  selector: .l-hub-page .river-segment-0, .l-group-page .river-segment-0
+  sizes:
+  - [300, 250]
+  - [300, 250v]
+  holdSize: [300, 250]
+  maxSlots: 1
+  insertion: after
+  watcherEligible: false
+  filters:
+    viewportWidth:
+      max: 728
+    spacing:
+      after: 500
+
+- name: athena_features_desktop
+  prebidName: desktop_athena_dynamic
+  sizes:
+  - [728, 90]
+  - [970, 90]
+  - [1030, 590]
+  - [620, 366]
+  - [620, 371]
+  - [620, 415]
+
+- name: athena_features_dynamic_mobile
+  prebidName: mobile_med_rec_athena
+  sizes:
+  - [1030, 590]
+  - [325, 508]
+  - [300, 250]
+  - [300, 250v]
+  - [300, 265]
+  - [325, 203]
+  - [325, 236]
+  - [325, 204]
+
+- name: athena_features_mobile
+  prebidName: mobile_med_rec_athena
+  sizes:
+  - [1030, 590]
+  - [325, 508]
+  - [300, 250]
+  - [300, 250v]
+  - [300, 265]
+  - [325, 203]
+  - [325, 236]
+  - [325, 204]
+
+- name: desktop_feature_body_dynamic
+  prebidName: desktop_dynamic
+  sizes:
+  - [728, 90]
+  - [300, 250]
+  - [300, 250v]
+  - [620, 366]
+  - [1030, 590]
+
+- name: desktop_feature_body
+  prebidName: desktop_article_body
+  sizes:
+  - [728, 90]
+  - [620, 366]
+  - [1030, 590]
+
+- name: athena_hub
+  prebidName: desktop_athena_dynamic
+  watcherEligible: false
+  sizes:
+  - [728, 90]
+  - [970, 90]
+  filters:
+    viewportWidth:
+      min: 728
+    spacing:
+      after: 500
+
+- name: editorially_placed_leaderboard
+  prebidName: desktop_article_body
+
+- name: package_cover_ad
+  watcherEligible: false
+  prebidName: desktop_leaderboard_variable
+  sizes:
+  - [970, 250]
+  - size: [970, 250]
+    filters:
+      containerWidth:
+        min: 970
+
+- name: medium_rectangle_variable_section_front
+  prebidName: medium_rectangle_variable
+  watcherEligible: false
+  selector: .c-section-front-block--has_ad .c-section-front-block__ad
+  sizes:
+  - [300, 250]
+  - [300, 250v]
+  - [300, 600]
+  holdSize: [300, 250]
+  insertion: inside
+  filters:
+    viewportWidth:
+      min: 881
+
+- name: desktop_leaderboard_variable
+  watcherEligible: false
+  sizes:
+  - size: [970, 250]
+    filters:
+      containerWidth:
+        min: 970
+
+- name: tablet_leaderboard
+  watcherEligible: false
+
+- name: mobile_leaderboard_hub
+  watcherEligible: false
+  sizes:
+  - [320, 50]
+  holdSize: [300, 50]
+
+- name: mobile_leaderboard_group
+  watcherEligible: false
+  sizes:
+  - [320, 50]
+
+- name: package_cover_ad_mobile
+  prebidName: mobile_leaderboard
+  watcherEligible: false
+  sizes:
+  - [320, 50]
+  - [300, 250]
+  - [300, 250v]
+  - [1030, 590]
+  - [325, 508]
+  - [325, 203]
+  - [325, 236]
+  - [325, 204]
+  - [1020, 90]
+
+- name: btf_leaderboard_variable
+  prebidName: desktop_leaderboard_variable
+  selector: .hub-front-page .l-breaker--social-promo, .l-hub-page:not(.hub-front-page) .c-footer__partner, .entry_layout_unison_main .c-footer__partner
+  watcherEligible: false
+  sizes:
+  - [728, 90]
+
+- name: mobile_adhesion
+  selector: .c-footer__partner
+  watcherEligible: false
+  prebidEligible: false
+  refreshEligible: false
+  allowSiblings: true
+  sizes:
+  - [320, 51]
+  holdSize: [320, 50]
+  filters:
+    viewportWidth:
+      min: 0
+      max: 728
+
+# allowSiblings is true to let the mobile adhesion slot show
+- name: mobile_footer
+  selector: .hub-front-page .l-breaker--social-promo, .l-hub-page:not(.hub-front-page) .c-footer__partner, .entry_layout_unison_main .c-footer__partner
+  watcherEligible: false
+  insertion: before
+  allowSiblings: true
+  previewHoldSize: [300, 250]
+  maxSlots: 1
+  sizes:
+  - [320, 50]
+  - [300, 250]
+  - [300, 250v]
+  - [325, 203]
+  - [325, 236]
+  - [325, 204]
+  holdSize: [300, 250]
+  filters:
+    viewportWidth:
+      min: 0
+      max: 728
+
+- name: package_mobile_footer
+  prebidName: mobile_footer
+  sizes:
+  - [320, 50]
+  - [300, 250]
+  - [300, 250v]
+  - [1030, 590]
+  - [325, 508]
+  - [325, 203]
+  - [325, 236]
+  - [325, 204]
+
+- name: mobile_feature_body
+  prebidName: mobile_leaderboard
+  sizes:
+  - [300, 250]
+  - [300, 250v]
+  - [325, 508]
+  - [325, 203]
+  - [325, 236]
+  - [325, 204]
+  - [320, 50]
+  - [1030, 590]
+
+- name: mobile_leaderboard
+  watcherEligible: false
+  sizes:
+  - [320, 50]
+  holdSize: [300, 50]
+  filters:
+    viewportWidth:
+      max: 728
+    spacing:
+      after: 500
+
+- name: mobile_leaderboard_video_entry
+  prebidName: mobile_leaderboard
+  selector: .entry_key_unison_video .l-main-content
+  insertion: before
+  previewHoldSize: [320, 50]
+  maxSlots: 1
+  sizes:
+  - [320, 50]
+  filters:
+    viewportWidth:
+      min: 0
+      max: 728
+
+- name: gift_guide_leaderboard_mobile
+  sizes:
+  - [320, 50]
+  - [300, 250]
+  - [300, 250v]
+  - [1030, 590]
+
+- name: storystream_top_leaderboard_mobile
+  prebidName: mobile_leaderboard
+  sizes:
+  - [320, 50]
+  watcherEligible: false
+
+- name: storystream_bottom_leaderboard_variable_mobile
+  prebidName: mobile_leaderboard
+  sizes:
+  - [320, 50]
+  - [300, 250]
+  - [300, 250v]
+  - [1030, 590]
+  - [325, 508]
+  - [325, 203]
+  - [325, 236]
+  - [325, 204]
+
+- name: storystream_river_leaderboard_variable_mobile
+  prebidName: mobile_leaderboard
+  sizes:
+  - [320, 50]
+  - [300, 250]
+  - [300, 250v]
+
+- name: btf_medium_rectangle_variable_hub
+  selector: .l-hub-page .river-segment-1 .l-col__sidebar > div:last-of-type
+  watcherEligible: false
+  refreshRate: 30
+
+- name: in_map_legacy
+  watcherEligible: false
+
+- name: mapstack_sponsorship
+  watcherEligible: false
+
+- name: article_sponsorship
+  selector: body.entry_layout_unison_main .c-social-buttons
+  insertion: before
+  watcherEligible: false
+
+- name: hub_sponsorship
+  watcherEligible: false
+
+- name: out_of_page
+  selector: .c-footer
+  insertion: before
+  sizes:
+  - [1, 1]
+  watcherEligible: false
+  prebidEligible: false
+  outOfPage: true
+  maxSlots: 1
+  allowSiblings: true
+
+# Within the river on home, hub, group, and article pages - This is the GAM Native River Ad for Revolt
+- name: native_river
+  className: m-ad__native_river
+  selector: .l-hub-page .river-segment-0 .c-compact-river__entry:nth-child(3), .l-group-page .river-segment-0 .c-compact-river__entry:nth-child(3), .entry_layout_unison_main .c-compact-river .c-compact-river__entry:nth-child(4)
+  sizes:
+  - fluid
+  prebidEligible: false
+  refreshEligible: false
+  watcherEligible: false
+
+- name: csk_athena
+  sizes:
+  - [1030, 590]
+  - [728, 90]
+

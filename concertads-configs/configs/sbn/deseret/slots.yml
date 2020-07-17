@@ -1,0 +1,499 @@
+---
+- behavior: merge
+  remove:
+  - prelude
+  - reskin
+  - native_ad_latest
+  - native_ad_video
+  - native_ad_ymal_link
+  - native_ad_linkset_link
+  - native_ad_content_link
+  - native_ad_module
+  - native_quicklistings
+  - native_quicklistings_article
+  - branded_content_feedback_form
+  - site_sponsorship_logo_white
+  - site_sponsorship_logo_color
+  - site_sponsorship_logo_mobile_white
+  - site_sponsorship_logo_mobile_color
+  - medium_rectangle_variable
+  - buy_button
+
+# Within the river - This is the GAM Native River Ad for Deseret
+- name: native_river
+  selector: .l-hub-page .river-segment-0 .c-compact-river__entry:nth-child(3), .l-group-page .river-segment-0 .c-compact-river__entry:nth-child(3)
+  sizes:
+  - fluid
+  prebidEligible: false
+  refreshEligible: false
+  watcherEligible: false
+  adLightningReportingDisabled: true
+
+- name: medium_rectangle_variable_section_front
+  refreshEligible: false
+  watcherEligible: false
+  selector: .c-section-front-block--has_ad .c-section-front-block__ad
+  sizes:
+  - [300, 250]
+  - [300, 250v]
+  holdSize: [300, 250]
+  insertion: inside
+  filters:
+    viewportWidth:
+      min: 881
+
+- name: desktop_leaderboard_variable
+  refreshEligible: false
+  watcherEligible: false
+  sizes:
+  - [728, 90]
+  - [970, 90]
+  - [970, 250]
+  - [1020, 90]
+  - size: [1280, 100]
+    filters:
+       showIfPresent:
+        selector: .group-high-school-sports, .c-entry-group-labels__item a[href$='/high-school-sports']
+
+- name: athena_features_desktop
+  prebidName: desktop_article_body
+  sizes:
+  - [728, 90]
+  - [1030, 590]
+  - [620, 366]
+  - [620, 371]
+  - [620, 415]
+
+- name: editorially_placed_athena_mobile
+  prebidName: mobile_article_body_med_rec_dynamic
+  refreshEligible: false
+  watcherEligible: false
+  sizes:
+    - [300, 250]
+    - [300, 250v]
+    - [1030, 590]
+    - [325, 508]
+    - [325, 203]
+    - [325, 236]
+    - [325, 204]
+
+- name: editorially_placed_athena_desktop
+  prebidName: desktop_article_body
+  refreshEligible: false
+  watcherEligible: false
+  sizes:
+  - [1030, 590]
+  - [728, 90]
+  - size: [1060, 610]
+    filters:
+      containerWidth:
+        min: 1060
+  - size: [620, 366]
+    filters:
+      containerWidth:
+        max: 1059
+  - size: [1060, 619]
+    filters:
+      containerWidth:
+        min: 1060
+  - size: [1060, 694]
+    filters:
+      containerWidth:
+        min: 1060
+
+- name: editorially_placed_leaderboard
+  prebidName: desktop_article_body
+  watcherEligible: false
+  refreshEligible: false
+
+- name: wings
+  watcherEligible: false
+  refreshEligible: false
+  adLightningReportingDisabled: true
+  selector: .l-root
+  sizes:
+  - [2, 2]
+  prebidEligible: false
+  filters:
+    viewportWidth:
+      min: 1320
+    hideIfPresent: # We hide these on features, map hubs, and article pages.
+      selector: .l-feature, .c-maps-hub, .entry_layout_unison_main
+
+- name: tablet_leaderboard
+  watcherEligible: false
+  refreshEligible: false
+
+- name: mobile_leaderboard_hub
+  watcherEligible: false
+  refreshEligible: false
+
+- name: mobile_leaderboard_group
+  watcherEligible: false
+  refreshEligible: false
+  sizes:
+  - [320, 50]
+  - [300, 250]
+  - [300, 250v]
+
+- name: package_cover_ad
+  prebidName: desktop_leaderboard_variable
+  watcherEligible: false
+  refreshEligible: false
+
+- name: package_cover_ad_mobile
+  prebidName: mobile_leaderboard
+  watcherEligible: false
+  refreshEligible: false
+
+- name: btf_leaderboard_variable
+  refreshEligible: false
+  sizes:
+  - [728, 90]
+  - [1020, 90]
+  - [970, 250]
+
+- name: tablet_btf_leaderboard
+  refreshEligible: false
+
+- name: mobile_footer
+  refreshEligible: false
+
+- name: package_mobile_footer
+  prebidName: mobile_footer
+  watcherEligible: false
+  refreshEligible: false
+
+- name: mobile_feature_body
+  prebidName: mobile_leaderboard
+  watcherEligible: false
+  refreshEligible: false
+
+- name: desktop_feature_body_dynamic
+  prebidName: desktop_dynamic
+
+- name: desktop_feature_body
+  prebidName: desktop_article_body
+
+- name: athena_features_mobile
+  prebidName: mobile_med_rec_athena
+  watcherEligible: false
+  refreshEligible: false
+  sizes:
+  - [1030, 590]
+  - [325, 508]
+  - [300, 250]
+  - [300, 250v]
+  - [325, 203]
+  - [325, 236]
+  - [325, 204]
+
+- name: athena_features_dynamic_mobile
+  prebidName: mobile_med_rec_athena
+  watcherEligible: false
+  refreshEligible: false
+  sizes:
+  - [1030, 590]
+  - [325, 508]
+  - [300, 250]
+  - [300, 250v]
+  - [325, 203]
+  - [325, 236]
+  - [325, 204]
+
+- name: mobile_leaderboard
+  watcherEligible: false
+  refreshEligible: false
+  sizes:
+  - [1030, 590]
+  - [325, 508]
+  - [300, 250]
+  - [300, 250v]
+  - [325, 203]
+  - [325, 236]
+  - [325, 204]
+  - [320, 50]
+
+- name: mobile_article_body
+  refreshEligible: false
+
+- name: native_ad_mobile
+  refreshEligible: false
+
+- name: mobile_article_body_med_rec_dynamic
+  prebidName: mobile_med_rec_athena
+  refreshEligible: false
+
+# Updated medium_rectangle_variable slot specifically for front page
+- name: medium_rectangle_variable_front
+  selector: .hub-front-page .l-col__sidebar:not(.c-sports-blog-directory__filter) > div:first-of-type
+  prebidName: medium_rectangle_variable
+  sizes:
+  - [300, 250]
+  - [300, 250v]
+  - [300, 600]
+  holdSize: [300, 250]
+  maxSlots: 1
+  watcherEligible: false
+  refreshEligible: false
+  filters:
+    viewportWidth:
+      min: 881
+    hideIfPresent:
+      selector: .l-full-archives
+    elementHeight:
+        selector: .l-main-content > .l-col__main
+        min: 1627
+
+# Updated medium_rectangle_variable slot specifically for hub pages
+- name: medium_rectangle_variable_hub
+  selector: .l-hub-page:not(.hub-front-page) .l-col__sidebar:not(.c-sports-blog-directory__filter) > div:first-of-type, .l-group-page .l-col__sidebar:not(.c-sports-blog-directory__filter) > div:first-of-type
+  prebidName: medium_rectangle_variable_section_front
+  sizes:
+  - [300, 250]
+  - [300, 250v]
+  - [300, 600]
+  holdSize: [300, 250]
+  maxSlots: 1
+  watcherEligible: false
+  refreshEligible: false
+  filters:
+    viewportWidth:
+      min: 881
+    hideIfPresent:
+      selector: .l-full-archives
+    elementHeight:
+        selector: .l-main-content > .l-col__main
+        min: 1627
+
+# Updated medium_rectangle_variable slot specifically for articles
+- name: medium_rectangle_variable_article
+  selector: .l-article-body-segment .l-col__sidebar:not(.c-sports-blog-directory__filter) > div:first-of-type
+  prebidName: medium_rectangle_variable_section_front
+  sizes:
+  - [300, 250]
+  - [300, 250v]
+  - [300, 600]
+  holdSize: [300, 250]
+  maxSlots: 1
+  watcherEligible: false
+  refreshEligible: false
+  filters:
+    viewportWidth:
+      min: 881
+    hideIfPresent:
+      selector: .l-full-archives
+    elementHeight:
+        selector: .l-article-body-segment .l-col__main, .l-main-content > .l-col__main
+        min: 1627
+
+- name: medium_rectangle_short
+  watcherEligible: false
+  refreshEligible: false
+  filters:
+    viewportWidth:
+      min: 881
+    hideIfPresent:
+      selector: .l-full-archives
+    elementHeight:
+        selector: .l-article-body-segment .l-col__main, .l-main-content > .l-col__main
+        max: 1626
+
+- name: btf_medium_rectangle_variable_article
+  prebidName: medium_rectangle_variable
+  watcherEligible: false
+  refreshRate: 30
+  filters:
+    viewportWidth:
+      min: 881
+    elementHeight:
+      selector: .l-article-body-segment .l-col__main
+      min: 3120
+
+- name: btf_medium_rectangle_variable_hub
+  watcherEligible: false
+  refreshRate: 30
+  sizes:
+  - [300, 250]
+  - [300, 250v]
+  maxSlots: 1
+
+- name: btf_medium_rectangle_short
+  className: m-ad__btf_medium_rectangle_variable
+  prebidName: medium_rectangle_short
+  watcherEligible: false
+  refreshRate: 30
+  selector: body[data-entry-id] .l-col__sidebar:not(.c-sports-blog-directory__filter) > div:last-of-type
+  sticky:
+    enabled: true
+    offset: 100
+  sizes:
+  - [300, 250]
+  - [300, 250v]
+  holdSize: [300, 250]
+  insertion: after
+  maxSlots: 1
+  filters:
+    viewportWidth:
+      min: 881
+    elementHeight:
+      selector: .l-article-body-segment .l-col__main, .l-main-content > .l-col__main
+      min: 2658
+      max: 3107
+
+- name: in_map_legacy
+  watcherEligible: false
+  refreshEligible: false
+
+- name: in_map
+  watcherEligible: false
+  refreshEligible: false
+
+- name: mapstack_sponsorship
+  watcherEligible: false
+  refreshEligible: false
+  adLightningReportingDisabled: true
+
+- name: athena_hub
+  prebidName: desktop_athena_dynamic
+  refreshEligible: false
+  sizes:
+  - [728, 90]
+  - [1030, 590]
+  - [970, 90]
+  - size: [1060, 610]
+    filters:
+      containerWidth:
+        min: 1060
+  - size: [620, 366]
+    filters:
+      containerWidth:
+        max: 1059
+  - size: [1060, 619]
+    filters:
+      containerWidth:
+        min: 1060
+  - size: [1060, 694]
+    filters:
+      containerWidth:
+        min: 1060
+  - size: [970, 250]
+    filters:
+      viewportWidth:
+        min: 970
+
+- name: athena_article
+  prebidName: desktop_athena_dynamic
+  refreshEligible: false
+
+- name: hub_river_leaderboard
+  refreshEligible: false
+  filters:
+    spacing:
+      before: 500
+      after: 500
+      exceptSlot: native_quicklistings
+    containerWidth:
+      min: 728
+
+- name: mobile_med_rec_athena
+  watcherEligible: false
+  refreshEligible: false
+  sizes:
+  - [300, 250]
+  - [300, 250v]
+  - [1030, 590]
+  - [325, 508]
+  - [325, 203]
+  - [325, 236]
+  - [325, 204]
+
+- name: hub_river_med_rec
+  refreshEligible: false
+  filters:
+    spacing:
+      before: 400
+      after: 400
+    viewportWidth:
+      max: 728
+
+- name: gift_guide_leaderboard_variable_desktop
+  refreshEligible: false
+
+- name: gift_guide_leaderboard_mobile
+  watcherEligible: false
+  refreshEligible: false
+
+- name: storystream_top_leaderboard_desktop
+  watcherEligible: false
+  refreshEligible: false
+
+- name: storystream_bottom_leaderboard_variable_desktop
+  watcherEligible: false
+  refreshEligible: false
+
+- name: storystream_river_leaderboard_variable_desktop
+  watcherEligible: false
+  refreshEligible: false
+
+- name: storystream_top_leaderboard_mobile
+  prebidName: mobile_leaderboard
+  watcherEligible: false
+  refreshEligible: false
+  sizes:
+  - [320, 50]
+  - [300, 50]
+
+- name: storystream_bottom_leaderboard_variable_mobile
+  prebidName: mobile_leaderboard
+  watcherEligible: false
+  refreshEligible: false
+
+- name: storystream_river_leaderboard_variable_mobile
+  prebidName: mobile_leaderboard
+  watcherEligible: false
+  refreshEligible: false
+
+- name: csk_article_sponsorship
+  adLightningReportingDisabled: true
+
+- name: article_sponsorship
+  watcherEligible: false
+  refreshEligible: false
+  adLightningReportingDisabled: true
+
+- name: hub_sponsorship
+  selector: .c-hub-title__inner, .c-group-header .p-page-title, .c-user-card__user-profile .c-user-card__name
+  watcherEligible: false
+  refreshEligible: false
+  adLightningReportingDisabled: true
+
+- name: failsafe_article_med_rec_athena_mobile
+  watcherEligible: false
+  refreshEligible: false
+
+- name: mobile_interstitial
+  selector: body.entry_layout_unison_main .c-entry-hero
+  watcherEligible: false
+  refreshEligible: false
+  sizes:
+  - [320, 480]
+  filters:
+    viewportWidth:
+      max: 728
+
+- name: comments_sidebar
+  selector: '#comments-sidebar'
+  refreshRate: 30
+  sticky:
+    enabled: true
+    offset: 50
+  sizes:
+  - [300, 250]
+  - [300, 250v]
+  holdSize: [300, 250]
+  maxSlots: 1
+  insertion: inside
+  filters:
+    viewportWidth:
+      min: 880

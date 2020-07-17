@@ -1,0 +1,210 @@
+---
+- behavior: merge
+  remove:
+  - athena_article
+
+- name: desktop_leaderboard_variable
+  selector: .l-header, .entry_layout_unison_package_landing .c-package-cover
+  blockthrough:
+    dataId: "5d83cfab28-377"
+
+- name: tablet_leaderboard
+  blockthrough:
+    dataId: "5d83cfaf96-377"
+
+- name: package_cover_ad
+  blockthrough:
+    dataId: "5d83cfb349-377"
+
+- name: btf_leaderboard_variable
+  blockthrough:
+    dataId: "5d83cfb69e-377"
+
+- name: tablet_btf_leaderboard
+  blockthrough:
+    dataId: "5d83cfb9da-377"
+
+- name: desktop_feature_body
+  blockthrough:
+    dataId: "5d83cfbdcf-377"
+
+- name: desktop_feature_body_dynamic
+  blockthrough:
+    dataId: "5d83cfc0ec-377"
+
+- name: desktop_article_body
+  blockthrough:
+    dataId: "5d83cfc4a4-377"
+
+- name: hub_river_leaderboard
+  blockthrough:
+    dataId: "5d83cfc809-377"
+
+- name: gift_guide_leaderboard_variable_desktop
+  blockthrough:
+    dataId: "5d83cfcb9c-377"
+
+- name: storystream_top_leaderboard_desktop
+  blockthrough:
+    dataId: "5d83cfceda-377"
+
+- name: storystream_bottom_leaderboard_variable_desktop
+  blockthrough:
+    dataId: "5d83cfd2a0-377"
+
+- name: storystream_river_leaderboard_variable_desktop
+  blockthrough:
+    dataId: "5d83cfd67c-377"
+
+- name: medium_rectangle_variable
+  blockthrough:
+    dataId: "5d83cfd9a4-377"
+
+- name: btf_medium_rectangle_variable_article
+  blockthrough:
+    dataId: "5d83cfdd75-377"
+
+- name: mobile_leaderboard_hub
+  selector: .l-hub-page .l-header, .entry_layout_unison_package_landing .c-package-cover
+  blockthrough:
+    dataId: "5d83cfe1d0-377"
+
+- name: package_cover_ad_mobile
+  blockthrough:
+    dataId: "5d83cfe4ec-377"
+
+- name: mobile_footer
+  blockthrough:
+    dataId: "5d83cfe81d-377"
+
+- name: package_mobile_footer
+  blockthrough:
+    dataId: "5d83cfebe4-377"
+
+- name: mobile_feature_body
+  blockthrough:
+    dataId: "5d83cfef74-377"
+
+- name: athena_features_mobile
+  blockthrough:
+    dataId: "5d83cff349-377"
+
+- name: athena_features_dynamic_mobile
+  blockthrough:
+    dataId: "5d83cff798-377"
+
+- name: mobile_leaderboard
+  blockthrough:
+    dataId: "5d83cffed6-377"
+
+- name: mobile_article_body
+  blockthrough:
+    dataId: "5d83d00317-377"
+
+- name: native_ad_mobile
+  blockthrough:
+    dataId: "5d83d00725-377"
+
+- name: mobile_article_body_med_rec_dynamic
+  blockthrough:
+    dataId: "5d83d00b72-377"
+
+- name: desktop_article_medrec_dynamic
+  blockthrough:
+    dataId: "5d83d00f21-377"
+
+- name: medium_rectangle_short
+  blockthrough:
+    dataId: "5d83d014b0-377"
+
+- name: btf_medium_rectangle_variable_hub
+  blockthrough:
+    dataId: "5d83d01944-377"
+
+- name: in_map_legacy
+  blockthrough:
+    dataId: "5d83d01d7f-377"
+
+- name: in_map
+  blockthrough:
+    dataId: "5d83d0212c-377"
+
+- name: mobile_med_rec_athena
+  blockthrough:
+    dataId: "5d83d02815-377"
+
+- name: hub_river_med_rec
+  blockthrough:
+    dataId: "5d83d02bf8-377"
+
+- name: gift_guide_leaderboard_mobile
+  blockthrough:
+    dataId: "5d83d03068-377"
+
+- name: storystream_bottom_leaderboard_variable_mobile
+  blockthrough:
+    dataId: "5d83d03419-377"
+
+- name: storystream_river_leaderboard_variable_mobile
+  blockthrough:
+    dataId: "5d83d037e8-377"
+
+- name: mobile_leaderboard_group
+  blockthrough:
+    dataId: "5d83d03b3c-377"
+
+- name: storystream_top_leaderboard_mobile
+  blockthrough:
+    dataId: "5d83d03efb-377"
+
+- name: csk_mobile_article
+  blockthrough:
+    dataId: "5d83d04246-377"
+
+- name: csk_athena
+  blockthrough:
+    dataId: "5d83d04686-377"
+
+- name: csk_athena_mobile
+  blockthrough:
+    dataId: "5d83d04a08-377"
+
+- name: comments_medium_rectangle_short
+  prebidName: desktop_article_medrec_dynamic
+  selector: "#comments-sidebar"
+  refreshRate: 15
+  sizes:
+  - [300, 250]
+  - [300, 250v]
+  holdSize: [300, 250]
+  insertion: inside
+  sticky:
+    enabled: true
+    offset: 10
+  maxSlots: 1
+  filters:
+    viewportWidth:
+      min: 881
+    elementHeight:
+      selector: "#comments"
+      min: 60
+      max: 599
+
+- name: comments_medium_rectangle
+  prebidName: btf_medium_rectangle_variable
+  selector: "#comments-sidebar"
+  refreshRate: 15
+  sizes:
+  - [300, 600]
+  holdSize: [300, 600]
+  insertion: inside
+  sticky:
+    enabled: true
+    offset: 10
+  maxSlots: 1
+  filters:
+    viewportWidth:
+      min: 881
+    elementHeight:
+      selector: "#comments"
+      min: 600

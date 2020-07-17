@@ -1,0 +1,9 @@
+nodeResize:
+  - targetSelectors: ['#comments']
+    observe: minHeight
+    observeLimit: 60
+    insert:
+      includedSlots: ['comments_medium_rectangle', 'comments_medium_rectangle_short']
+    breakpointMin: 728 
+
+permutiveEnabled: true

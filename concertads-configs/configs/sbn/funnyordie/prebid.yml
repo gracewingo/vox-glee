@@ -1,0 +1,262 @@
+---
+biddingEnabled: true
+prebidEnabled: true
+timeout: 1000
+amazonPubId: 3176
+defaultConfig:
+  openx:
+    delDomain: sbnationbidder-d.openx.net
+    unit: 540300046
+  rubicon:
+    accountId: 7470
+    position: btf
+    siteId: 212222
+    zoneId: 1042110
+  rubiconLite:
+    accountId: 18288
+    siteId: 212240
+    sizes: [213, 270, 271, 272]
+    position: btf
+    zoneId: 1042148
+  consumable:
+    networkId: 9969
+    siteId: 1039096
+  rubi__mm:
+    accountId: 21670
+    siteId: 294140
+    zoneId: 1480272
+    zoneName: "Funny or Die_MediaMath DC"
+  rubi__ttd:
+    accountId: 21670
+    siteId: 294142
+    zoneName: "Funny or Die_TTD DC"
+    zoneId: 1480298
+desktop_leaderboard_variable:
+  ix:
+    siteId: 338814
+  rubicon:
+    position: atf
+  consumable:
+    unitId: 5495
+    unitName: cnsmbl-audio-728x90-slider
+  appnexus:
+    placementId: 14508847
+  trustx:
+    uid: 2665
+medium_rectangle_variable:
+  trustx:
+    uid: 2666
+  ix:
+    siteId: 338813
+  rubicon:
+    position: atf
+  consumable:
+    unitId: 5479
+    unitName: cnsmbl-audio-300x250-slider
+  appnexus:
+    placementId: 14508848
+btf_medium_rectangle_variable:
+  trustx:
+    uid: 2668
+  ix:
+    siteId: 338825
+  consumable:
+    unitId: 5479
+    unitName: cnsmbl-audio-300x250-slider
+  appnexus:
+    placementId: 14508850
+desktop_article_medrec_dynamic:
+  trustx:
+    uid: 2669
+  ix:
+    siteId: 338812
+  consumable:
+    unitId: 5479
+    unitName: cnsmbl-audio-300x250-slider
+  appnexus:
+    placementId: 14508851
+btf_leaderboard_variable:
+  trustx:
+    uid: 2670
+  ix:
+    siteId: 338827
+  consumable:
+    unitId: 5495
+    unitName: cnsmbl-audio-728x90-slider
+  appnexus:
+    placementId: 338827
+  concert:
+    partnerId: funnyordie
+mobile_leaderboard:
+  trustx:
+    uid: 2673
+  ix:
+    siteId: 338818
+  rubicon:
+    position: atf
+  consumable:
+    unitId: 5511
+    unitName: cnsmbl-audio-320x50-slider
+  appnexus:
+    placementId: 14508853
+  concert:
+    partnerId: funnyordie
+mobile_article_body:
+  trustx:
+    uid: 2674
+  ix:
+    siteId: 338823
+  rubiconLite:
+    zoneId: 1042148
+  consumable:
+    unitId: 5503
+    unitName: cnsmbl-audio-300x250-slider
+  appnexus:
+    placementId: 14508854
+  concert:
+    partnerId: funnyordie
+mobile_article_body_med_rec_dynamic:
+  trustx:
+    uid: 2676
+  ix:
+    siteId: 338815
+  rubiconLite:
+    zoneId: 1042148
+  consumable:
+    unitId: 5503
+    unitName: cnsmbl-audio-300x250-slider
+  appnexus:
+    placementId: 14508856
+mobile_footer:
+  trustx:
+    uid: 2677
+  ix:
+    siteId: 338824
+  consumable:
+    unitId: 5511
+    unitName: cnsmbl-audio-320x50-slider
+  appnexus:
+    placementId: 14508858
+tablet_leaderboard:
+  trustx:
+    uid: 2678
+  ix:
+    siteId: 338828
+  rubicon:
+    position: atf
+  consumable:
+    unitId: 5495
+    unitName: cnsmbl-audio-728x90-slider
+  appnexus:
+    placementId: 14508859
+tablet_btf_leaderboard:
+  trustx:
+    uid: 2680
+  ix:
+    siteId: 338828
+  consumable:
+    unitId: 5495
+    unitName: cnsmbl-audio-728x90-slider
+  appnexus:
+    placementId: 14508861
+hub_river_leaderboard:
+  trustx:
+    uid: 2682
+  ix:
+    siteId: 338822
+  rubiconLite:
+    zoneId: 1042148
+  consumable:
+    unitId: 5495
+    unitName: cnsmbl-audio-728x90-slider
+  appnexus:
+    placementId: 14508862
+  concert:
+    partnerId: funnyordie
+hub_river_med_rec:
+  trustx:
+    uid: 2684
+  ix:
+    siteId: 338826
+  consumable:
+    unitId: 5479
+    unitName: cnsmbl-audio-300x250-slider
+  appnexus:
+    placementId: 14508864
+  concert:
+    partnerId: funnyordie
+mobile_med_rec_athena:
+  trustx:
+    uid: 2685
+  ix:
+    siteId: 338819
+  rubicon:
+    position: atf
+  rubiconLite:
+    zoneId: 1042148
+    position: atf
+  consumable:
+    unitId: 5503
+    unitName: cnsmbl-audio-300x250-slider
+  appnexus:
+    placementId: 14508865
+  concert:
+    partnerId: funnyordie
+desktop_article_body:
+  trustx:
+    uid: 7312
+  ix:
+    siteId: 338816
+  rubiconLite:
+    zoneId: 1042148
+  consumable:
+    unitId: 5479
+    unitName: cnsmbl-audio-300x250-slider
+  appnexus:
+    placementId: 14508877
+  concert:
+    partnerId: funnyordie
+in_map:
+  trustx:
+    uid: 7313
+  ix:
+    disabled: true
+  rubiconLite:
+    zoneId: 1042148
+  consumable:
+    unitId: 5479
+    unitName: cnsmbl-audio-300x250-slider
+  appnexus:
+    placementId: 14508883
+  concert:
+    partnerId: funnyordie
+desktop_dynamic:
+  ix:
+    siteId: 338820
+  trustx:
+    uid: 7314
+  appnexus:
+    placementId: 14508874
+desktop_athena_dynamic:
+  ix:
+    siteId: 338838
+  trustx:
+    uid: 7315
+  rubiconLite:
+    zoneId: 1042148
+  appnexus:
+    placementId: 1484621
+native_ad_mobile:
+  ix:
+    siteId: 338821
+  trustx:
+    uid: 2675
+  rubiconLite:
+    zoneId: 1042148
+  appnexus:
+    placementId: 14508855
+  concert:
+    partnerId: funnyordie
+tablet_medium_rectangle:
+  trustx:
+    disabled: true

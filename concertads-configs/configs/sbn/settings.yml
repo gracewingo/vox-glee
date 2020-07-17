@@ -1,0 +1,149 @@
+refreshRate: 15
+concertTrackingEnabled: true
+ixLibraryEnabled: true
+adLightningReporting: false
+observerThreshold: '100px 0px 200px 0px'
+outbrainUrl: https://widgets.outbrain.com/outbrain.js
+remix: 
+  url: https://tags.remixd.com/player/v4/index.js
+  scriptId: remixd-audio-player-script
+permutiveEnabled: false
+
+permutive:
+  projectId: d2fb08da-1c03-4c8a-978f-ad8a96b4c31f
+  publicApiKey: f8d3dda6-1372-4e33-b0e4-848b39d58874
+
+containerLimits:
+  .c-entry-content: 20
+
+previewSizes:
+  athena-templates:
+  - [1060, 590]
+  - [1030, 590]
+  - [1030, 590]
+  - [1060, 610]
+  - [1060, 694]
+  - [1060, 619]
+  prelude-templates:
+  - [1400, 600]
+  - [1180, 450]
+
+experiments:
+
+# Experiment 2: Test refreshRate and its impact on revenue
+- id: 2
+  start_date: '2019-08-20'
+  end_date: '2019-09-02'
+  variations:
+  - id: 1
+    share: 0.016
+    config:
+      refreshRate: 10
+  - id: 2
+    share: 0.016
+    config:
+      refreshRate: 25
+  - id: 3
+    share: 0.016
+    config:
+      refreshRate: 30
+
+# Experiment 3: Test prebid timeout and its impact on revenue
+- id: 3
+  start_date: '2019-08-20'
+  end_date: '2019-09-02'
+  variations:
+  - id: 1
+    share: 0.016
+    config:
+      prebid:
+        timeout: 500
+  - id: 2
+    share: 0.016
+    config:
+      prebid:
+        timeout: 1500
+  - id: 3
+    share: 0.016
+    config:
+      prebid:
+        timeout: 2000
+
+# Experiment 4: Test viewport visibility and its impact on revenue
+- id: 4
+  share: 0.032
+  start_date: '2019-09-03'
+  end_date: '2019-09-17'
+  variations:
+  - id: 1
+    share: 0.25
+    config:
+      observerThreshold: '50px 0px 50px 0px'
+  - id: 2
+    share: 0.25
+    config:
+      observerThreshold: '150px 0px 150px 0px'
+  - id: 3
+    share: 0.25
+    config:
+      observerThreshold: '200px 0px 200px 0px'
+
+# Experiment 5: Test scroll velocity thresholds and its impact on revenue
+- id: 5
+  share: 0.032
+  start_date: '2019-09-03'
+  end_date: '2019-09-17'
+  variations:
+  - id: 1
+    share: 0.25
+    config:
+      scrollVelocityThreshold: 2
+  - id: 2
+    share: 0.25
+    config:
+      scrollVelocityThreshold: 1.5
+  - id: 3
+    share: 0.25
+    config:
+      scrollVelocityThreshold: 3
+    
+# Experiment 6 is a Control experiment which helps us track any side effects
+# of rolling out blanket changes to config. We want it active so we can compare
+# changes to the values that were set _before_.
+# Remember to update this config whenever we ship a settings change across networks.
+- id: 6
+  share: 0.05
+  variations:
+    - id: 1
+      share: .5
+      config:
+        # Prebid timeout used to be 1000
+        prebid:
+          timeout: 1000
+
+# Experiment 7 is a re-run of Experiment 3 (Prebid timeout) to test affect in a post-first-price-auction world.
+- id: 7
+  start_date: '2019-11-01'
+  end_date: '2019-11-14'
+  share: 0.05
+  variations:
+  - id: 0 # control, which is more like A/A here
+    share: 0.25
+    config:
+      prebid:
+        timeout: 1500
+  - id: 1
+    share: 0.25
+    config:
+      prebid:
+        timeout: 1500
+  - id: 2
+    share: 0.25
+    config:
+      prebid:
+        timeout: 1000
+  - id: 3
+    share: 0.25
+    config:
+      prebid:
+        timeout: 2000

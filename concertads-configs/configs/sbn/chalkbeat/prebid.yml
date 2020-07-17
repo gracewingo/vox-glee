@@ -1,0 +1,61 @@
+---
+biddingEnabled: true
+prebidEnabled: true
+amazonPubId: null
+defaultConfig: {}
+prelude: {}
+reskin: {}
+desktop_leaderboard_variable:
+  concert:
+    partnerId: chalkbeat
+medium_rectangle_variable: {}
+btf_medium_rectangle_variable: {}
+desktop_article_medrec_dynamic: {}
+btf_leaderboard_variable:
+  concert:
+    partnerId: chalkbeat
+native_ad_latest: {}
+native_ad_ymal_link: {}
+mobile_leaderboard:
+  concert:
+    partnerId: chalkbeat
+mobile_article_body: 
+  concert:
+    partnerId: chalkbeat
+desktop_article_body: 
+  concert:
+    partnerId: chalkbeat
+athena: 
+  concert:
+    partnerId: chalkbeat
+athena_features:
+  concert:
+    partnerId: chalkbeat
+athena_features_dynamic:
+  concert:
+    partnerId: chalkbeat
+native_ad_mobile:
+  concert:
+    partnerId: chalkbeat
+mobile_article_body_med_rec_dynamic:
+  concert:
+    partnerId: chalkbeat
+mobile_footer:
+  concert:
+    partnerId: chalkbeat
+tablet_leaderboard: {}
+tablet_medium_rectangle: {}
+tablet_btf_leaderboard: {}
+native_ad_content_link: {}
+hub_river_leaderboard:
+  concert:
+    partnerId: chalkbeat
+hub_river_med_rec:
+  concert:
+    partnerId: chalkbeat
+mobile_med_rec_athena:
+  concert:
+    partnerId: chalkbeat
+in_map:
+  concert:
+    partnerId: chalkbeat

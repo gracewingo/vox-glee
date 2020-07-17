@@ -1,0 +1,81 @@
+---
+biddingEnabled: true
+prebidEnabled: true
+rubiconDemandManagerEnabled: false
+timeout: 1000
+amazonPubId: 3176
+defaultConfig:
+  openx:
+    delDomain: sbnationbidder-d.openx.net
+  rubicon:
+    accountId: 7470
+    position: btf
+    siteId: 319100
+    zoneId: 1644196
+  usersync:
+    userIds:
+      - name: "unifiedId"
+        params:
+          url: "https://match.adsrvr.org/track/rid?ttd_pid=gs8reto&fmt=json"
+        storage:
+          type: "cookie"
+          name: "pbjs-unifiedid"
+          expires: 14
+        syncDelay: 3000
+desktop_leaderboard_variable:
+  trustx:
+    uid: 15324
+medium_rectangle_variable:
+  trustx:
+    uid: 15323
+btf_tablet_medium_rectangle:
+  trustx:
+    uid: 15338
+btf_medium_rectangle_variable:
+  trustx:
+    uid: 15325
+desktop_article_medrec_dynamic:
+  trustx:
+    uid: 15326
+desktop_article_body:
+  trustx:
+    uid: 15339
+athena_features:
+  trustx:
+    uid: 15340
+athena_features_dynamic:
+  trustx:
+    uid: 15341
+btf_leaderboard_variable:
+  trustx:
+    uid: 15327
+mobile_leaderboard:
+  trustx:
+    uid: 15328
+mobile_article_body:
+  trustx:
+    uid: 15329
+mobile_article_body_med_rec_dynamic:
+  trustx:
+    uid: 15330
+mobile_footer:
+  trustx:
+    uid: 15331
+tablet_leaderboard:
+  trustx:
+    uid: 15332
+tablet_medium_rectangle:
+  trustx:
+    uid: 15333
+tablet_btf_leaderboard:
+  trustx:
+    uid: 15334
+hub_river_leaderboard:
+  trustx:
+    uid: 15335
+hub_river_med_rec:
+  trustx:
+    uid: 15336
+mobile_med_rec_athena:
+  trustx:
+    uid: 15337

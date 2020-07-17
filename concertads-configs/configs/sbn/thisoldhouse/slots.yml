@@ -1,0 +1,192 @@
+---
+- behavior: merge
+  merge_behavior: append
+
+  remove:
+  - prelude
+  - buy_button
+
+- name: athena_article
+  allowSiblings: true
+
+- name: btf_leaderboard_variable
+  allowSiblings: true
+
+- name: jp_creative_footer
+  selector: .c-footer
+  sizes:
+  - [1, 2]
+  refreshEligible: false
+  prebidEligible: false
+  watcherEligible: false
+  allowSiblings: true
+  insertion: after
+  filters:
+    viewportWidth:
+      min: 728
+
+- name: jp_creative_header
+  selector: .c-tab-bar
+  sizes:
+  - [1, 3]
+  refreshEligible: false
+  prebidEligible: false
+  watcherEligible: false
+  allowSiblings: true
+  filters:
+    viewportWidth:
+      min: 728
+
+# Using selectors for mobile_article_body and hub_river_med_rec
+# Using filters for hub_river_med_rec
+- name: jp_creative_mobile
+  selector: .l-hub-wrapper .c-compact-river__entry, .l-group-page .c-compact-river__entry, .l-segment:not(.l-feature) .c-entry-content > p + p 
+  sizes:
+  - [1, 4]
+  refreshEligible: false
+  prebidEligible: false
+  watcherEligible: false
+  maxSlots: 1
+  filters:
+    spacing:
+      before: 600
+      after: 400
+    viewportWidth:
+      max: 727
+
+# Within the river - These are GAM Native River Story ads
+# Needs to be listed in config/on the page before the river desktop and mobile leaderboards
+# b/c the leaderboards include a spacing exception for these specific slots
+- name: native_river_ad
+  selector: .l-hub-page .c-compact-river__entry:nth-child(3)
+  sizes:
+  - fluid
+  - [200, 200]
+  prebidEligible: false
+  refreshEligible: false
+  watcherEligible: false
+  maxSlots: 1
+  allowSiblings: true
+  insertion: after
+
+# Native Ad Module is always beneath the Video section on the homepage
+- name: native_ad_module
+  selector: .c-three-stories-one-feature, body[data-entry-id] article:last-of-type
+  sizes:
+  - fluid
+  - [1100, 250]
+  prebidEligible: false
+  refreshEligible: false
+  watcherEligible: false
+  maxSlots: 1
+  insertion: after
+
+- name: article_sponsorship
+  selector: .entry_template_package_landing .c-package-cover__title-body, body.entry_layout_unison_main .c-entry-hero--feature .c-entry-hero__content .c-byline, body.entry_layout_unison_main .c-entry-hero__header-wrap:not(.c-entry-hero--feature)
+
+# Within the river (on desktop), we add in leaderboard every 700px.
+# Updating slot exception for TOH
+- name: hub_river_leaderboard
+  filters:
+    spacing:
+      exceptSlot: native_river_ad
+      before: 700
+      after: 500
+      
+- name: mobile_leaderboard_hub
+  selector: .l-hub-page:not(.hub-front-page) .l-group-intro__grid, .hub-front-page .l-hero
+
+- name: athena_hub
+  filters:
+    viewportWidth:
+      min: 728
+    showIfPresent:
+      selector: .river-segment-1
+
+- name: mobile_med_rec_athena
+  filters:
+    viewportWidth:
+      max: 728
+    showIfPresent:
+      selector: .river-segment-1 
+
+- name: right_rail_desktop
+  selector: .l-hub-page:not(.hub-front-page) .c-newsletter_signup_box, .entry_layout_unison_main .c-newsletter_signup_box
+  refreshEligible: false
+  sizes:
+    - [300, 167]
+  holdSize: [300, 167]
+  filters:
+    viewportWidth:
+      min: 880
+
+- name: desktop_article_body
+  maxSlots: 20
+  filters:
+    avoidFloats: true
+    paragraphHeight:
+      above: 50
+    spacing:
+      before: 750
+      after: 600
+    containerWidth:
+      min: 620
+
+- name: mobile_article_body_med_rec_dynamic
+  filters:
+    viewportWidth:
+      max: 728
+    spacing:
+      before: 750
+
+# On group pages, place the mobile leaderboard slot under the header
+- name: mobile_leaderboard_group
+  className: m-ad__mobile_leaderboard
+  prebidName: mobile_leaderboard
+  selector: body.entry_layout_unison_main .c-global-header
+  sizes:
+  - [320, 50]
+  holdSize: [320, 50]
+  insertion: after
+  maxSlots: 1
+  watcherEligible: false
+  filters:
+    viewportWidth:
+      max: 728
+
+- name: medium_rectangle_variable
+  watcherEligible: false
+
+- name: desktop_leaderboard_variable
+  watcherEligible: false
+
+- name: btf_medium_rectangle_variable_article
+  refreshRate: 60
+
+- name: btf_medium_rectangle_variable_hub
+  refreshRate: 60
+  
+- name: mobile_next_up
+  className: m-ad__mobile_next_up
+  prebidName: mobile_next_up
+  selector: body.entry_layout_unison_main .c-nextclick
+  sizes:
+  - [300, 250]
+  - [300, 250v]
+  - [320, 50]
+  holdSize: [320, 50]
+  maxSlots: 1
+  filters:
+    viewportWidth:
+      max: 728
+
+- name: search_med_rec
+  selector: .search .l-wrapper .l-col__sidebar
+  sizes:
+  - [300, 250]
+  - [300, 250v]
+  sticky:
+    enabled: true
+  insertion: inside
+
+

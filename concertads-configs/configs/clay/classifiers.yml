@@ -1,0 +1,12 @@
+- name: brand_safety
+  when: immediate
+  timeout: 5000
+  classifiers:
+    - loadMotifTargeting:
+        endpoint: https://cdn.concert.io/lookup/
+
+- name: whitelist_adblock_conversion
+  when: immediate
+  classifiers:
+    - localStorage:
+        storageKey: dfp_variables

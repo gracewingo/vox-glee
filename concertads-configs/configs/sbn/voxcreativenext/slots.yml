@@ -1,0 +1,87 @@
+---
+- behavior: replace
+- name: cfa_athena_only
+  sizes:
+  - [1030, 590]
+  - size: [300, 250]
+    filters:
+      viewportWidth:
+        max: 727
+  - size: [325, 508]
+    filters:
+      viewportWidth:
+        max: 727
+  selector: "#formatter-datter"
+  maxSlots: 1
+  refreshEligible: false
+  filters:
+    hideIfPresent:
+      selector: ".c-mapstack"
+- name: branded_content_feedback_form
+  sizes:
+  - [300, 200]
+  selector: ".c-entry-content"
+  insertion: after
+  maxSlots: 1
+  refreshEligible: false
+  prebidEligible: false
+  filters:
+    hideIfPresent:
+      selector: ".c-mapstack"
+- name: editorially_placed_athena_mobile
+  className: m-ad__editorially_placed_athena
+  prebidName: editorially_placed_athena
+  selector: ".m-ad.m-ad__editorial-athena-placement"
+  sizes:
+  - [1030, 590]
+  holdSize:
+  - [300, 500]
+  filters:
+    viewportWidth:
+      max: 727
+- name: editorially_placed_athena_desktop
+  className: m-ad__editorially_placed_athena
+  prebidName: editorially_placed_athena
+  selector: ".m-ad.m-ad__editorial-athena-placement"
+  sizes:
+  - [1030, 590]
+  holdSize:
+  - [728, 295]
+  filters:
+    viewportWidth:
+      min: 728
+- name: in_map_legacy
+  className: m-ad__in_map
+  prebidName: in_map
+  selector: ".c-mapstack__ad"
+  sizes:
+  - [300, 250]
+  - [300, 250v]
+  previewHoldSize:
+  - [300, 250]
+- name: in_map
+  selector: ".c-mapstack__card--ad"
+  sizes:
+  - [300, 250]
+  - [300, 250v]
+  - [1030, 590]
+  previewHoldSize:
+  - [728, 590]
+  insertion: after
+  filters:
+    viewportWidth:
+      min: 1175
+- name: in_map_mobile
+  className: m-ad__in_map
+  prebidName: in_map
+  selector: ".c-mapstack__card--ad"
+  sizes:
+  - [300, 250]
+  - [300, 250v]
+  - [1030, 590]
+  previewHoldSize:
+  - [300, 250]
+  insertion: after
+  filters:
+    viewportWidth:
+      max: 1174

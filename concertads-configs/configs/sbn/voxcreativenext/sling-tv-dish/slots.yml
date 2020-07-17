@@ -1,0 +1,20 @@
+---
+- behavior: merge
+
+- name: prelude
+  selector: .l-root
+  reveal:
+    enabled: true
+    offset: 0
+    zIndex: -1000
+    observationTarget: .l-header
+  sizes:
+  - [1400, 600]
+  prebidEligible: false
+  refreshEligible: false
+  watcherEligible: false
+  allowSiblings: true
+  filters:
+    viewportWidth:
+      min: 881
+    deviceType: desktop

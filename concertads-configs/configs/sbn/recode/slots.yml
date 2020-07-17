@@ -1,0 +1,4 @@
+---
+- behavior: merge
+  remove:
+  - athena_article

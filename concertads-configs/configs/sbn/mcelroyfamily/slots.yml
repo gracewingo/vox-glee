@@ -1,0 +1,135 @@
+---
+- behavior: merge
+  remove:
+  - prelude
+  - buy_button
+
+- name: desktop_leaderboard_variable
+  sizes:
+  - [728, 90]
+  - [970, 90]
+  - [1020, 90]
+  - size: [970, 250]
+    filters:
+      hideIfPresent:
+        selector: .l-hub-page, .hub-front-page
+
+- name: editorially_placed_leaderboard
+  prebidName: desktop_article_body
+
+- name: athena_features_mobile
+  prebidName: mobile_med_rec_athena
+  sizes:
+  - [300, 250]
+  - [300, 250v]
+
+- name: athena_features_dynamic_mobile
+  prebidName: mobile_med_rec_athena
+  sizes:
+  - [300, 250]
+  - [300, 250v]
+
+- name: mobile_article_body_med_rec_dynamic
+  prebidName: mobile_med_rec_athena
+  sizes:
+  - [300, 250]
+  - [300, 250v]
+
+- name: medium_rectangle_short
+  prebidName: desktop_article_medrec_dynamic
+
+- name: btf_medium_rectangle_variable_article
+  prebidName: medium_rectangle_variable
+  sizes:
+  - [300, 250]
+  - [300, 250v]
+  - [300, 600]
+  refreshRate: 15
+
+- name: storystream_top_leaderboard_mobile
+  prebidName: mobile_leaderboard
+  sizes:
+  - [320, 50]
+  - [300, 250]
+  - [300, 250v]
+
+- name: package_cover_ad
+  prebidName: desktop_leaderboard_variable
+  sizes:
+  - [728, 90]
+  - [970, 250]
+  - [970, 90]
+  - [1020, 90]
+
+- name: package_cover_ad_mobile
+  prebidName: mobile_leaderboard
+  sizes:
+  - [320, 50]
+  - [300, 250]
+  - [300, 250v]
+
+- name: package_mobile_footer
+  prebidName: mobile_footer
+  sizes:
+  - [320, 50]
+  - [300, 250]
+  - [300, 250v]
+
+- name: mobile_feature_body
+  prebidName: mobile_leaderboard
+  sizes:
+  - [320, 50]
+  - [300, 250]
+  - [300, 250v]
+
+- name: storystream_bottom_leaderboard_variable_mobile
+  prebidName: mobile_leaderboard
+  sizes:
+  - [320, 50]
+  - [300, 250]
+  - [300, 250v]
+
+- name: storystream_river_leaderboard_variable_mobile
+  prebidName: mobile_leaderboard
+  sizes:
+  - [320, 50]
+  - [300, 250]
+  - [300, 250v]
+
+- name: desktop_feature_body
+  prebidName: desktop_article_body
+  sizes:
+  - [728, 90]
+
+- name: desktop_feature_body_dynamic
+  prebidName: desktop_dynamic
+  sizes:
+  - [728, 90]
+  - [300, 250]
+  - [300, 250v]
+
+- name: athena_article
+  prebidName: desktop_athena_dynamic
+  sizes:
+  - [728, 90]
+  - [970, 250]
+
+- name: mobile_leaderboard_group
+  sizes:
+  - [320, 50]
+  - [300, 250]
+  - [300, 250v]
+
+- name: athena_features_desktop
+  prebidName: desktop_athena_dynamic
+  sizes:
+  - [728, 90]
+  - [970, 250]
+  
+- name: athena_hub
+  prebidName: desktop_article_body
+  sizes:
+  - [728, 90]
+
+- name: btf_medium_rectangle_variable_hub
+  refreshRate: 15

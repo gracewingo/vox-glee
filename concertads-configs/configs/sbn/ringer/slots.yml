@@ -1,0 +1,34 @@
+---
+- behavior: merge
+  remove:
+  - athena_features_mobile
+  - athena_features_desktop
+  - buy_button
+
+# add more ad slots throughout feature posts
+- name: desktop_feature_body_dynamic
+  insertion: after
+  sizes:
+  - [728, 90]
+  - [300, 250]
+  - [300, 250v]
+  - [620, 366]
+  - [1030, 590]
+  - [620, 371]
+  - [620, 415]
+  maxSlots: 6
+
+# 300x250 on mobile, after the first paragraph
+- name: mobile_feature_body
+  insertion: after
+
+# increased this by one slot b/c we eliminiated the athena_features_mobile
+- name: athena_features_dynamic_mobile
+  insertion: after
+  maxSlots: 3
+
+- name: btf_medium_rectangle_variable_article
+  refreshRate: 15
+
+- name: btf_medium_rectangle_variable_hub
+  refreshRate: 15

@@ -1,0 +1,533 @@
+---
+- behavior: merge
+
+########
+## Homepage
+########
+
+# Placement notes: first element inside the sidebar
+- name: medium_rectangle_variable
+  selector: .spacer, body:not(.layout) .tertiary .latest-article, body.layout .tertiary > div
+  sizes:
+  - [300, 250]
+  - [300, 1050]
+  - size: [300, 600]
+    filters:
+      hideIfPresent:
+        selector: .break-out
+  holdSize: [300, 250]
+  maxSlots: 1
+  allowSiblings: true # for btf_medium_rectangle_variable_article
+  filters:
+    hideIfPresent:
+      selector: .feature, .break-out
+    viewportWidth:
+      min: 1180
+
+- name: btf_medium_rectangle_variable_hub
+  className: m-ad__btf_medium_rectangle_variable
+  selector: body:not(.layout) .tertiary
+  sticky:
+    enabled: true
+    offset: 50
+  sizes:
+  - [300, 250]
+  - [300, 600]
+  holdSize: [300, 250]
+  insertion: inside
+  maxSlots: 2
+  filters:
+    hideIfPresent:
+      selector: .special-feature, .feature
+    viewportWidth:
+      min: 881
+    hideIfPresent:
+      selector: .l-full-archives
+
+# Placement notes: after every 8 articles
+- name: hub_river_leaderboard
+  selector: .newsfeed-article-list li + li + li
+  sizes:
+  - [300, 250]
+  - [1030, 590]
+  - [620, 366]
+  holdSize: [300, 250]
+  filters:
+    hideIfPresent:
+      selector: .special-feature, .feature
+    spacing:
+      before: 1000
+      after: 1000
+
+- name: tag_hub_river_leaderboard
+  selector: .paginated-feed-list-wrapper li + li
+  sizes:
+  - [300, 250]
+  - [1030, 590]
+  - [620, 366]
+  holdSize: [300, 250]
+  insertion: after
+  maxSlots: 1
+  filters:
+    hideIfPresent:
+      selector: .special-feature, .feature
+    spacing:
+      after: 200
+
+# Placement notes: goes in the footer
+- name: btf_leaderboard_variable
+  selector: body:not(.one-column-layout) footer.bottom, body.layout-simple .footer
+  sizes:
+  - [970, 90]
+  - [1024, 90]
+  - [728, 91]
+  - [970, 91]
+  - [1024, 91]
+  - [970, 250]
+  - [970, 252]
+  - size: [728, 90]
+    filters:
+      containerWidth:
+        min: 728
+  filters:
+    hideIfPresent:
+      selector: .special-feature, .feature
+    viewportWidth:
+      min: 1024
+
+
+# On hub and group pages (include home pages), after the first river— we insert an
+# athena.
+- name: athena_hub
+  className: m-ad__athena
+  selector: .newsfeed-article-list div:nth-child(2) > aside
+  insertion: inside
+  sizes:
+  - [1030, 590]
+  - size: [970, 250]
+    filters:
+      containerWidth:
+        min: 970
+  - size: [728, 90]
+    filters:
+      containerWidth:
+        min: 728
+  - size: [1060, 610]
+    filters:
+      containerWidth:
+        min: 1060
+  - size: [620, 366]
+    filters:
+      containerWidth:
+        max: 1059
+  - size: [1060, 619]
+    filters:
+      containerWidth:
+        min: 1060
+  - size: [1060, 694]
+    filters:
+      containerWidth:
+        min: 1060
+  holdSize: [300, 250]
+  maxSlots: 1
+  filters:
+    hideIfPresent:
+      selector: .special-feature, .feature
+    viewportWidth:
+      min: 728
+
+# Placement notes: very top element on page
+- name: mobile_leaderboard_hub
+  selector: section .main
+  insertion: before
+  sizes:
+  - [320, 50]
+  - [320, 100]
+  - [320, 101]
+  filters:
+    hideIfPresent:
+      selector: .special-feature, .feature, .layout
+    viewportWidth:
+      max: 728
+
+# Placement notes: goes just below the "more stories" button
+- name: mobile_footer
+  selector: body:not(.layout) .bottom, .latest-ad
+  sizes:
+  - [320, 50]
+  - [320, 100]
+  - [320, 101]
+  - [300, 250]
+  filters:
+    hideIfPresent:
+      selector: .special-feature, .feature
+    viewportWidth:
+      max: 728
+
+
+# Placement notes: after every 6 articles
+- name: hub_river_med_rec
+  selector: .newsfeed-article-list li + li + li + li
+  sizes:
+  - [300, 250]
+  - [1030, 590]
+  - [325, 508]
+  - [325, 204]
+  filters:
+    hideIfPresent:
+      selector: .special-feature, .feature
+    spacing:
+      before: 600
+      after: 400
+    viewportWidth:
+      max: 728
+
+- name: mobile_med_rec_athena
+  selector: .newsfeed-article-list > div > li:last-of-type
+  sizes:
+  - [300, 250]
+  - [1030, 590]
+  - [325, 508]
+  - [300, 265]
+  - [325, 203]
+  - [325, 236]
+  - [325, 204]
+  holdSize: [300, 250]
+  maxSlots: 1
+  insertion: after
+  filters:
+    hideIfPresent:
+      selector: .special-feature, .feature
+    viewportWidth:
+      max: 728
+
+
+# Placement notes: goes just below the "more stories" button
+- name: tablet_btf_leaderboard
+  selector: .tertiary
+  insertion: inside
+  sizes:
+  - size: [728, 90]
+    filters:
+      containerWidth:
+        min: 728
+  holdSize: [728, 90]
+  filters:
+    hideIfPresent:
+      selector: .special-feature, .feature
+    viewportWidth:
+      min: 768
+      max: 888
+
+      
+########
+## Feature
+########
+
+- name: mobile_feature_body
+  className: m-ad__mobile_article_body_med_rec_dynamic
+  selector: .special-feature .article-content > p + p, .feature .article-content > p + p, body.one-column-layout .article-content > p + p
+  sizes:
+  - [300, 250]
+  - [325, 508]
+  - [325, 203]
+  - [325, 236]
+  - [325, 204]
+  - [320, 50]
+  - [1030, 590]
+  previewHoldSize: [300, 250]
+  maxSlots: 1
+  filters:
+    spacing:
+      before: 150
+    viewportWidth:
+      max: 779
+
+- name: desktop_feature_body
+  selector: .special-feature .article-content > p + p + p, .feature .article-content > p + p + p, body.one-column-layout .article-content > p + p + p
+  sizes:
+  - [620, 366]
+  - [1030, 590]
+  - size: [728, 90]
+    filters:
+      containerWidth:
+        min: 728
+  previewHoldSize: [300, 250]
+  maxSlots: 3
+  insertion: after
+  filters:
+    avoidFloats: true
+    spacing:
+      before: 800
+      after: 800
+    paragraphHeight:
+      above: 200
+    viewportWidth:
+      min: 780
+    hideIfPresent:
+      selector: .c-buying-guide
+
+- name: desktop_feature_body_dynamic
+  className: m-ad__desktop_feature_body
+  selector: .special-feature .article-content > p + p + p + p + p, .feature .article-content > p + p + p + p + p, body.one-column-layout .article-content > p + p + p + p + p
+  sizes:
+  - [300, 250]
+  - [620, 366]
+  - [1030, 590]
+  - size: [728, 90]
+    filters:
+      containerWidth:
+        min: 728
+  previewHoldSize: [300, 250]
+  maxSlots: 3
+  filters:
+    avoidFloats: true
+    spacing:
+      before: 800
+      after: 800
+    paragraphHeight:
+      above: 200
+    viewportWidth:
+      min: 780
+
+- name: athena_features_mobile
+  className: m-ad__athena_features
+  selector: .special-feature .article-content > p + p + p + p, .feature .article-content > p + p + p + p, body.one-column-layout .article-content > p + p + p + p
+  sizes:
+  - [1030, 590]
+  - [325, 508]
+  - [300, 250]
+  - [300, 265]
+  - [325, 203]
+  - [325, 236]
+  - [325, 204]
+  previewHoldSize: [300, 250]
+  maxSlots: 1
+  filters:
+    avoidFloats: true
+    paragraphHeight:
+      above: 200
+    viewportWidth:
+      max: 779
+    spacing:
+      before: 1500
+
+- name: athena_features_dynamic_mobile
+  className: m-ad__athena_features_dynamic
+  selector: .special-feature .article-content > p + p + p + p + p, .feature .article-content > p + p + p + p + p, body.one-column-layout .article-content > p + p + p + p + p
+  sizes:
+  - [1030, 590]
+  - [325, 508]
+  - [300, 250]
+  - [300, 265]
+  - [325, 203]
+  - [325, 236]
+  - [325, 204]
+  previewHoldSize: [300, 250]
+  maxSlots: 2
+  filters:
+    avoidFloats: true
+    paragraphHeight:
+      above: 200
+    viewportWidth:
+      max: 779
+    spacing:
+      before: 1500
+
+
+########
+## Article
+########
+
+- name: desktop_leaderboard_variable
+  selector: .ad-splash
+  sizes:
+  - [970, 90]
+  - [970, 250]
+  - [1100, 350]
+  - size: [728, 90]
+    filters:
+      containerWidth:
+        min: 1180
+  insertion: inside
+  filters:
+    viewportWidth:
+      min: 1180
+    hideIfPresent:
+      selector: .special-feature, .feature
+    hideIfPresent:
+      selector: .feature, .special-feature
+
+- name: desktop_article_body
+  selector: body:not(.one-column-layout) .article-content p + p, .lede-video-description p
+  sizes:
+  - [1030, 590]
+  - [620, 366]
+  - [620, 371]
+  - [620, 415]
+  - size: [728, 90]
+    filters:
+      containerWidth:
+        min: 728
+  previewHoldSize: [726, 415]
+  insertion: after
+  maxSlots: 1
+  filters:
+    hideIfPresent:
+      selector: .special-feature, .feature
+    avoidFloats: true
+    paragraphHeight:
+      above: 25
+      below: 25
+    spacing:
+      before: 25
+      after: 25
+    containerWidth:
+      min: 500
+
+- name: btf_medium_rectangle_variable_article
+  className: m-ad__btf_medium_rectangle_variable
+  selector: body.layout .tertiary, .lede-video-recirc section
+  allowSiblings: true
+  insertion: inside
+  sticky:
+    enabled: true
+    offset: 100
+  sizes:
+  - [300, 250]
+  - size: [300, 600]
+    filters:
+      viewportHeight:
+        min: 600
+  holdSize: [300, 250]
+  maxSlots: 1
+  filters:
+    hideIfPresent:
+      selector: .special-feature, .feature, .break-out
+    viewportWidth:
+      min: 881
+
+- name: btf_leaderboard_variable
+  selector: .secondary > .latest-news .result:nth-of-type(3)
+  insertion: after
+  filters:
+    hideIfPresent:
+      selector: .special-feature, .feature
+
+- name: mobile_leaderboard
+  selector: body:not(.one-column-layout) .article-content > p + p, .lede-video-description p + p
+  sizes:
+  - [320, 50]
+  - [300, 250]
+  holdSize: [300, 250]
+  insertion: after
+  maxSlots: 1
+  filters:
+    hideIfPresent:
+      selector: .special-feature, .feature
+    viewportWidth:
+      max: 728
+    spacing:
+      before: 400
+      after: 400
+
+- name: mobile_article_body
+  selector: body:not(.one-column-layout) .article-content > p + p, .lede-video-description p + p + p
+  sizes:
+  - [1030, 590]
+  - [325, 508]
+  - [300, 250]
+  - [300, 265]
+  - [325, 203]
+  - [325, 236]
+  - [325, 204]
+  previewHoldSize: [300, 250]
+  maxSlots: 8
+  filters:
+    hideIfPresent:
+      selector: .special-feature, .feature
+    viewportWidth:
+      max: 728
+    spacing:
+      before: 800
+
+- name: sponsored_mobile_body_article
+  selector: .sponsored .subsection:nth-child(3n+3)
+  sizes:
+  - [1030, 590]
+  - [325, 508]
+  - [300, 250]
+  - [300, 265]
+  - [325, 203]
+  - [325, 236]
+  - [325, 204]
+  predbidEligible: false
+  previewHoldSize: [300, 250]
+  maxSlots: 8
+  filters:
+    hideIfPresent:
+      selector: .special-feature, .feature
+    viewportWidth:
+      max: 728
+    spacing:
+      before: 400
+
+- name: athena_article
+  className: m-ad__athena
+  selector: .latest-ad
+  sizes:
+  - [1030, 590]
+  - size: [728, 90]
+    filters:
+      containerWidth:
+        min: 728
+  - size: [1060, 610]
+    filters:
+      containerWidth:
+        min: 1060
+  - size: [620, 366]
+    filters:
+      containerWidth:
+        max: 1059
+  - size: [970, 250]
+    filters:
+      viewportWidth:
+        min: 970
+  - size: [620, 371]
+    filters:
+      containerWidth:
+        max: 1059
+  - size: [620, 415]
+    filters:
+      containerWidth:
+        max: 1059
+  holdSize: [300, 250]
+  maxSlots: 1
+  insertion: inside
+  filters:
+    hideIfPresent:
+      selector: .special-feature, .feature
+    viewportWidth:
+      min: 728
+
+- name: athena_footer
+  selector: .latest-news .result:nth-child(5), .latest-ad
+  sizes:
+  - [1030, 590]
+  - [620, 366]
+  - size: [970, 250]
+    filters:
+      containerWidth:
+        min: 970
+  - size: [1060, 610]
+    filters:
+      containerWidth:
+        min: 1060
+  - size: [1100, 200]
+    filters:
+      containerWidth:
+        min: 1100
+  filters:
+    viewportWidth:
+      min: 729
+

@@ -1,0 +1,255 @@
+---
+- behavior: merge
+  remove:
+  - athena_article
+
+- name: desktop_article_body
+  blockthrough:
+    dataId: "5d641f6fa7-377"
+  sizes:
+  - [1030, 590]
+  - [620, 366]
+  - [620, 371]
+  - [620, 415]
+  - [300, 250]
+  - [300, 250v]
+  - size: [728, 90]
+    filters:
+      containerWidth:
+        min: 700
+
+- name: native_ad_latest
+  sizes:
+  - [300, 100]
+  - size: [300, 250]
+    filters:
+      showIfPresent:
+        selector: "#rock-tickets"
+
+- name: native_ad_content_link
+  prebidEligible: true
+
+- name: editorially_placed_leaderboard
+  blockthrough:
+    dataId: "5d641f4fd3-377"
+
+- name: desktop_leaderboard_variable
+  blockthrough:
+    dataId: "5d641f539b-377"
+
+- name: tablet_leaderboard
+  blockthrough:
+    dataId: "5d641f5751-377"
+
+- name: package_cover_ad
+  blockthrough:
+    dataId: "5d641f5b20-377"
+
+- name: btf_leaderboard_variable
+  blockthrough:
+    dataId: "5d641f5fdd-377"
+
+- name: tablet_btf_leaderboard
+  blockthrough:
+    dataId: "5d641f6369-377"
+
+- name: desktop_feature_body
+  blockthrough:
+    dataId: "5d641f673d-377"
+
+- name: desktop_feature_body_dynamic
+  blockthrough:
+    dataId: "5d641f6bd2-377"
+
+- name: hub_river_leaderboard
+  blockthrough:
+    dataId: "5d641f7383-377"
+
+- name: gift_guide_leaderboard_variable_desktop
+  blockthrough:
+    dataId: "5d641f776c-377"
+
+- name: storystream_top_leaderboard_desktop
+  blockthrough:
+    dataId: "5d641f7ae9-377"
+
+- name: storystream_bottom_leaderboard_variable_desktop
+  blockthrough:
+    dataId: "5d641f7f20-377"
+
+- name: storystream_river_leaderboard_variable_desktop
+  blockthrough:
+    dataId: "5d641f83a1-377"
+
+- name: medium_rectangle_variable
+  blockthrough:
+    dataId: "5d641f8757-377"
+
+- name: btf_medium_rectangle_variable_article
+  blockthrough:
+    dataId: "5d641f8ec2-377"
+
+- name: mobile_leaderboard_hub
+  blockthrough:
+    dataId: "5d641f95f2-377"
+
+- name: package_cover_ad_mobile
+  blockthrough:
+    dataId: "5d641f9995-377"
+
+- name: mobile_footer
+  blockthrough:
+    dataId: "5d641f9ded-377"
+
+- name: package_mobile_footer
+  blockthrough:
+    dataId: "5d641fa22f-377"
+
+- name: mobile_feature_body
+  blockthrough:
+    dataId: "5d641fa66f-377"
+
+- name: athena_features_mobile
+  blockthrough:
+    dataId: "5d641fac1a-377"
+
+- name: athena_features_dynamic_mobile
+  blockthrough:
+    dataId: "5d641faefd-377"
+
+- name: mobile_leaderboard
+  blockthrough:
+    dataId: "5d641fb28b-377"
+
+- name: mobile_article_body
+  blockthrough:
+    dataId: "5d641fb6dc-377"
+
+- name: native_ad_mobile
+  blockthrough:
+    dataId: "5d641fbb35-377"
+
+- name: mobile_article_body_med_rec_dynamic
+  blockthrough:
+    dataId: "5d641fbf11-377"
+
+- name: desktop_article_medrec_dynamic
+  blockthrough:
+    dataId: "5d641fc3a9-377"
+
+- name: medium_rectangle_short
+  blockthrough:
+    dataId: "5d641fc870-377"
+
+- name: btf_medium_rectangle_variable_hub
+  blockthrough:
+    dataId: "5d641fcc5e-377"
+
+- name: in_map_legacy
+  blockthrough:
+    dataId: "5d641fd236-377"
+
+- name: in_map
+  blockthrough:
+    dataId: "5d641fd64e-377"
+
+- name: mobile_med_rec_athena
+  blockthrough:
+    dataId: "5d641fdaca-377"
+
+- name: hub_river_med_rec
+  blockthrough:
+    dataId: "5d641fdf11-377"
+
+- name: gift_guide_leaderboard_mobile
+  blockthrough:
+    dataId: "5d641fe438-377"
+
+- name: storystream_bottom_leaderboard_variable_mobile
+  blockthrough:
+    dataId: "5d641fe83f-377"
+
+- name: storystream_river_leaderboard_variable_mobile
+  blockthrough:
+    dataId: "5d641fed5f-377"
+
+- name: mobile_leaderboard_group
+  blockthrough:
+    dataId: "5d641ff235-377"
+
+- name: storystream_top_leaderboard_mobile
+  blockthrough:
+    dataId: "5d641ff6b2-377"
+
+- name: csk_mobile_article
+  blockthrough:
+    dataId: "5d641ffb2c-377"
+
+- name: csk_athena
+  blockthrough:
+    dataId: "5d641fff87-377"
+
+- name: csk_athena_mobile
+  blockthrough:
+    dataId: "5d642004d4-377"
+
+- name: right_rail_desktop
+  selector: .l-hub-page .c-rock-list--hub, .entry_layout_unison_main .c-rock-list--trending
+  refreshEligible: false
+  sizes:
+    - [300, 167]
+  holdSize: [300, 167]
+  filters:
+    viewportWidth:
+      min: 880
+
+- name: right_rail_mobile
+  selector: .l-hub-page .river-segment-0, .entry_layout_unison_main .c-related-list__video
+  refreshEligible: false
+  watcherEligible: false
+  sizes:
+    - [300, 167]
+  holdSize: [300, 167]
+  filters:
+    viewportWidth:
+      max: 879
+
+- name: comments_medium_rectangle_short
+  prebidName: desktop_article_medrec_dynamic
+  selector: "#comments-sidebar"
+  refreshRate: 15
+  sizes:
+  - [300, 250]
+  - [300, 250v]
+  holdSize: [300, 250]
+  insertion: inside
+  sticky:
+    enabled: true
+    offset: 10
+  maxSlots: 1
+  filters:
+    viewportWidth:
+      min: 881
+    elementHeight:
+      selector: "#comments"
+      min: 60
+      max: 599
+
+- name: comments_medium_rectangle
+  prebidName: btf_medium_rectangle_variable
+  selector: "#comments-sidebar"
+  refreshRate: 15
+  sizes:
+  - [300, 600]
+  holdSize: [300, 600]
+  insertion: inside
+  sticky:
+    enabled: true
+    offset: 10
+  maxSlots: 1
+  filters:
+    viewportWidth:
+      min: 881
+    elementHeight:
+      selector: "#comments"
+      min: 600

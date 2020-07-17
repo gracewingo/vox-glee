@@ -1,0 +1,7 @@
+- name: contextual_segments
+  when: immediate
+  timeout: 5000
+  classifiers:
+    - loadContextualSegments:
+        endpoint: https://cdn.concert.io/segments/v1.0/segment
+        targetingKey: c_sg
