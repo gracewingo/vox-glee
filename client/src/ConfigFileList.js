@@ -1,16 +1,21 @@
 import React, { useState } from "react";
-import { List, Divider, Grid, Image, Segment } from "semantic-ui-react";
-import ConfigForm from "./ConfigForm";
-import JSONEditor from "./JSONEditor";
+import { List } from "semantic-ui-react";
+import EditorMain from "./EditorMain";
 import "./ConfigFileList.css";
 
 export default function ConfigFileList({ configFiles, fileData }) {
+
   function onClickConfigFile(e) {
     let fileDataName = e.target.innerHTML;
+
+    let jsonFileData = JSON.stringify(fileData[fileDataName], null, ' ');
+    setJSONData(jsonFileData);
     setFileData(fileDataName);
+
   }
 
   const [fileDataName, setFileData] = useState(null);
+  const [jsonFileData, setJSONData] = useState(null);
   // When I click on a config (site) yaml file name, show the corresponding form for it.
 
   return (
@@ -30,16 +35,12 @@ export default function ConfigFileList({ configFiles, fileData }) {
             </List>
           ))}
         </div>
-        <div className='left-right'>
-          {fileDataName && <JSONEditor />}
-          {fileDataName && (
-            <ConfigForm
-              formData={fileData}
-              schema={fileData}
-              file={fileDataName}
-            />
-          )}
-        </div>
+        {fileDataName && (
+          <EditorMain
+            jsonData={jsonFileData}
+            file={fileDataName}
+          />
+        )}
       </div>
     </>
   );

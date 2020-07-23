@@ -4,8 +4,7 @@ import ConfigFileList from "./ConfigFileList";
 import { List } from "semantic-ui-react";
 
 const Configs = (props) => {
-
-  function getConfigFiles(){
+  function getConfigFiles() {
     const fileData = {};
     const formKeys = Object.keys(props.configs).filter(
       (key) => key !== "_id" && key !== "name"
@@ -23,10 +22,10 @@ const Configs = (props) => {
     setConfigFiles(configFiles);
     setFileData(fileData);
   }
-  
+
   const [showConfigFiles, showHideConfigFiles] = useState(false);
-  const [fileData, setFileData ] = useState(null);
-  const [ configFiles, setConfigFiles ] = useState(null);
+  const [fileData, setFileData] = useState(null);
+  const [configFiles, setConfigFiles] = useState(null);
 
   return (
     <>
@@ -35,16 +34,18 @@ const Configs = (props) => {
           <List.Item>
             <List.Icon name="folder" />
             <List.Content>
-              <List.Header 
-              onClick={(e) => {
-                getConfigFiles();
-                console.log('clicking ', e.target)
-                showHideConfigFiles((current) => !current.showConfigFiles);
-
-              }}
-              >{props.configs.name}</List.Header>
-              {showConfigFiles &&
-              <ConfigFileList configFiles={configFiles} fileData={fileData}/>}
+              <List.Header
+                onClick={(e) => {
+                  getConfigFiles();
+                  console.log("clicking ", e.target);
+                  showHideConfigFiles((current) => !current.showConfigFiles);
+                }}
+              >
+                {props.configs.name}
+              </List.Header>
+              {showConfigFiles && (
+                <ConfigFileList configFiles={configFiles} fileData={fileData} />
+              )}
             </List.Content>
           </List.Item>
         </List>

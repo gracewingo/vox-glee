@@ -5,7 +5,9 @@ const fs = require("fs");
 const app = express();
 const mongodb = require("mongodb");
 const jsonSchemaGenerator = require("json-schema-generator");
-
+const bodyParser = require('body-parser');
+const jsonParser = bodyParser.json()
+const urlencodedParser = bodyParser.urlencoded({ extended: false })
 // serve static files from React app
 app.use(express.static(path.join(__dirname, "client/build")));
 
@@ -33,14 +35,12 @@ function getSchema(json) {
   return schemaObj;
 }
 
-let schema;
-
-app.post("/api/schema", (req, res) => {
+app.post("/api/schema", jsonParser, (req, res) => {
   const json = req.body;
-  console.log(json);
 
   // Convert the json to the schema
-  schema = getSchema(json);
+  let schema = getSchema(json);
+  res.send(schema);
 });
 
 // Do some parameter stuff here

@@ -10,9 +10,9 @@ const ConfigForm = (props) => {
     return null;
   }
 
-  // Send to .... ?
+  // Send to the api/configs to set the new data in the database
   const handleSubmit = async (e) => {
-    const response = await fetch("url");
+    const response = await fetch('/api/configs');
   };
 
   if (!formData) {

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Configs from "./Configs";
-import JSONEditor from "./JSONEditor";
 import "./Configs.css";
 import "./Welcome.css";
+import glee from './glee.jpg'
 
 const Welcome = (props) => {
   let dummyNYMag = ["grubstreet"];
@@ -13,7 +13,11 @@ const Welcome = (props) => {
     <div>
       {!config && (
         <>
-          <h5>Welcome to the ConcertAds-Configs Interface</h5>
+          <div className="flex-welcome">
+          <img src={glee}></img>
+          <h3>Welcome to Glee: A visual editor for creating, editing, and managing ConcertAds-Configs</h3>
+  
+          </div>
           <h2>What would you like to create?</h2>
           <ul>
             {React.Children.map(props.platform, (platform) => (
@@ -43,7 +47,6 @@ const Welcome = (props) => {
                 configs={platform === "Chorus configs" ? config : dummyNYMag}
               />
             ))}
-            <JSONEditor />
           </div>
         </>
       )}

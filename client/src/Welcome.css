@@ -1,4 +1,12 @@
 .config-container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-welcome {
+  display: flex;
+}
+
+img {
+  width: 8em;
 }

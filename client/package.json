@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@monaco-editor/react": "^3.4.2",
     "@rjsf/core": "^2.2.1",
     "@rjsf/semantic-ui": "^2.2.1",
     "@testing-library/jest-dom": "^4.2.4",
@@ -13,7 +14,6 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-jsonschema-form": "^1.8.1",
-    "react-monaco-editor": "^0.39.1",
     "react-scripts": "3.4.1",
     "semantic-ui-react": "^0.88.2"
   },
