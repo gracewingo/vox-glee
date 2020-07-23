@@ -2,8 +2,9 @@ const express = require("express");
 const path = require("path");
 const yaml = require("js-yaml");
 const fs = require("fs");
-const connectDB = require("./config/db");
 const app = express();
+const mongodb = require("mongodb");
+const jsonSchemaGenerator = require("json-schema-generator");
 
 // serve static files from React app
 app.use(express.static(path.join(__dirname, "client/build")));
@@ -24,23 +25,38 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname + "build" + "index.html"));
 });
 
+// Schema generator
+
+function getSchema(json) {
+  const schemaObj = jsonSchemaGenerator(json);
+  console.log("schema obj is ", schemaObj);
+  return schemaObj;
+}
+
+let schema;
+
+app.post("/api/schema", (req, res) => {
+  const json = req.body;
+  console.log(json);
+
+  // Convert the json to the schema
+  schema = getSchema(json);
+});
+
+// Do some parameter stuff here
+app.get('/api/schema', (req, res) => {
+  res.send(schema);
+})
+
 async function loadConfigData() {
   const uri =
     "mongodb+srv://gracewingo:newuser09@cluster0.rajok.mongodb.net/concertads-configs?retryWrites=true&w=majority";
-  const client = await new MongoClient(uri, { useUnifiedTopology: true });
+  const client = await mongodb.MongoClient.connect(uri, {
+    useUnifiedTopology: true,
+  });
 
   return client.db("concertads-configs").collection("test");
 }
-
-// Connect to DB and get config data into MongoDB
-const MongoClient = require("mongodb").MongoClient;
-const uri =
-  "mongodb+srv://gracewingo:newuser09@cluster0.rajok.mongodb.net/concertads-configs?retryWrites=true&w=majority";
-const client = new MongoClient(uri, { useUnifiedTopology: true });
-client.connect((err) => {
-  const db = client.db("concertads-configs").collection("test");
-  // importYAMLConfigs(db);
-});
 
 function importYAMLConfigs(db) {
   let workingDirectory = "./concertads-configs/configs";
@@ -109,12 +125,3 @@ function isDirectory(path) {
 const port = process.env.PORT || 5000;
 app.listen(port);
 console.log(`App serving on ${port}! 🎉`);
-
-/**
- * To do:
- * import real data instead of dummuy data through mongodb via an api call, use fetch
- * from, 'choose a site' - flow to the contents of each site
- * at this step, the left panel shows the site & contents (yml files)
- * the right panel shows the preview, depending on which yaml file you click - an api call for each onclick?
- *
- */

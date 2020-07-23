@@ -1,0 +1,16 @@
+.configList-container {
+    display: flex
+}
+
+.list-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.left-right {
+    display: grid;
+    flex: 1;
+    min-height: 0;
+    grid-gap: 16px;
+    grid-template-columns: 1fr 1fr;
+}

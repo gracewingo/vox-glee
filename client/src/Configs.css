@@ -3,24 +3,11 @@ ul {
     padding: 0;
 }
 
-.platform {
-    border: 1px solid #dfe3e8;
-    border-radius: 4px;
-    cursor: pointer;
-    list-style: none;
-    margin: 8px;
-    padding: 16px;
-    font-weight: bold;
-    transition: box-shadow 500ms ease, border 500ms ease;
-}
-
-.site {
-  border: 1px solid #dfe3e8;
-  border-radius: 4px;
+.ui.list .list>.item:last-child, .ui.list>.item:last-child, ol.ui.list li:last-child, ul.ui.list li:last-child {
+  padding: 0em;
   cursor: pointer;
-  list-style: none;
   margin: 8px;
-  padding: 16px;
   font-weight: bold;
+  font-size: 1.4em;
   transition: box-shadow 500ms ease, border 500ms ease;
 }

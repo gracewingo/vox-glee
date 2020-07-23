@@ -6,3 +6,22 @@
 .content {
   padding: 3em;
 }
+
+.platform {
+  border: 1px solid #dfe3e8;
+  border-radius: 4px;
+  cursor: pointer;
+  list-style: none;
+  margin: 8px;
+  padding: 16px;
+  font-weight: bold;
+  transition: box-shadow 500ms ease, border 500ms ease;
+}
+
+.platform:hover {
+border: 1px solid #00a2ff;
+}
+
+.site:hover {
+border: 1px solid #00a2ff;
+}

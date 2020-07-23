@@ -6,11 +6,13 @@
   "dependencies": {
     "express": "^4.17.1",
     "js-yaml": "^3.14.0",
+    "json-schema-generator": "^2.0.6",
     "mongodb": "^3.5.9",
-    "mongoose": "^5.9.24"
+    "mongoose": "^5.9.24",
+    "nodemon": "^2.0.4"
   },
   "scripts": {
-    "start": "node app.js",
+    "start": "nodemon app.js",
     "heroku-postbuild": "cd client && yarn && yarn run build"
   }
 }

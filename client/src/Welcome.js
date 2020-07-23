@@ -1,24 +1,11 @@
 import React, { useState } from "react";
-import Configs from "./Configs.js";
+import Configs from "./Configs";
+import JSONEditor from "./JSONEditor";
+import "./Configs.css";
+import "./Welcome.css";
 
 const Welcome = (props) => {
-  let dummyNYMag = ["grubstreet", "intelligencer", "thecut", "thestrategist"];
-
-  let dummyChorus = [
-    "chalkbeat",
-    "chicagosuntimes",
-    "choruswhitelabel",
-    "curbed",
-    "deseret",
-    "dsow",
-    "eater",
-    "funnyordie",
-    "johnfrieda",
-    "mcelroyfamily",
-    "meridian",
-    "polygon",
-    "racked",
-  ];
+  let dummyNYMag = ["grubstreet"];
 
   const [{ config, platform }, showConfigs] = useState({ config: false });
 
@@ -33,10 +20,9 @@ const Welcome = (props) => {
               <li
                 className="platform"
                 onClick={() => {
-                  console.log(platform);
                   showConfigs((currentConfig) => ({
                     config: !currentConfig.config,
-                    platform: platform
+                    platform: platform,
                   }));
                 }}
               >
@@ -48,10 +34,17 @@ const Welcome = (props) => {
       )}
       {config && (
         <>
-          <Configs
-            configs={platform === "Chorus configs" ? dummyChorus : dummyNYMag}
-            config={config}
-          />
+          <h1 className="header">Choose a site</h1>
+          <div className="config-container">
+            {props.configs.map((config) => (
+              <Configs
+                key={config._id}
+                className="site"
+                configs={platform === "Chorus configs" ? config : dummyNYMag}
+              />
+            ))}
+            <JSONEditor />
+          </div>
         </>
       )}
     </div>

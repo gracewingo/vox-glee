@@ -3,13 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@rjsf/core": "^2.2.1",
+    "@rjsf/semantic-ui": "^2.2.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "json-schema-converter": "^0.0.4",
+    "json-schema-generator": "^2.0.6",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-jsonschema-form": "^1.8.1",
+    "react-monaco-editor": "^0.39.1",
     "react-scripts": "3.4.1",
-    "react-split-pane": "^0.1.91"
+    "semantic-ui-react": "^0.88.2"
   },
   "scripts": {
     "start": "react-scripts start",

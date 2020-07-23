@@ -1,24 +1,26 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import Welcome from './Welcome';
-import YAMLpreview from "./YAMLpreview";
 
 const App = () => {
 
   let platform = ['Chorus configs', 'New York Mag configs'];
+  const [ configs, setConfigs ] = useState([]);
 
-  async function getData(){
-    const response = await fetch('/api/configs');
-    const data = await response.json();
-    console.log(data);
-  }
 
-  getData();
-  
+  useEffect(() => {
+    async function fetchConfigs() {
+      const response = await fetch('/api/configs');
+      const configs = await response.json();
+      setConfigs(configs);
+    }
+    fetchConfigs();
+  }, []); 
+
   return (
     <div className="App">
       <div className='content'>
-        <Welcome platform={platform} />
+        <Welcome platform={platform} configs={configs}/>
       </div>
     </div>
   );
