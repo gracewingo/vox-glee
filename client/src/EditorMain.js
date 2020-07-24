@@ -33,14 +33,13 @@ export default function EditorMain(props) {
         const response = await fetch("/api/schema", requestOptions);
         const JSONSchema = await response.json();
         setSchema(JSONSchema);
-        return schema;
       } catch (e) {
         return e;
       }
     }
     postData();
     setFormData(jsonData);
-  },[jsonData, schema]);
+  },[jsonData]);
 
   if (!file) {
     return null;

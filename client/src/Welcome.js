@@ -7,7 +7,6 @@ import "./css/Welcome.css";
 import glee from "./glee.jpg";
 import rocket from "./rocket.jpeg";
 
-
 const Welcome = (props) => {
   const [{ config, configSet }, showConfigs] = useState({ config: false });
 
@@ -68,33 +67,34 @@ const Welcome = (props) => {
             <div className="flex-welcome">
               <img className="glee" src={glee}></img>
               <h3>
-                Welcome to Glee, A visual editor for creating, editing, and managing
-                ConcertAds-Configs.
+                Welcome to Glee, A visual editor for creating, editing, and
+                managing ConcertAds-Configs.
               </h3>
             </div>
             <h2>What would you like to create?</h2>
             <div className="flex-welcome2">
-            <ul>
-              {React.Children.map(props.platform, (platform) => (
-                <li
-                  className="platform"
-                  onClick={() => {
-                    showConfigs((currentConfig) => ({
-                      config: !currentConfig.config,
-                      platform: platform,
-                      configSet: platform === "Chorus configs" ? chorus : nymag,
-                    }));
-                  }}
-                >
-                  {platform}
-                </li>
-              ))}
-            </ul>
-            <div>
-              <img src={rocket}></img>
+              <ul>
+                {React.Children.map(props.platform, (platform) => (
+                  <li
+                    className="platform"
+                    onClick={() => {
+                      showConfigs((currentConfig) => ({
+                        config: !currentConfig.config,
+                        platform: platform,
+                        configSet:
+                          platform === "Chorus configs" ? chorus : nymag,
+                      }));
+                    }}
+                  >
+                    {platform}
+                  </li>
+                ))}
+              </ul>
+              <div>
+                <img src={rocket}></img>
+              </div>
             </div>
-            </div>
-            <a href='https://github.com/gracewingo/vox-glee'>Link to Github</a>
+            <a href="https://github.com/gracewingo/vox-glee">Link to Github</a>
           </div>
         </>
       )}
