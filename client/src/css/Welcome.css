@@ -1,0 +1,38 @@
+.main-header {
+  padding-top: 1em;
+  padding-left: 2em;
+}
+
+.config-container {
+  display: flex;
+  padding: 3em;
+  animation: FadeInAnim 300ms ease;
+  transition: opacity 300ms ease;
+}
+
+.flex-welcome {
+  display: flex;
+}
+
+.flex-welcome2 {
+  display: flex;
+  text-align: center;
+}
+
+.flex-welcome2 ul {
+  padding-right: 5em;
+}
+
+.glee {
+  width: 8em;
+}
+
+.siteList-pane {
+  height: 81em;
+  width: 20em;
+  overflow: scroll;
+}
+
+.editor-pane{
+  width: 100%
+}

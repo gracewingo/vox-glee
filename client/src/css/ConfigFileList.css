@@ -1,7 +1,3 @@
-.configList-container {
-    display: flex
-}
-
 .list-container {
     display: flex;
     flex-direction: column;

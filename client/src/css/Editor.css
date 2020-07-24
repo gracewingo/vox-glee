@@ -29,6 +29,7 @@
     min-height: 0;
     grid-gap: 60px;
     grid-template-columns: 1fr 1fr;
+    width: 100%;
 }
 
 .left-right .text-edit {

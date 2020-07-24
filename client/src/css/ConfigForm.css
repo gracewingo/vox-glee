@@ -29,3 +29,9 @@
   background-color: #5bc0de;
   border-color: #46b8da;
 }
+
+.ui.form {
+  overflow: scroll;
+  height: 87vh;
+}
+

@@ -1,13 +1,19 @@
 .App {
   margin: 0;
   padding: 0;
-}
-
-.content {
-  padding: 3em;
+  animation: FadeInAnim 300ms ease;
+    animation-duration: 300ms;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: FadeInAnim;
 }
 
 .platform {
+  width: 20em;
   border: 1px solid #dfe3e8;
   border-radius: 4px;
   cursor: pointer;

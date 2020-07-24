@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Form from "@rjsf/semantic-ui";
-import "./ConfigForm.css";
+import "./css/ConfigForm.css";
 
 const ConfigForm = (props) => {
   const [formData, setFormData] = useState(null);

@@ -31,7 +31,6 @@ app.get("*", (req, res) => {
 
 function getSchema(json) {
   const schemaObj = jsonSchemaGenerator(json);
-  console.log("schema obj is ", schemaObj);
   return schemaObj;
 }
 
