@@ -78,7 +78,6 @@ export default function EditorMain(props) {
             schema={schema}
             // onSubmit ={handleShowValue} disabled={!isEditorReady}
             formData={formData}
-            onChange={handleShowValue}
             onChange={(e) => setFormData(e.formData)}
           />
         ) : null}

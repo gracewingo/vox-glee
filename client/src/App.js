@@ -8,7 +8,7 @@ const App = () => {
 
   useEffect(() => {
     async function fetchConfigs() {
-      const response = await fetch("/api/configs");
+      const response = await fetch("https://revexp-tools-server.herokuapp.com/api/configs");
       const configs = await response.json();
       setConfigs(configs);
     }
